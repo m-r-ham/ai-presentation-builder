@@ -3,7 +3,8 @@ import { useState } from 'react'
 function OutlinePanel({ outline, onUpdateOutline }) {
   const [editingField, setEditingField] = useState(null)
   const [tempValue, setTempValue] = useState('')
-  const { metadata, slides, completionStatus } = outline
+  const [showVersions, setShowVersions] = useState(false)
+  const { metadata, slides, completionStatus, versions } = outline
 
   const handleFieldEdit = (field, value) => {
     setEditingField(field)
@@ -52,7 +53,6 @@ function OutlinePanel({ outline, onUpdateOutline }) {
               {options.map(option => (
                 <option key={option} value={option}>{option}</option>
               ))}
-              <option value="_custom">Custom...</option>
             </select>
           ) : (
             <input
@@ -116,10 +116,7 @@ function OutlinePanel({ outline, onUpdateOutline }) {
           color: status === 'missing' ? '#991b1b' : '#166534',
           minHeight: '1.5rem',
           display: 'flex',
-          alignItems: 'center',
-          ':hover': {
-            backgroundColor: status === 'missing' ? '#fee2e2' : '#dcfce7'
-          }
+          alignItems: 'center'
         }}
         onMouseEnter={(e) => {
           e.target.style.backgroundColor = status === 'missing' ? '#fee2e2' : '#dcfce7'
@@ -134,12 +131,18 @@ function OutlinePanel({ outline, onUpdateOutline }) {
   }
 
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ 
+      height: '100%', 
+      display: 'flex', 
+      flexDirection: 'column',
+      overflow: 'hidden'
+    }}>
       {/* Header with Progress */}
       <div style={{ 
         padding: '1rem', 
         borderBottom: '1px solid #e0e0e0',
-        backgroundColor: '#f8f9fa'
+        backgroundColor: '#f8f9fa',
+        flexShrink: 0
       }}>
         <div style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '0.5rem' }}>
           Outline
@@ -154,25 +157,95 @@ function OutlinePanel({ outline, onUpdateOutline }) {
           <div style={{
             width: `${completionStatus.percentage}%`,
             height: '100%',
-            backgroundColor: completionStatus.percentage >= 70 ? '#10b981' : '#f59e0b',
+            backgroundColor: completionStatus.percentage >= 90 ? '#10b981' : completionStatus.percentage >= 70 ? '#f59e0b' : '#ef4444',
             transition: 'width 0.3s ease'
           }} />
         </div>
         <div style={{ 
           fontSize: '0.6rem', 
           color: '#6b7280', 
-          marginTop: '0.25rem' 
+          marginTop: '0.25rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
         }}>
-          {completionStatus.completed}/{completionStatus.total} fields complete ({completionStatus.percentage}%)
+          <span>
+            Metadata: {completionStatus.completed}/{completionStatus.total} • 
+            Slides: {completionStatus.slideCount} ({completionStatus.hasSlideOutline ? '✓' : '✗'}) • 
+            {completionStatus.percentage}%
+          </span>
+          {versions && versions.length > 0 && (
+            <button
+              onClick={() => setShowVersions(!showVersions)}
+              style={{
+                fontSize: '0.6rem',
+                padding: '0.125rem 0.5rem',
+                backgroundColor: '#f3f4f6',
+                color: '#374151',
+                border: '1px solid #d1d5db',
+                borderRadius: '3px',
+                cursor: 'pointer'
+              }}
+            >
+              v{outline.currentVersion - 1}
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Editable Fields */}
+      {/* Scrollable Content */}
       <div style={{ 
         flex: 1,
-        padding: '0.75rem',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        padding: '0.75rem'
       }}>
+        {/* Status indicators */}
+        <div style={{ marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <span style={{
+              fontSize: '0.625rem',
+              padding: '0.25rem 0.5rem',
+              backgroundColor: completionStatus.metadataComplete ? '#d1fae5' : '#fef3c7',
+              color: completionStatus.metadataComplete ? '#065f46' : '#92400e',
+              borderRadius: '12px'
+            }}>
+              {completionStatus.metadataComplete ? '✓ Metadata Complete' : '⏳ Gathering Info'}
+            </span>
+            <span style={{
+              fontSize: '0.625rem',
+              padding: '0.25rem 0.5rem',
+              backgroundColor: completionStatus.hasSlideOutline ? '#d1fae5' : '#fef3c7',
+              color: completionStatus.hasSlideOutline ? '#065f46' : '#92400e',
+              borderRadius: '12px'
+            }}>
+              {completionStatus.hasSlideOutline ? '✓ Slide Outline Ready' : '⏳ Need Slide Structure'}
+            </span>
+          </div>
+        </div>
+
+        {/* Version History (if shown) */}
+        {showVersions && versions && (
+          <div style={{ marginBottom: '1rem', backgroundColor: '#f9fafb', padding: '0.75rem', borderRadius: '6px' }}>
+            <div style={{ fontSize: '0.75rem', fontWeight: '600', marginBottom: '0.5rem' }}>History</div>
+            <div style={{ maxHeight: '120px', overflowY: 'auto' }}>
+              {versions.slice(-3).reverse().map((version) => (
+                <div key={version.version} style={{
+                  padding: '0.375rem',
+                  marginBottom: '0.25rem',
+                  backgroundColor: 'white',
+                  borderRadius: '3px',
+                  fontSize: '0.625rem'
+                }}>
+                  <div style={{ fontWeight: '500' }}>
+                    v{version.version} • {new Date(version.timestamp).toLocaleTimeString()}
+                  </div>
+                  <div style={{ color: '#6b7280' }}>{version.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Basic Information */}
         <div style={{ marginBottom: '1rem' }}>
           <div style={{ fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.75rem', color: '#374151' }}>
@@ -277,61 +350,116 @@ function OutlinePanel({ outline, onUpdateOutline }) {
           </div>
         )}
 
-        {/* Slides */}
-        {slides.length > 0 && (
-          <div>
-            <div style={{ fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#374151' }}>
-              Slides ({slides.length})
-            </div>
-            {slides.map((slide, index) => (
+        {/* SLIDE OUTLINE - The Key Component */}
+        <div>
+          <div style={{ 
+            fontSize: '0.875rem', 
+            fontWeight: '600', 
+            marginBottom: '0.5rem', 
+            color: '#374151',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem'
+          }}>
+            Slide Outline
+            {completionStatus.hasSlideOutline && (
+              <span style={{ fontSize: '0.6rem', color: '#10b981' }}>✓</span>
+            )}
+          </div>
+          
+          {slides.length > 0 ? (
+            slides.map((slide, index) => (
               <div 
                 key={slide.id} 
                 style={{ 
-                  padding: '0.5rem',
-                  border: '1px solid #f3f4f6',
-                  borderRadius: '4px',
+                  padding: '0.75rem',
+                  border: '1px solid #e5e7eb',
+                  borderRadius: '6px',
                   marginBottom: '0.5rem',
-                  fontSize: '0.75rem'
+                  fontSize: '0.75rem',
+                  backgroundColor: 'white'
                 }}
               >
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  marginBottom: '0.25rem' 
+                  marginBottom: '0.5rem' 
                 }}>
                   <div style={{ 
-                    width: '1.25rem', 
-                    height: '1.25rem', 
+                    width: '1.5rem', 
+                    height: '1.5rem', 
                     backgroundColor: '#3b82f6', 
                     color: 'white', 
-                    borderRadius: '3px',
+                    borderRadius: '4px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '0.625rem',
+                    fontSize: '0.675rem',
                     fontWeight: '600',
-                    marginRight: '0.5rem'
+                    marginRight: '0.75rem'
                   }}>
                     {slide.id}
                   </div>
-                  <div style={{ fontWeight: '500', color: '#1f2937', fontSize: '0.75rem' }}>
+                  <div style={{ fontWeight: '600', color: '#1f2937', fontSize: '0.875rem' }}>
                     {slide.title}
+                  </div>
+                  <div style={{ 
+                    marginLeft: 'auto',
+                    fontSize: '0.625rem',
+                    padding: '0.125rem 0.5rem',
+                    backgroundColor: '#f3f4f6',
+                    color: '#6b7280',
+                    borderRadius: '4px'
+                  }}>
+                    {slide.type}
                   </div>
                 </div>
                 {slide.description && (
                   <div style={{ 
-                    fontSize: '0.625rem', 
+                    fontSize: '0.75rem', 
                     color: '#6b7280', 
-                    marginLeft: '1.75rem',
-                    lineHeight: '1.3'
+                    marginLeft: '2.25rem',
+                    marginBottom: '0.5rem'
                   }}>
                     {slide.description}
                   </div>
                 )}
+                {slide.keyPoints && slide.keyPoints.length > 0 && (
+                  <div style={{ marginLeft: '2.25rem' }}>
+                    {slide.keyPoints.map((point, pointIndex) => (
+                      <div 
+                        key={pointIndex}
+                        style={{ 
+                          fontSize: '0.675rem', 
+                          color: '#9ca3af',
+                          marginBottom: '0.25rem'
+                        }}
+                      >
+                        • {point}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-        )}
+            ))
+          ) : (
+            <div style={{
+              padding: '1.5rem',
+              textAlign: 'center',
+              border: '2px dashed #d1d5db',
+              borderRadius: '6px',
+              color: '#6b7280'
+            }}>
+              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📋</div>
+              <div style={{ fontSize: '0.75rem', fontWeight: '500', marginBottom: '0.25rem' }}>
+                No slide outline yet
+              </div>
+              <div style={{ fontSize: '0.675rem' }}>
+                Need at least 3 slides to complete the outline
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

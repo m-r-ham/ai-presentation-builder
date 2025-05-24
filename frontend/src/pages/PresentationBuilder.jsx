@@ -21,6 +21,33 @@ function PresentationBuilder() {
   const [activeTab, setActiveTab] = useState('chat')
   const [draftMessage, setDraftMessage] = useState('')
 
+  // Force outline to show whenever ANY outline data exists
+  useEffect(() => {
+    if (outline) {
+      const hasAnyOutlineData = 
+        outline.metadata.title ||
+        outline.metadata.goal ||
+        outline.metadata.purpose ||
+        outline.metadata.audience ||
+        outline.metadata.deliveryMethod ||
+        outline.metadata.duration ||
+        outline.metadata.dateTime ||
+        outline.completionStatus.percentage > 0 ||
+        outline.slides.length > 0;
+      
+      if (hasAnyOutlineData) {
+        console.log('Auto-showing outline due to data:', {
+          title: outline.metadata.title,
+          goal: outline.metadata.goal,
+          purpose: outline.metadata.purpose,
+          audience: outline.metadata.audience,
+          completion: outline.completionStatus.percentage
+        });
+        setShowOutline(true);
+      }
+    }
+  }, [outline]);
+
   const sendMessage = async (content) => {
     const userMessage = {
       id: Date.now(),
@@ -30,7 +57,7 @@ function PresentationBuilder() {
     }
     setMessages(prev => [...prev, userMessage])
     setIsLoading(true)
-    setDraftMessage('') // Clear draft when sending
+    setDraftMessage('')
 
     try {
       const response = await fetch('http://localhost:3001/api/chat', {
@@ -53,20 +80,10 @@ function PresentationBuilder() {
       }
       setMessages(prev => [...prev, aiMessage])
       
-      // Update outline and show it IMMEDIATELY when ANY data exists
+      // Update outline - the useEffect will handle showing it
       if (data.outline) {
-        setOutline(data.outline)
-        // Much more aggressive outline showing
-        const hasAnyData = data.outline.completionStatus.percentage > 0 || 
-                          data.outline.metadata.title || 
-                          data.outline.metadata.goal || 
-                          data.outline.metadata.purpose ||
-                          data.outline.metadata.audience ||
-                          data.outline.slides.length > 0
-        
-        if (hasAnyData) {
-          setShowOutline(true)
-        }
+        console.log('Received outline update:', data.outline);
+        setOutline(data.outline);
       }
       
     } catch (error) {
@@ -83,7 +100,6 @@ function PresentationBuilder() {
     }
   }
 
-  // Save draft message to localStorage for persistence
   useEffect(() => {
     const savedDraft = localStorage.getItem(`draft-${sessionId}`)
     if (savedDraft) {
@@ -111,8 +127,6 @@ function PresentationBuilder() {
       const data = await response.json()
       if (data.outline) {
         setOutline(data.outline)
-        // Show outline when manually updated
-        setShowOutline(true)
       }
     } catch (error) {
       console.error('Error updating outline:', error)
@@ -125,7 +139,10 @@ function PresentationBuilder() {
     outline.metadata.title ||
     outline.metadata.goal ||
     outline.metadata.purpose ||
-    outline.metadata.audience
+    outline.metadata.audience ||
+    outline.metadata.deliveryMethod ||
+    outline.metadata.duration ||
+    outline.metadata.dateTime
   )
 
   const bottomTabs = [
@@ -253,20 +270,25 @@ function PresentationBuilder() {
               {hasOutlineContent ? outline.metadata.title || 'Presentation' : 'Presentation Builder'}
             </h1>
             {hasOutlineContent && (
-              <button
-                onClick={() => setShowOutline(!showOutline)}
-                style={{
-                  fontSize: '0.75rem',
-                  padding: '0.25rem 0.75rem',
-                  backgroundColor: showOutline ? '#3b82f6' : '#f3f4f6',
-                  color: showOutline ? 'white' : '#374151',
-                  border: '1px solid #d1d5db',
-                  borderRadius: '4px',
-                  cursor: 'pointer'
-                }}
-              >
-                {showOutline ? 'Hide Outline' : 'Show Outline'}
-              </button>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <span style={{ fontSize: '0.75rem', color: '#6b7280' }}>
+                  {outline.completionStatus.percentage}% complete
+                </span>
+                <button
+                  onClick={() => setShowOutline(!showOutline)}
+                  style={{
+                    fontSize: '0.75rem',
+                    padding: '0.25rem 0.75rem',
+                    backgroundColor: showOutline ? '#3b82f6' : '#f3f4f6',
+                    color: showOutline ? 'white' : '#374151',
+                    border: '1px solid #d1d5db',
+                    borderRadius: '4px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {showOutline ? 'Hide Outline' : 'Show Outline'}
+                </button>
+              </div>
             )}
           </div>
 
