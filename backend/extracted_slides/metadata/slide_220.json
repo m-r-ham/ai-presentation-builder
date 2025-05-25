@@ -1,0 +1,45 @@
+{
+  "id": "slide-220",
+  "slide_number": 220,
+  "title": "Template — Roger’s Five Factors",
+  "content": "1",
+  "bullet_points": [
+    "2",
+    "5",
+    "3",
+    "4",
+    "Relative advantage\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Compatibility\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Complexity\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Trialability\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Observability\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — Roger’s Five Factors",
+    "1",
+    "2",
+    "5",
+    "3",
+    "4",
+    "Relative advantage\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Compatibility\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Complexity\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Trialability\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Observability\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "shape_count": 23,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_220.png",
+  "image_path": "images/slide_220.png"
+}

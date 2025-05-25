@@ -1,0 +1,53 @@
+{
+  "id": "slide-210",
+  "slide_number": 210,
+  "title": "Template — BCG Growth Share Matrix",
+  "content": "High",
+  "bullet_points": [
+    "Low",
+    "Market growth",
+    "Question marks",
+    "Stars",
+    "Dogs",
+    "Cash cows",
+    "Low",
+    "High",
+    "Market share",
+    "Text\nText\nText",
+    "Text\nText\nText",
+    "Text\nText\nText",
+    "Text\nText\nText",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — BCG Growth Share Matrix",
+    "High",
+    "Low",
+    "Market growth",
+    "Question marks",
+    "Stars",
+    "Dogs",
+    "Cash cows",
+    "Low",
+    "High",
+    "Market share",
+    "Text\nText\nText",
+    "Text\nText\nText",
+    "Text\nText\nText",
+    "Text\nText\nText",
+    "Source:_______"
+  ],
+  "shape_count": 21,
+  "design_elements": {
+    "text_blocks": 16,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_210.png",
+  "image_path": "images/slide_210.png"
+}

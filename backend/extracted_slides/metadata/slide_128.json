@@ -1,0 +1,49 @@
+{
+  "id": "slide-128",
+  "slide_number": 128,
+  "title": "Subtitle",
+  "content": "Template - Linear Process",
+  "bullet_points": [
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Linear Process",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______"
+  ],
+  "shape_count": 25,
+  "design_elements": {
+    "text_blocks": 14,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_128.png",
+  "image_path": "images/slide_128.png"
+}

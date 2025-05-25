@@ -1,0 +1,39 @@
+{
+  "id": "slide-106",
+  "slide_number": 106,
+  "title": "Subtitle",
+  "content": "Template - Proportional area chart",
+  "bullet_points": [
+    "Source:_______",
+    "XX%",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "-XX%",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Title here",
+    "Title here"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Proportional area chart",
+    "Source:_______",
+    "XX%",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "-XX%",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Title here",
+    "Title here"
+  ],
+  "shape_count": 14,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_106.png",
+  "image_path": "images/slide_106.png"
+}

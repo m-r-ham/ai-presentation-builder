@@ -1,0 +1,35 @@
+{
+  "id": "slide-129",
+  "slide_number": 129,
+  "title": "Subtitle",
+  "content": "Template - Snake process",
+  "bullet_points": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Snake process",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______"
+  ],
+  "shape_count": 20,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_129.png",
+  "image_path": "images/slide_129.png"
+}

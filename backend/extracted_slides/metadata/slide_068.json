@@ -1,0 +1,35 @@
+{
+  "id": "slide-068",
+  "slide_number": 68,
+  "title": "Subtitle",
+  "content": "Template - 100% stacked column chart",
+  "bullet_points": [
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - 100% stacked column chart",
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 10,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_068.png",
+  "image_path": "images/slide_068.png"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "slide-061",
+  "slide_number": 61,
+  "title": "Subtitle",
+  "content": "Template — 100% Stacked bar chart",
+  "bullet_points": [
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — 100% Stacked bar chart",
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 14,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_061.png",
+  "image_path": "images/slide_061.png"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "slide-193",
+  "slide_number": 193,
+  "title": "Subtitle",
+  "content": "Template - Venn Diagram",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Venn Diagram",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 20,
+  "design_elements": {
+    "text_blocks": 10,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_193.png",
+  "image_path": "images/slide_193.png"
+}

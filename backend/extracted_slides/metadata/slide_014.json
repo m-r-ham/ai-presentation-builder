@@ -1,0 +1,39 @@
+{
+  "id": "slide-014",
+  "slide_number": 14,
+  "title": "Umbrex provides resources to help consultants thrive",
+  "content": "Guide To Setting Up Your Own Practice",
+  "bullet_points": [
+    "How to Build a Consulting Website",
+    "How to Write a Consulting Proposal: Guide and Templates",
+    "How To Set Consulting Fees",
+    "LinkedIn for Consultants: Best Practices to Optimize Your Profile",
+    "How To Find Clients For Your Consulting Practice",
+    "And dozens more",
+    "Access resources"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Umbrex provides resources to help consultants thrive",
+    "Guide To Setting Up Your Own Practice",
+    "How to Build a Consulting Website",
+    "How to Write a Consulting Proposal: Guide and Templates",
+    "How To Set Consulting Fees",
+    "LinkedIn for Consultants: Best Practices to Optimize Your Profile",
+    "How To Find Clients For Your Consulting Practice",
+    "And dozens more",
+    "Access resources"
+  ],
+  "shape_count": 19,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 3,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_014.png",
+  "image_path": "images/slide_014.png"
+}

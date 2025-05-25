@@ -1,0 +1,47 @@
+{
+  "id": "slide-177",
+  "slide_number": 177,
+  "title": "Subtitle",
+  "content": "Alternatives",
+  "bullet_points": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Uncertainty",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "High-risk Consequences",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Interpersonal Issues",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Complexity",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______",
+    "Template - Decision Diagram"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Alternatives",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Uncertainty",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "High-risk Consequences",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Interpersonal Issues",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Complexity",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______",
+    "Template - Decision Diagram"
+  ],
+  "shape_count": 30,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_177.png",
+  "image_path": "images/slide_177.png"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "slide-019",
+  "slide_number": 19,
+  "title": "Subtitle",
+  "content": "01",
+  "bullet_points": [
+    "02",
+    "03",
+    "01",
+    "02",
+    "03",
+    "01",
+    "02",
+    "03",
+    "Source:_______",
+    "Template - Elements",
+    "Text box title",
+    "Text box text box",
+    "Text box with grey background",
+    "Text box with Blue background"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Subtitle",
+    "01",
+    "02",
+    "03",
+    "01",
+    "02",
+    "03",
+    "01",
+    "02",
+    "03",
+    "Source:_______",
+    "Template - Elements",
+    "Text box title",
+    "Text box text box",
+    "Text box with grey background",
+    "Text box with Blue background"
+  ],
+  "shape_count": 43,
+  "design_elements": {
+    "text_blocks": 16,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_019.png",
+  "image_path": "images/slide_019.png"
+}

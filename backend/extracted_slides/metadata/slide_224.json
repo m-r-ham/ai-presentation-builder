@@ -1,0 +1,41 @@
+{
+  "id": "slide-224",
+  "slide_number": 224,
+  "title": "Template — Three Horizons",
+  "content": "Value",
+  "bullet_points": [
+    "Time",
+    "Horizon 1\nMaintain and defend core business\n1-3 years",
+    "Horizon 2\nFoster emerging\n3-5 years",
+    "Horizon 3\nSeed future business (es)\n>5 years",
+    "Now",
+    "New",
+    "Next",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — Three Horizons",
+    "Value",
+    "Time",
+    "Horizon 1\nMaintain and defend core business\n1-3 years",
+    "Horizon 2\nFoster emerging\n3-5 years",
+    "Horizon 3\nSeed future business (es)\n>5 years",
+    "Now",
+    "New",
+    "Next",
+    "Source:_______"
+  ],
+  "shape_count": 18,
+  "design_elements": {
+    "text_blocks": 10,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_224.png",
+  "image_path": "images/slide_224.png"
+}

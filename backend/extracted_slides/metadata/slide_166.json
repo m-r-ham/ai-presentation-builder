@@ -1,0 +1,41 @@
+{
+  "id": "slide-166",
+  "slide_number": 166,
+  "title": "Template - 3x3 Matrix",
+  "content": "Source:_______",
+  "bullet_points": [
+    "Label name",
+    "Label name",
+    "Label name",
+    "Label name",
+    "Label name",
+    "Label name",
+    "Y Label",
+    "X Label"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template - 3x3 Matrix",
+    "Source:_______",
+    "Label name",
+    "Label name",
+    "Label name",
+    "Label name",
+    "Label name",
+    "Label name",
+    "Y Label",
+    "X Label"
+  ],
+  "shape_count": 13,
+  "design_elements": {
+    "text_blocks": 10,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_166.png",
+  "image_path": "images/slide_166.png"
+}

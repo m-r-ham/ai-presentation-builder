@@ -1,0 +1,24 @@
+{
+  "id": "slide-001",
+  "slide_number": 1,
+  "title": "Presentation title goes here",
+  "content": "Subtitle goes here",
+  "bullet_points": [],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "20_Cover",
+  "text_content": [
+    "Presentation title goes here",
+    "Subtitle goes here"
+  ],
+  "shape_count": 4,
+  "design_elements": {
+    "text_blocks": 2,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_001.png",
+  "image_path": "images/slide_001.png"
+}

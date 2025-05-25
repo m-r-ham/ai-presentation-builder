@@ -1,0 +1,27 @@
+{
+  "id": "slide-159",
+  "slide_number": 159,
+  "title": "Subtitle",
+  "content": "Template - Business systems/hierarchy",
+  "bullet_points": [
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Business systems/hierarchy",
+    "Source:_______"
+  ],
+  "shape_count": 22,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_159.png",
+  "image_path": "images/slide_159.png"
+}

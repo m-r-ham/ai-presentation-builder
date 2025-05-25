@@ -1,0 +1,49 @@
+{
+  "id": "slide-162",
+  "slide_number": 162,
+  "title": "Subtitle",
+  "content": "Template - Comparative table",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Comparative table",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 37,
+  "design_elements": {
+    "text_blocks": 14,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_162.png",
+  "image_path": "images/slide_162.png"
+}

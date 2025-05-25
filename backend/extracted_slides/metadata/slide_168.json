@@ -1,0 +1,53 @@
+{
+  "id": "slide-168",
+  "slide_number": 168,
+  "title": "Subtitle",
+  "content": "Template - Honeycomb chart",
+  "bullet_points": [
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Honeycomb chart",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "Source:_______"
+  ],
+  "shape_count": 21,
+  "design_elements": {
+    "text_blocks": 16,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_168.png",
+  "image_path": "images/slide_168.png"
+}

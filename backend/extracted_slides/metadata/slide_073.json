@@ -1,0 +1,51 @@
+{
+  "id": "slide-073",
+  "slide_number": 73,
+  "title": "Subtitle",
+  "content": "Template - Multiple column chart",
+  "bullet_points": [
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 05",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 04",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "$$$",
+    "Source:_______",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Multiple column chart",
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 05",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 04",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "$$$",
+    "Source:_______",
+    "xxx"
+  ],
+  "shape_count": 18,
+  "design_elements": {
+    "text_blocks": 15,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_073.png",
+  "image_path": "images/slide_073.png"
+}

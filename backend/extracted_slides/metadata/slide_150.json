@@ -1,0 +1,31 @@
+{
+  "id": "slide-150",
+  "slide_number": 150,
+  "title": "Analysis to be conducted\nxxx",
+  "content": "3. End product\u000bxxx",
+  "bullet_points": [
+    "Sources of insight\nxxx",
+    "4. Timing / steps / responsisibility\nxxx",
+    "Template — Analysis Plan"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Analysis to be conducted\nxxx",
+    "3. End product\u000bxxx",
+    "Sources of insight\nxxx",
+    "4. Timing / steps / responsisibility\nxxx",
+    "Template — Analysis Plan"
+  ],
+  "shape_count": 7,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_150.png",
+  "image_path": "images/slide_150.png"
+}

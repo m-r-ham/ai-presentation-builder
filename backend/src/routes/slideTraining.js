@@ -104,9 +104,9 @@ async function slideTrainingRoutes(fastify, options) {
 // Function to get real slide examples from extracted PowerPoint
 async function getRealSlideExamples() {
   try {
-    // Load extracted consultant slides
-    const consultantSlidesPath = path.join(__dirname, '../../data/consultant_slides.json');
-    const consultantData = JSON.parse(fs.readFileSync(consultantSlidesPath, 'utf8'));
+    // Load extracted consultant slides from new format
+    const extractedSlidesPath = path.join(__dirname, '../../extracted_slides/presentation_data.json');
+    const consultantData = JSON.parse(fs.readFileSync(extractedSlidesPath, 'utf8'));
     
     // Convert to training format with SDF analysis
     const processedSlides = consultantData.slides

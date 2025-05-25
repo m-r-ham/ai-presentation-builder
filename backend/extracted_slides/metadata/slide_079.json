@@ -1,0 +1,31 @@
+{
+  "id": "slide-079",
+  "slide_number": 79,
+  "title": "Subtitle",
+  "content": "Template - Population pyramid",
+  "bullet_points": [
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Population pyramid",
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 8,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 2,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_079.png",
+  "image_path": "images/slide_079.png"
+}

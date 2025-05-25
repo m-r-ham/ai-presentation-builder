@@ -1,0 +1,49 @@
+{
+  "id": "slide-228",
+  "slide_number": 228,
+  "title": "Subtitle",
+  "content": "xxxx",
+  "bullet_points": [
+    "xxxx",
+    "xxxx",
+    "xxxxx",
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "Template - Skills And Self-id Top Factors",
+    "xxxx",
+    "xxxx",
+    "xxxx",
+    "xxxx",
+    "xxxx"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "xxxx",
+    "xxxx",
+    "xxxx",
+    "xxxxx",
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "Template - Skills And Self-id Top Factors",
+    "xxxx",
+    "xxxx",
+    "xxxx",
+    "xxxx",
+    "xxxx"
+  ],
+  "shape_count": 17,
+  "design_elements": {
+    "text_blocks": 14,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_228.png",
+  "image_path": "images/slide_228.png"
+}

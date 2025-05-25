@@ -1,0 +1,45 @@
+{
+  "id": "slide-184",
+  "slide_number": 184,
+  "title": "Subtitle",
+  "content": "Template - Sankey diagram",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Sankey diagram",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 27,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_184.png",
+  "image_path": "images/slide_184.png"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "slide-197",
+  "slide_number": 197,
+  "title": "Subtitle",
+  "content": "Template - Balance Scale Diagram",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Balance Scale Diagram",
+    "Source:_______",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 13,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_197.png",
+  "image_path": "images/slide_197.png"
+}

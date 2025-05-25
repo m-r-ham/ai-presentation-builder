@@ -1,0 +1,47 @@
+{
+  "id": "slide-181",
+  "slide_number": 181,
+  "title": "Subtitle",
+  "content": "Template – Funnel chart",
+  "bullet_points": [
+    "Source:_______",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template – Funnel chart",
+    "Source:_______",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 24,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_181.png",
+  "image_path": "images/slide_181.png"
+}

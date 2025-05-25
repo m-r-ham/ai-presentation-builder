@@ -1,0 +1,31 @@
+{
+  "id": "slide-008",
+  "slide_number": 8,
+  "title": "Industries Umbrex Serves",
+  "content": "Aerospace & Defense\nAgriculture\nAutomotive\nBiotechnology\nChemicals\nConsumer Packaged Goods\nCosmetics & Personal Care\nEducation\nEnergy\nFinancial Services\nHealthcare",
+  "bullet_points": [
+    "Insurance\nManufacturing\nMedia & Entertainment\nMedical Devices\nMetals & Mining\nNonprofit\nOil & Gas\nPharmaceuticals\nPrivate Equity\nProfessional Services\nPulp and Paper",
+    "Real Estate & Construction\nRestaurant\nRetail\nSocial Sector & NGOs\nSoftware\nTechnology\nTelecommunications\nTravel & Logistics\nWaste Management\nWine, Beer, and Spirits",
+    "Find a consultant now"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Industries Umbrex Serves",
+    "Aerospace & Defense\nAgriculture\nAutomotive\nBiotechnology\nChemicals\nConsumer Packaged Goods\nCosmetics & Personal Care\nEducation\nEnergy\nFinancial Services\nHealthcare",
+    "Insurance\nManufacturing\nMedia & Entertainment\nMedical Devices\nMetals & Mining\nNonprofit\nOil & Gas\nPharmaceuticals\nPrivate Equity\nProfessional Services\nPulp and Paper",
+    "Real Estate & Construction\nRestaurant\nRetail\nSocial Sector & NGOs\nSoftware\nTechnology\nTelecommunications\nTravel & Logistics\nWaste Management\nWine, Beer, and Spirits",
+    "Find a consultant now"
+  ],
+  "shape_count": 9,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 2,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_008.png",
+  "image_path": "images/slide_008.png"
+}

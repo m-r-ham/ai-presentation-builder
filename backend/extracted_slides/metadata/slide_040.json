@@ -1,0 +1,27 @@
+{
+  "id": "slide-040",
+  "slide_number": 40,
+  "title": "Subtitle",
+  "content": "Template — Features List",
+  "bullet_points": [
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Features List",
+    "Source:_______"
+  ],
+  "shape_count": 13,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_040.png",
+  "image_path": "images/slide_040.png"
+}

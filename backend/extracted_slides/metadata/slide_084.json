@@ -1,0 +1,43 @@
+{
+  "id": "slide-084",
+  "slide_number": 84,
+  "title": "Subtitle",
+  "content": "Template - Line chart",
+  "bullet_points": [
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Line chart",
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "shape_count": 17,
+  "design_elements": {
+    "text_blocks": 11,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_084.png",
+  "image_path": "images/slide_084.png"
+}

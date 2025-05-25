@@ -1,0 +1,45 @@
+{
+  "id": "slide-221",
+  "slide_number": 221,
+  "title": "Template — SIPOC model",
+  "content": "Supplier\nXXX\nXXX\nXXX",
+  "bullet_points": [
+    "Inputs\nXXX\nXXX\nXXX",
+    "Process\nXXX\nXXX\nXXX",
+    "Outputs\nXXX\nXXX\nXXX",
+    "Customers\nXXX\nXXX\nXXX",
+    "S",
+    "I",
+    "P",
+    "O",
+    "C",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — SIPOC model",
+    "Supplier\nXXX\nXXX\nXXX",
+    "Inputs\nXXX\nXXX\nXXX",
+    "Process\nXXX\nXXX\nXXX",
+    "Outputs\nXXX\nXXX\nXXX",
+    "Customers\nXXX\nXXX\nXXX",
+    "S",
+    "I",
+    "P",
+    "O",
+    "C",
+    "Source:_______"
+  ],
+  "shape_count": 22,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_221.png",
+  "image_path": "images/slide_221.png"
+}

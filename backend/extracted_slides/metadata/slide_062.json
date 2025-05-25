@@ -1,0 +1,35 @@
+{
+  "id": "slide-062",
+  "slide_number": 62,
+  "title": "Subtitle",
+  "content": "Template — Clustered bar chart",
+  "bullet_points": [
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Clustered bar chart",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "shape_count": 12,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_062.png",
+  "image_path": "images/slide_062.png"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "slide-140",
+  "slide_number": 140,
+  "title": "Subtitle",
+  "content": "Template - Steps chart",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Steps chart",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 24,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_140.png",
+  "image_path": "images/slide_140.png"
+}

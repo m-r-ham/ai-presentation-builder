@@ -1,0 +1,45 @@
+{
+  "id": "slide-202",
+  "slide_number": 202,
+  "title": "Subtitle",
+  "content": "Template - Maps showing data",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Maps showing data",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 19,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_202.png",
+  "image_path": "images/slide_202.png"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "slide-009",
+  "slide_number": 9,
+  "title": "Umbrex offers flexible options to engage talent",
+  "content": "Location",
+  "bullet_points": [
+    "Seniority",
+    "Number of consultants",
+    "Time commitment",
+    "Team",
+    "Individual",
+    "Associate",
+    "Manager",
+    "Partner",
+    "On-site",
+    "Remote",
+    "Find a consultant now"
+  ],
+  "has_image": true,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Umbrex offers flexible options to engage talent",
+    "Location",
+    "Seniority",
+    "Number of consultants",
+    "Time commitment",
+    "Team",
+    "Individual",
+    "Associate",
+    "Manager",
+    "Partner",
+    "On-site",
+    "Remote",
+    "Find a consultant now"
+  ],
+  "shape_count": 30,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 9,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_009.png",
+  "image_path": "images/slide_009.png"
+}

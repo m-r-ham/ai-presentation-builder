@@ -1,0 +1,51 @@
+{
+  "id": "slide-136",
+  "slide_number": 136,
+  "title": "Subtitle",
+  "content": "03",
+  "bullet_points": [
+    "01",
+    "02",
+    "04",
+    "05",
+    "06",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "Source:_______",
+    "Template – Circular process"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "03",
+    "01",
+    "02",
+    "04",
+    "05",
+    "06",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "Source:_______",
+    "Template – Circular process"
+  ],
+  "shape_count": 30,
+  "design_elements": {
+    "text_blocks": 15,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_136.png",
+  "image_path": "images/slide_136.png"
+}

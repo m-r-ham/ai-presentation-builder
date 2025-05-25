@@ -1,0 +1,37 @@
+{
+  "id": "slide-179",
+  "slide_number": 179,
+  "title": "Subtitle",
+  "content": "Template - Tree diagram",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Tree diagram",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 18,
+  "design_elements": {
+    "text_blocks": 8,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_179.png",
+  "image_path": "images/slide_179.png"
+}

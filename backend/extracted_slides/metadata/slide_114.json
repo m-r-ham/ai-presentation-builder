@@ -1,0 +1,33 @@
+{
+  "id": "slide-114",
+  "slide_number": 114,
+  "title": "Subtitle",
+  "content": "Template - XY Bubble chart",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - XY Bubble chart",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 8,
+  "design_elements": {
+    "text_blocks": 6,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_114.png",
+  "image_path": "images/slide_114.png"
+}

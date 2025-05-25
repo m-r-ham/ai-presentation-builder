@@ -1,0 +1,27 @@
+{
+  "id": "slide-029",
+  "slide_number": 29,
+  "title": "Subtitle",
+  "content": "Template — Executive Summary 7",
+  "bullet_points": [
+    "[Situation – lay out the facts of the current state]\nText\nText\nText\nText\n\n[Complication – what has changed or will change, and what will be the impact]\nText\nText\nText\nText\n\n[Resolution – what should we do]\nText\nText\nText\nText"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Executive Summary 7",
+    "[Situation – lay out the facts of the current state]\nText\nText\nText\nText\n\n[Complication – what has changed or will change, and what will be the impact]\nText\nText\nText\nText\n\n[Resolution – what should we do]\nText\nText\nText\nText"
+  ],
+  "shape_count": 4,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_029.png",
+  "image_path": "images/slide_029.png"
+}

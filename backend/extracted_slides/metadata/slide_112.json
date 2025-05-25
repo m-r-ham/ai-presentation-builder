@@ -1,0 +1,35 @@
+{
+  "id": "slide-112",
+  "slide_number": 112,
+  "title": "Subtitle",
+  "content": "Template - Scatter chart with four quadrants",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Scatter chart with four quadrants",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 13,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_112.png",
+  "image_path": "images/slide_112.png"
+}

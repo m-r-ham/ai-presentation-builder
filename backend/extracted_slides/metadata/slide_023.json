@@ -1,0 +1,29 @@
+{
+  "id": "slide-023",
+  "slide_number": 23,
+  "title": "Subtitle",
+  "content": "Template — Executive Summary 1",
+  "bullet_points": [
+    "Text\nText\nText",
+    "Image"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Executive Summary 1",
+    "Text\nText\nText",
+    "Image"
+  ],
+  "shape_count": 7,
+  "design_elements": {
+    "text_blocks": 4,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_023.png",
+  "image_path": "images/slide_023.png"
+}

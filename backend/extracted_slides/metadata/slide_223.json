@@ -1,0 +1,45 @@
+{
+  "id": "slide-223",
+  "slide_number": 223,
+  "title": "Template — Lafley Strategy",
+  "content": "XXX",
+  "bullet_points": [
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — Lafley Strategy",
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "XXX\nXXX",
+    "Source:_______"
+  ],
+  "shape_count": 21,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_223.png",
+  "image_path": "images/slide_223.png"
+}

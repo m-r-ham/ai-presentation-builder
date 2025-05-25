@@ -1,0 +1,39 @@
+{
+  "id": "slide-183",
+  "slide_number": 183,
+  "title": "Subtitle",
+  "content": "Template - Mind map",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Mind map",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 30,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_183.png",
+  "image_path": "images/slide_183.png"
+}

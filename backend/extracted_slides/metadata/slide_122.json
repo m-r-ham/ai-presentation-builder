@@ -1,0 +1,39 @@
+{
+  "id": "slide-122",
+  "slide_number": 122,
+  "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  "bullet_points": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "XXX\nText",
+    "Subtitle",
+    "Template - Boat chart vertical",
+    "Source:_______",
+    "XXX\nText",
+    "XXX\nText"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "XXX\nText",
+    "Subtitle",
+    "Template - Boat chart vertical",
+    "Source:_______",
+    "XXX\nText",
+    "XXX\nText"
+  ],
+  "shape_count": 13,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_122.png",
+  "image_path": "images/slide_122.png"
+}

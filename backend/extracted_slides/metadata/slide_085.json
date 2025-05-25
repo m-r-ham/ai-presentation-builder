@@ -1,0 +1,27 @@
+{
+  "id": "slide-085",
+  "slide_number": 85,
+  "title": "Subtitle",
+  "content": "Template - Vertical line chart",
+  "bullet_points": [
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Vertical line chart",
+    "Source:_______"
+  ],
+  "shape_count": 6,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_085.png",
+  "image_path": "images/slide_085.png"
+}

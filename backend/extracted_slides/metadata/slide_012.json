@@ -1,0 +1,35 @@
+{
+  "id": "slide-012",
+  "slide_number": 12,
+  "title": "Umbrex thought leadership",
+  "content": "Produce Unleashed, the leading podcast on how to thrive as an independent professional",
+  "bullet_points": [
+    "Managing Partner Will Bachman recognized as a “Power Player Consulting” by Business Insider",
+    "Invited speaker on independent consulting at business schools including Harvard, Wharton, Columbia, and Kellong",
+    "Over 1,000 consultants have used our video guide to set up their own practice",
+    "Organized over 300 events for independent consultants",
+    "Find a consultant now"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Umbrex thought leadership",
+    "Produce Unleashed, the leading podcast on how to thrive as an independent professional",
+    "Managing Partner Will Bachman recognized as a “Power Player Consulting” by Business Insider",
+    "Invited speaker on independent consulting at business schools including Harvard, Wharton, Columbia, and Kellong",
+    "Over 1,000 consultants have used our video guide to set up their own practice",
+    "Organized over 300 events for independent consultants",
+    "Find a consultant now"
+  ],
+  "shape_count": 17,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 7,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_012.png",
+  "image_path": "images/slide_012.png"
+}

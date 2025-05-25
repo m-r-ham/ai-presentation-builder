@@ -1,0 +1,35 @@
+{
+  "id": "slide-098",
+  "slide_number": 98,
+  "title": "Subtitle",
+  "content": "Template - Multiple Doughnuts",
+  "bullet_points": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Multiple Doughnuts",
+    "01",
+    "02",
+    "03",
+    "04",
+    "Source:_______"
+  ],
+  "shape_count": 28,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 4,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_098.png",
+  "image_path": "images/slide_098.png"
+}

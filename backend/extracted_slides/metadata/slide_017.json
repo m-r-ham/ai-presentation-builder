@@ -1,0 +1,31 @@
+{
+  "id": "slide-017",
+  "slide_number": 17,
+  "title": "Subtitle",
+  "content": "Short description here in 1 or two lines",
+  "bullet_points": [
+    ".01",
+    "Title in 1 line",
+    "Template – Section Divider"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "1_OK_content",
+  "text_content": [
+    "Subtitle",
+    "Short description here in 1 or two lines",
+    ".01",
+    "Title in 1 line",
+    "Template – Section Divider"
+  ],
+  "shape_count": 7,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_017.png",
+  "image_path": "images/slide_017.png"
+}

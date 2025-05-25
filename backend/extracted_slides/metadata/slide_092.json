@@ -1,0 +1,47 @@
+{
+  "id": "slide-092",
+  "slide_number": 92,
+  "title": "Subtitle",
+  "content": "Template - Evolution Chart",
+  "bullet_points": [
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 05",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 04",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Evolution Chart",
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 05",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 04",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "shape_count": 20,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_092.png",
+  "image_path": "images/slide_092.png"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "slide-055",
+  "slide_number": 55,
+  "title": "Template A - Statistics table",
+  "content": "Source:_______",
+  "bullet_points": [],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Template A - Statistics table",
+    "Source:_______"
+  ],
+  "shape_count": 6,
+  "design_elements": {
+    "text_blocks": 2,
+    "visual_elements": 2,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_055.png",
+  "image_path": "images/slide_055.png"
+}

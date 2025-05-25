@@ -1,0 +1,51 @@
+{
+  "id": "slide-065",
+  "slide_number": 65,
+  "title": "Template index",
+  "content": "Structural \nslides",
+  "bullet_points": [
+    "Text-based \nslides",
+    "Bar \ncharts",
+    "Column \ncharts",
+    "Line \ncharts",
+    "Pie \ncharts",
+    "Area \ncharts",
+    "Scatter \ncharts",
+    "Workplan / \nprocess charts",
+    "Organization / relationships",
+    "Concept\nslides",
+    "Map \nslides",
+    "Consulting frameworks",
+    "Additional\nslides"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "1_OK_content",
+  "text_content": [
+    "Template index",
+    "Structural \nslides",
+    "Text-based \nslides",
+    "Bar \ncharts",
+    "Column \ncharts",
+    "Line \ncharts",
+    "Pie \ncharts",
+    "Area \ncharts",
+    "Scatter \ncharts",
+    "Workplan / \nprocess charts",
+    "Organization / relationships",
+    "Concept\nslides",
+    "Map \nslides",
+    "Consulting frameworks",
+    "Additional\nslides"
+  ],
+  "shape_count": 16,
+  "design_elements": {
+    "text_blocks": 15,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_065.png",
+  "image_path": "images/slide_065.png"
+}

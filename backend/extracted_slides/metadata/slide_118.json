@@ -1,0 +1,39 @@
+{
+  "id": "slide-118",
+  "slide_number": 118,
+  "title": "Subtitle",
+  "content": "Template - Timeline",
+  "bullet_points": [
+    "Source:_______",
+    "Text\nText",
+    "1",
+    "2",
+    "3",
+    "Text\nText",
+    "Text\nText"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Timeline",
+    "Source:_______",
+    "Text\nText",
+    "1",
+    "2",
+    "3",
+    "Text\nText",
+    "Text\nText"
+  ],
+  "shape_count": 17,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_118.png",
+  "image_path": "images/slide_118.png"
+}

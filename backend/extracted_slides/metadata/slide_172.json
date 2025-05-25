@@ -1,0 +1,33 @@
+{
+  "id": "slide-172",
+  "slide_number": 172,
+  "title": "Template - Pyramid concept",
+  "content": "Source:_______",
+  "bullet_points": [
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Template - Pyramid concept",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 11,
+  "design_elements": {
+    "text_blocks": 6,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_172.png",
+  "image_path": "images/slide_172.png"
+}

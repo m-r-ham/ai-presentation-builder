@@ -1,0 +1,35 @@
+{
+  "id": "slide-070",
+  "slide_number": 70,
+  "title": "Subtitle",
+  "content": "Template - Waterfall column chart",
+  "bullet_points": [
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget."
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Waterfall column chart",
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget."
+  ],
+  "shape_count": 11,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_070.png",
+  "image_path": "images/slide_070.png"
+}

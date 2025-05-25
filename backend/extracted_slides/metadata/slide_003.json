@@ -1,0 +1,45 @@
+{
+  "id": "slide-003",
+  "slide_number": 3,
+  "title": "Subtitle",
+  "content": "How to change the color scheme in this template",
+  "bullet_points": [
+    "Source:_______",
+    "View > Slide Master",
+    "1",
+    "2",
+    "Then Colors > Customize colors",
+    "3",
+    "4",
+    "Change each one of the color slots as explained in the video",
+    "Watch video: \nHow to change the color palette",
+    "Use RBG / HEV color values\nOr just use the color eyedrop to replace the existing colors"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Subtitle",
+    "How to change the color scheme in this template",
+    "Source:_______",
+    "View > Slide Master",
+    "1",
+    "2",
+    "Then Colors > Customize colors",
+    "3",
+    "4",
+    "Change each one of the color slots as explained in the video",
+    "Watch video: \nHow to change the color palette",
+    "Use RBG / HEV color values\nOr just use the color eyedrop to replace the existing colors"
+  ],
+  "shape_count": 23,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 5,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_003.png",
+  "image_path": "images/slide_003.png"
+}

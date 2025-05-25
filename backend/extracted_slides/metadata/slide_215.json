@@ -1,0 +1,41 @@
+{
+  "id": "slide-215",
+  "slide_number": 215,
+  "title": "Template — The 4 Ps",
+  "content": "XXX",
+  "bullet_points": [
+    "XXX",
+    "XXX",
+    "XXX",
+    "Product",
+    "Price",
+    "Place",
+    "Promotion",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — The 4 Ps",
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX",
+    "Product",
+    "Price",
+    "Place",
+    "Promotion",
+    "Source:_______"
+  ],
+  "shape_count": 18,
+  "design_elements": {
+    "text_blocks": 10,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_215.png",
+  "image_path": "images/slide_215.png"
+}

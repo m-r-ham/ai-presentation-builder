@@ -1,0 +1,47 @@
+{
+  "id": "slide-120",
+  "slide_number": 120,
+  "title": "XXX\nText",
+  "content": "XXX\nText",
+  "bullet_points": [
+    "XXX\nText",
+    "XXX\nText",
+    "XXX\nText",
+    "Subtitle",
+    "Template - Boat chart horizontal",
+    "Source:_______",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "XXX\nText",
+    "XXX\nText",
+    "XXX\nText",
+    "XXX\nText",
+    "XXX\nText",
+    "Subtitle",
+    "Template - Boat chart horizontal",
+    "Source:_______",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  ],
+  "shape_count": 19,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_120.png",
+  "image_path": "images/slide_120.png"
+}

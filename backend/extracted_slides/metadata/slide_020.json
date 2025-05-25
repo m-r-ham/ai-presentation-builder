@@ -1,0 +1,45 @@
+{
+  "id": "slide-020",
+  "slide_number": 20,
+  "title": "Subtitle",
+  "content": "Source:_______",
+  "bullet_points": [
+    "Template - Elements",
+    "1",
+    "3",
+    "2",
+    "4",
+    "CONSIDERATION",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Subtitle",
+    "Source:_______",
+    "Template - Elements",
+    "1",
+    "3",
+    "2",
+    "4",
+    "CONSIDERATION",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 45,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_020.png",
+  "image_path": "images/slide_020.png"
+}

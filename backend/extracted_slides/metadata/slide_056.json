@@ -1,0 +1,24 @@
+{
+  "id": "slide-056",
+  "slide_number": 56,
+  "title": "Template B - Statistics table",
+  "content": "Source:_______",
+  "bullet_points": [],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Template B - Statistics table",
+    "Source:_______"
+  ],
+  "shape_count": 5,
+  "design_elements": {
+    "text_blocks": 2,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_056.png",
+  "image_path": "images/slide_056.png"
+}

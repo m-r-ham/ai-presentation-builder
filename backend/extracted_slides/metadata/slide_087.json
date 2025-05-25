@@ -1,0 +1,39 @@
+{
+  "id": "slide-087",
+  "slide_number": 87,
+  "title": "Subtitle",
+  "content": "Template - Data over time line chart",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Data over time line chart",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 14,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_087.png",
+  "image_path": "images/slide_087.png"
+}

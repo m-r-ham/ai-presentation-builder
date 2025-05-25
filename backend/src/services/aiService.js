@@ -180,31 +180,29 @@ Remember: When you learn something about their presentation, capture it using ou
 
   async enhanceSlideWithTraining(slideData) {
     try {
-      // Use design AI to enhance slide based on training data
+      // Use design AI to generate Slidev markdown based on training data
       const slideContent = `${slideData.title}: ${slideData.description || ''} ${slideData.keyPoints ? slideData.keyPoints.join(', ') : ''}`;
-      const enhancedDesign = await this.slideDesignAI.generateSlideWithTraining(slideContent, slideData.type);
+      const slidevDesign = await this.slideDesignAI.generateSlidevSlideWithTraining(slideContent, slideData.type);
       
-      // Merge AI enhancements with original slide data
+      // Return slide data with Slidev markdown
       return {
         ...slideData,
-        designEnhancements: {
-          optimizedTitle: enhancedDesign.title,
-          optimizedContent: enhancedDesign.content,
-          recommendedLayout: enhancedDesign.layout,
-          visualElements: enhancedDesign.visualElements,
-          designPrinciples: enhancedDesign.designPrinciples,
-          automaticOptimizations: enhancedDesign.automaticOptimizations,
-          aiConfidence: enhancedDesign.aiConfidence
-        },
+        slidevMarkdown: slidevDesign.slidevMarkdown,
+        layout: slidevDesign.layout,
+        designRationale: slidevDesign.designRationale,
+        optimizations: slidevDesign.optimizations,
+        automaticOptimizations: slidevDesign.automaticOptimizations,
+        aiConfidence: slidevDesign.aiConfidence,
         metadata: {
           ...slideData.metadata,
+          slideFormat: 'slidev',
           designOptimized: true,
           optimizationTimestamp: new Date().toISOString()
         }
       };
     } catch (error) {
-      console.log('Could not enhance slide with training data:', error.message);
-      // Return original slide if enhancement fails
+      console.log('Could not generate Slidev slide with training data:', error.message);
+      // Return original slide if generation fails
       return slideData;
     }
   }

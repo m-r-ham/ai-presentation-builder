@@ -1,0 +1,37 @@
+{
+  "id": "slide-148",
+  "slide_number": 148,
+  "title": "Subtitle",
+  "content": "Template – Gantt chart",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template – Gantt chart",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 10,
+  "design_elements": {
+    "text_blocks": 8,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_148.png",
+  "image_path": "images/slide_148.png"
+}

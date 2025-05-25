@@ -1,0 +1,27 @@
+{
+  "id": "slide-103",
+  "slide_number": 103,
+  "title": "Subtitle",
+  "content": "Template - Wheel chart",
+  "bullet_points": [
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Wheel chart",
+    "Source:_______"
+  ],
+  "shape_count": 17,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_103.png",
+  "image_path": "images/slide_103.png"
+}

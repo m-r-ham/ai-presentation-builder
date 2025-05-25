@@ -1,0 +1,24 @@
+{
+  "id": "slide-005",
+  "slide_number": 5,
+  "title": "Umbrex is the fastest way to find the right independent management consultant.",
+  "content": "Find a consultant now",
+  "bullet_points": [],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Umbrex is the fastest way to find the right independent management consultant.",
+    "Find a consultant now"
+  ],
+  "shape_count": 7,
+  "design_elements": {
+    "text_blocks": 2,
+    "visual_elements": 2,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_005.png",
+  "image_path": "images/slide_005.png"
+}

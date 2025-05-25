@@ -145,6 +145,54 @@ function PresentationBuilder() {
     }
   }
 
+  const generateSlidevPresentation = async () => {
+    if (!outline || !outline.slides || outline.slides.length === 0) {
+      alert('No slides found. Please create slides first.')
+      return
+    }
+
+    try {
+      setIsLoading(true)
+      const response = await fetch('http://localhost:3001/api/slidev/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          sessionId,
+          presentationTitle: outline.metadata?.title || 'AI Generated Presentation'
+        })
+      })
+      
+      const data = await response.json()
+      
+      if (data.success) {
+        // Open Slidev preview in new window
+        window.open(data.previewUrl, '_blank')
+        
+        // Show success message
+        const successMessage = {
+          id: Date.now(),
+          role: 'ai',
+          content: `🎉 Slidev presentation generated successfully! It's now available at ${data.previewUrl}. You can view, edit, and export your presentation from there.`,
+          timestamp: Date.now()
+        }
+        setMessages(prev => [...prev, successMessage])
+      } else {
+        throw new Error(data.error)
+      }
+    } catch (error) {
+      console.error('Error generating Slidev presentation:', error)
+      const errorMessage = {
+        id: Date.now(),
+        role: 'ai',
+        content: 'Sorry, I encountered an error generating the Slidev presentation. Please try again.',
+        timestamp: Date.now()
+      }
+      setMessages(prev => [...prev, errorMessage])
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   const hasOutlineContent = outline !== null
 
   const bottomTabs = [
@@ -311,7 +359,12 @@ function PresentationBuilder() {
                 flexShrink: 0,
                 overflow: 'hidden'
               }}>
-                <OutlinePanel outline={outline} onUpdateOutline={handleOutlineUpdate} />
+                <OutlinePanel 
+                  outline={outline} 
+                  onUpdateOutline={handleOutlineUpdate}
+                  onGenerateSlidev={generateSlidevPresentation}
+                  isLoading={isLoading}
+                />
               </div>
             )}
 

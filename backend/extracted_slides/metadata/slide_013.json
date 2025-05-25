@@ -1,0 +1,31 @@
+{
+  "id": "slide-013",
+  "slide_number": 13,
+  "title": "How Umbrex can help",
+  "content": "For Consultants",
+  "bullet_points": [
+    "For Clients",
+    "Find a consultant now",
+    "Join our community"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "How Umbrex can help",
+    "For Consultants",
+    "For Clients",
+    "Find a consultant now",
+    "Join our community"
+  ],
+  "shape_count": 9,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 2,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_013.png",
+  "image_path": "images/slide_013.png"
+}

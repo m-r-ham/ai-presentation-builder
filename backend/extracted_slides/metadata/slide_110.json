@@ -1,0 +1,35 @@
+{
+  "id": "slide-110",
+  "slide_number": 110,
+  "title": "Template - Radar chart",
+  "content": "Source:_______",
+  "bullet_points": [
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Template - Radar chart",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 11,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_110.png",
+  "image_path": "images/slide_110.png"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "slide-101",
+  "slide_number": 101,
+  "title": "Subtitle",
+  "content": "Lorem ipsum dolor sit amet, consectetur",
+  "bullet_points": [
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Lorem ipsum dolor sit amet, consectetur\n\n.",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Source:_______",
+    "Template - Harvey Ball Slide"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Lorem ipsum dolor sit amet, consectetur\n\n.",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Source:_______",
+    "Template - Harvey Ball Slide"
+  ],
+  "shape_count": 28,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_101.png",
+  "image_path": "images/slide_101.png"
+}

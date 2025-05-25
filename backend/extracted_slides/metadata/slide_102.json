@@ -1,0 +1,39 @@
+{
+  "id": "slide-102",
+  "slide_number": 102,
+  "title": "Subtitle",
+  "content": "Lorem ipsum dolor sit amet, consectetur",
+  "bullet_points": [
+    "Your Title",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Your Title",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Your Title",
+    "Source:_______",
+    "Template - Harvey Ball Map Slide"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Your Title",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Your Title",
+    "Lorem ipsum dolor sit amet, consectetur",
+    "Your Title",
+    "Source:_______",
+    "Template - Harvey Ball Map Slide"
+  ],
+  "shape_count": 35,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_102.png",
+  "image_path": "images/slide_102.png"
+}

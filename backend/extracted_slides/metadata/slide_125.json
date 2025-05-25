@@ -1,0 +1,29 @@
+{
+  "id": "slide-125",
+  "slide_number": 125,
+  "title": "Subtitle",
+  "content": "Template - Circular process",
+  "bullet_points": [
+    "xxx",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Circular process",
+    "xxx",
+    "Source:_______"
+  ],
+  "shape_count": 18,
+  "design_elements": {
+    "text_blocks": 4,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_125.png",
+  "image_path": "images/slide_125.png"
+}

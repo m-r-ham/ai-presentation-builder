@@ -1,0 +1,27 @@
+{
+  "id": "slide-028",
+  "slide_number": 28,
+  "title": "Subtitle",
+  "content": "Template — Executive Summary 6",
+  "bullet_points": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Executive Summary 6",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText"
+  ],
+  "shape_count": 8,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 4,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_028.png",
+  "image_path": "images/slide_028.png"
+}

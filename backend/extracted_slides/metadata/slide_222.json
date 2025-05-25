@@ -1,0 +1,24 @@
+{
+  "id": "slide-222",
+  "slide_number": 222,
+  "title": "Template — PESTEL Analysis",
+  "content": "Source:_______",
+  "bullet_points": [],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — PESTEL Analysis",
+    "Source:_______"
+  ],
+  "shape_count": 4,
+  "design_elements": {
+    "text_blocks": 2,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_222.png",
+  "image_path": "images/slide_222.png"
+}

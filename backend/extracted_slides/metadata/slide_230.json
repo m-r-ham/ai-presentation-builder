@@ -1,0 +1,35 @@
+{
+  "id": "slide-230",
+  "slide_number": 230,
+  "title": "Subtitle",
+  "content": "Template - Pictogram chart",
+  "bullet_points": [
+    "Source:_______",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Pictogram chart",
+    "Source:_______",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 11,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_230.png",
+  "image_path": "images/slide_230.png"
+}

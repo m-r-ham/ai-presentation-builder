@@ -1,0 +1,35 @@
+{
+  "id": "slide-071",
+  "slide_number": 71,
+  "title": "Subtitle",
+  "content": "Template - Vertical dot chart",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Vertical dot chart",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 21,
+  "design_elements": {
+    "text_blocks": 7,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_071.png",
+  "image_path": "images/slide_071.png"
+}

@@ -16,13 +16,13 @@ class SlideDesignAI {
     this.effectivenessRules = trainingData.effectivenessRules || [];
   }
 
-  // Generate slides using training data insights
-  async generateSlideWithTraining(content, slideType = 'general') {
+  // Generate Slidev markdown using training data insights
+  async generateSlidevSlideWithTraining(content, slideType = 'general') {
     try {
       // Build context from training data
       const trainingContext = this.buildTrainingContext(slideType);
       
-      const prompt = `You are an expert slide designer with deep knowledge of visual design principles learned from real user feedback.
+      const prompt = `You are an expert slide designer that creates Slidev markdown. You have deep knowledge of visual design principles learned from real user feedback.
 
 AUTOMATICALLY APPLY THESE PROVEN DESIGN PATTERNS:
 ${trainingContext}
@@ -30,27 +30,28 @@ ${trainingContext}
 For the content: "${content}"
 
 DESIGN REQUIREMENTS (automatically apply without user asking):
-1. INFORMATION HIERARCHY: Structure content with clear visual priority and logical flow
-2. VISUAL BALANCE: Distribute elements harmoniously, balance text/visuals appropriately  
-3. READABILITY: Optimize text length, contrast, and typography for comprehension
-4. CONTENT DENSITY: Follow cognitive load principles, use 7±2 rule for information chunks
-5. DESIGN CONSISTENCY: Maintain uniform alignment, spacing, and style patterns
-6. VISUAL APPEAL: Create engaging aesthetics that enhance rather than distract
+1. INFORMATION HIERARCHY: Choose appropriate Slidev layout for clear visual priority
+2. VISUAL BALANCE: Select layouts that balance text/visuals optimally
+3. READABILITY: Optimize content length and structure for comprehension
+4. CONTENT DENSITY: Use 7±2 rule for bullet points and information chunks
+5. DESIGN CONSISTENCY: Use consistent Slidev layout patterns
+6. VISUAL APPEAL: Choose engaging layouts that enhance understanding
+
+AVAILABLE SLIDEV LAYOUTS:
+- default: Standard layout with title and content
+- two-cols: Left text, right content (split-left-text-right-visual pattern)
+- image-right: Right image, left text (split-right-text-left-visual pattern)
+- center: Center-focused minimal layout
+- quote: For impactful statements
+- cover: Title slides
+- end: Conclusion slides
 
 Return a JSON object with:
 {
-  "title": "Clear, hierarchically prominent title (under 60 chars based on training)",
-  "content": "Optimized content following readability and density guidelines",
-  "layout": "layout type that maximizes dimensional effectiveness",
-  "visualElements": ["specific", "elements", "that", "improve", "design", "quality"],
-  "designPrinciples": {
-    "hierarchy": "how information hierarchy is optimized",
-    "balance": "how visual balance is achieved", 
-    "readability": "how readability is maximized",
-    "density": "how content density is optimized",
-    "consistency": "how design consistency is maintained",
-    "appeal": "how visual appeal enhances comprehension"
-  },
+  "slidevMarkdown": "Complete Slidev slide markdown including frontmatter and content",
+  "layout": "chosen slidev layout",
+  "designRationale": "why this layout was chosen based on training data",
+  "optimizations": ["specific", "design", "optimizations", "applied"],
   "automaticOptimizations": ["list", "of", "training-based", "improvements", "applied"],
   "aiConfidence": 0.85
 }

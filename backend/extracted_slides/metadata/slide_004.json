@@ -1,0 +1,23 @@
+{
+  "id": "slide-004",
+  "slide_number": 4,
+  "title": "About Umbrex",
+  "content": "",
+  "bullet_points": [],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "1_OK_content",
+  "text_content": [
+    "About Umbrex"
+  ],
+  "shape_count": 2,
+  "design_elements": {
+    "text_blocks": 1,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_004.png",
+  "image_path": "images/slide_004.png"
+}

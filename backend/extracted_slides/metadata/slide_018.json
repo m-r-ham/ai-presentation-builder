@@ -1,0 +1,37 @@
+{
+  "id": "slide-018",
+  "slide_number": 18,
+  "title": "Subtitle",
+  "content": "XXX",
+  "bullet_points": [
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX",
+    "Source:_______",
+    "Template – Table of Contents"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX",
+    "XXX",
+    "Source:_______",
+    "Template – Table of Contents"
+  ],
+  "shape_count": 24,
+  "design_elements": {
+    "text_blocks": 8,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_018.png",
+  "image_path": "images/slide_018.png"
+}

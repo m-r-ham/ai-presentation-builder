@@ -1,0 +1,41 @@
+{
+  "id": "slide-146",
+  "slide_number": 146,
+  "title": "Template — Hypothesis Tree",
+  "content": "Text",
+  "bullet_points": [
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — Hypothesis Tree",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 19,
+  "design_elements": {
+    "text_blocks": 10,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_146.png",
+  "image_path": "images/slide_146.png"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "slide-010",
+  "slide_number": 10,
+  "title": "Join our community",
+  "content": "We create opportunities for our members to meet,\nbuild relationships, share lessons learned, and collaborate",
+  "bullet_points": [
+    "Umbrex connects you with a community of other top-tier independent consultants",
+    "Free access to resources",
+    "Mastermind Groups",
+    "In-person events",
+    "Private online forum",
+    "Online events"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Join our community",
+    "We create opportunities for our members to meet,\nbuild relationships, share lessons learned, and collaborate",
+    "Umbrex connects you with a community of other top-tier independent consultants",
+    "Free access to resources",
+    "Mastermind Groups",
+    "In-person events",
+    "Private online forum",
+    "Online events"
+  ],
+  "shape_count": 21,
+  "design_elements": {
+    "text_blocks": 8,
+    "visual_elements": 7,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_010.png",
+  "image_path": "images/slide_010.png"
+}

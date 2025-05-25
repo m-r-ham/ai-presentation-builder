@@ -1,0 +1,51 @@
+{
+  "id": "slide-086",
+  "slide_number": 86,
+  "title": "Subtitle",
+  "content": "Template - Multiple line chart",
+  "bullet_points": [
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "$$$",
+    "xxx",
+    "$$$",
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Multiple line chart",
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "$$$",
+    "xxx",
+    "$$$",
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "shape_count": 25,
+  "design_elements": {
+    "text_blocks": 15,
+    "visual_elements": 3,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_086.png",
+  "image_path": "images/slide_086.png"
+}

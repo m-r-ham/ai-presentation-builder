@@ -1,0 +1,45 @@
+{
+  "id": "slide-097",
+  "slide_number": 97,
+  "title": "Subtitle",
+  "content": "Template - Multiple Doughnuts",
+  "bullet_points": [
+    "2018",
+    "2019",
+    "2020",
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Multiple Doughnuts",
+    "2018",
+    "2019",
+    "2020",
+    "Title 01",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 02",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Title 03",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "shape_count": 29,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 3,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_097.png",
+  "image_path": "images/slide_097.png"
+}

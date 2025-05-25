@@ -1,0 +1,29 @@
+{
+  "id": "slide-100",
+  "slide_number": 100,
+  "title": "Subtitle",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  "bullet_points": [
+    "Source:_______",
+    "Template - Harvey Ball Slide"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______",
+    "Template - Harvey Ball Slide"
+  ],
+  "shape_count": 46,
+  "design_elements": {
+    "text_blocks": 4,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_100.png",
+  "image_path": "images/slide_100.png"
+}

@@ -10,7 +10,7 @@ fastify.register(require('@fastify/cors'), {
 
 // Register static file serving for slide images
 fastify.register(require('@fastify/static'), {
-  root: path.join(__dirname, '../data/images'),
+  root: path.join(__dirname, '../extracted_slides/images'),
   prefix: '/api/images/',
 });
 
@@ -18,6 +18,7 @@ fastify.register(require('@fastify/static'), {
 fastify.register(require('./routes/chat'), { prefix: '/api' });
 fastify.register(require('./routes/outline'), { prefix: '/api/outline' });
 fastify.register(require('./routes/slideTraining'), { prefix: '/api' });
+fastify.register(require('./routes/slidev'), { prefix: '/api' });
 
 // Health check
 fastify.get('/api/health', async (request, reply) => {

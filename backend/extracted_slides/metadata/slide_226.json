@@ -1,0 +1,47 @@
+{
+  "id": "slide-226",
+  "slide_number": 226,
+  "title": "Template — Galbraith Star Model",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "bullet_points": [
+    "Strategy",
+    "Structure",
+    "People",
+    "Process",
+    "Rewards",
+    "Star \u000bmodel",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — Galbraith Star Model",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Strategy",
+    "Structure",
+    "People",
+    "Process",
+    "Rewards",
+    "Star \u000bmodel",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Source:_______"
+  ],
+  "shape_count": 31,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_226.png",
+  "image_path": "images/slide_226.png"
+}

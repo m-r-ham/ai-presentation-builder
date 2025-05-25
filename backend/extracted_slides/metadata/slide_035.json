@@ -1,0 +1,39 @@
+{
+  "id": "slide-035",
+  "slide_number": 35,
+  "title": "Subtitle",
+  "content": "Template — Statements",
+  "bullet_points": [
+    "Our mission",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Our vision",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Our values",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Statements",
+    "Our mission",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Our vision",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Our values",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
+    "Source:_______"
+  ],
+  "shape_count": 16,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_035.png",
+  "image_path": "images/slide_035.png"
+}

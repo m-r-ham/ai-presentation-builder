@@ -1,0 +1,43 @@
+{
+  "id": "slide-002",
+  "slide_number": 2,
+  "title": "How to replace the placeholder logo in this template",
+  "content": "Watch video: \nHow to replace the placeholder logo",
+  "bullet_points": [
+    "View > Slide Master",
+    "1",
+    "Select the top Master slide",
+    "3",
+    "Delete placeholder logo from Master slide",
+    "Select Insert > Pictures\nBrowse and select your logo",
+    "4",
+    "5",
+    "Move your own logo into position on the Master slide. \nOR: Just delete the placeholder logo from the Master and leave that space blank."
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "How to replace the placeholder logo in this template",
+    "Watch video: \nHow to replace the placeholder logo",
+    "View > Slide Master",
+    "1",
+    "Select the top Master slide",
+    "3",
+    "Delete placeholder logo from Master slide",
+    "Select Insert > Pictures\nBrowse and select your logo",
+    "4",
+    "5",
+    "Move your own logo into position on the Master slide. \nOR: Just delete the placeholder logo from the Master and leave that space blank."
+  ],
+  "shape_count": 21,
+  "design_elements": {
+    "text_blocks": 11,
+    "visual_elements": 4,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_002.png",
+  "image_path": "images/slide_002.png"
+}

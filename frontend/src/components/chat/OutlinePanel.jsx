@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function OutlinePanel({ outline, onUpdateOutline }) {
+function OutlinePanel({ outline, onUpdateOutline, onGenerateSlidev, isLoading }) {
   const [editingField, setEditingField] = useState(null)
   const [tempValue, setTempValue] = useState('')
   const [showVersions, setShowVersions] = useState(false)
@@ -489,6 +489,74 @@ function OutlinePanel({ outline, onUpdateOutline }) {
             </div>
           )}
         </div>
+
+        {/* Generate Slidev Presentation Button */}
+        {slides && slides.length > 0 && (
+          <div style={{ 
+            marginTop: '1rem',
+            padding: '1rem',
+            borderTop: '1px solid #e5e7eb'
+          }}>
+            <button
+              onClick={onGenerateSlidev}
+              disabled={isLoading}
+              style={{
+                width: '100%',
+                padding: '0.75rem 1rem',
+                backgroundColor: isLoading ? '#9ca3af' : '#3b82f6',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                fontSize: '0.875rem',
+                fontWeight: '600',
+                cursor: isLoading ? 'not-allowed' : 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                transition: 'background-color 0.2s'
+              }}
+              onMouseOver={(e) => {
+                if (!isLoading) {
+                  e.target.style.backgroundColor = '#2563eb'
+                }
+              }}
+              onMouseOut={(e) => {
+                if (!isLoading) {
+                  e.target.style.backgroundColor = '#3b82f6'
+                }
+              }}
+            >
+              {isLoading ? (
+                <>
+                  <div style={{
+                    width: '1rem',
+                    height: '1rem',
+                    border: '2px solid transparent',
+                    borderTop: '2px solid white',
+                    borderRadius: '50%',
+                    animation: 'spin 1s linear infinite'
+                  }}></div>
+                  Generating...
+                </>
+              ) : (
+                <>
+                  <span style={{ fontSize: '1rem' }}>🎯</span>
+                  Generate Slidev Presentation
+                </>
+              )}
+            </button>
+            
+            <div style={{
+              fontSize: '0.625rem',
+              color: '#6b7280',
+              textAlign: 'center',
+              marginTop: '0.5rem'
+            }}>
+              Creates a professional Slidev presentation with your design training insights
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

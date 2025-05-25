@@ -1,0 +1,41 @@
+{
+  "id": "slide-025",
+  "slide_number": 25,
+  "title": "Subtitle",
+  "content": "Template — Executive Summary 3",
+  "bullet_points": [
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Executive Summary 3",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  ],
+  "shape_count": 15,
+  "design_elements": {
+    "text_blocks": 10,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_025.png",
+  "image_path": "images/slide_025.png"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "slide-185",
+  "slide_number": 185,
+  "title": "Subtitle",
+  "content": "Template - Kagi chart",
+  "bullet_points": [
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Kagi chart",
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 11,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_185.png",
+  "image_path": "images/slide_185.png"
+}

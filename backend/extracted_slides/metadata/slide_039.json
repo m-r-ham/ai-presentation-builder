@@ -1,0 +1,27 @@
+{
+  "id": "slide-039",
+  "slide_number": 39,
+  "title": "Subtitle",
+  "content": "Template — Table",
+  "bullet_points": [
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Table",
+    "Source:_______"
+  ],
+  "shape_count": 5,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_039.png",
+  "image_path": "images/slide_039.png"
+}

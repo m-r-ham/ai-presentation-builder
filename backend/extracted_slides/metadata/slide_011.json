@@ -1,0 +1,27 @@
+{
+  "id": "slide-011",
+  "slide_number": 11,
+  "title": "Independent consultants available where you need them – in every global region",
+  "content": "You're global and local - Umbrex is, too",
+  "bullet_points": [
+    "Find a consultant now"
+  ],
+  "has_image": true,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Independent consultants available where you need them – in every global region",
+    "You're global and local - Umbrex is, too",
+    "Find a consultant now"
+  ],
+  "shape_count": 9,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 3,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_011.png",
+  "image_path": "images/slide_011.png"
+}

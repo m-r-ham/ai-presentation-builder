@@ -1,0 +1,31 @@
+{
+  "id": "slide-066",
+  "slide_number": 66,
+  "title": "Subtitle",
+  "content": "Template - Simple column chart",
+  "bullet_points": [
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Simple column chart",
+    "xxx",
+    "$$$",
+    "Source:_______"
+  ],
+  "shape_count": 8,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_066.png",
+  "image_path": "images/slide_066.png"
+}

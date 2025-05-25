@@ -1,0 +1,45 @@
+{
+  "id": "slide-189",
+  "slide_number": 189,
+  "title": "Subtitle",
+  "content": "Template - Comparison chart #2",
+  "bullet_points": [
+    "Source:_______",
+    "X",
+    "X",
+    "X",
+    "X",
+    "X",
+    "X",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Comparison chart #2",
+    "Source:_______",
+    "X",
+    "X",
+    "X",
+    "X",
+    "X",
+    "X",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 41,
+  "design_elements": {
+    "text_blocks": 12,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_189.png",
+  "image_path": "images/slide_189.png"
+}

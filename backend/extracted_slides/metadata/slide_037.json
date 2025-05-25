@@ -1,0 +1,27 @@
+{
+  "id": "slide-037",
+  "slide_number": 37,
+  "title": "Subtitle",
+  "content": "Template — Table of words",
+  "bullet_points": [
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Table of words",
+    "Source:_______"
+  ],
+  "shape_count": 10,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_037.png",
+  "image_path": "images/slide_037.png"
+}

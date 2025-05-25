@@ -1,0 +1,47 @@
+{
+  "id": "slide-126",
+  "slide_number": 126,
+  "title": "Subtitle",
+  "content": "Template - Journey Slide",
+  "bullet_points": [
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Journey Slide",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "YOUR\nTITLE",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______"
+  ],
+  "shape_count": 24,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_126.png",
+  "image_path": "images/slide_126.png"
+}

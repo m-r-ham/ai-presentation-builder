@@ -1,0 +1,31 @@
+{
+  "id": "slide-082",
+  "slide_number": 82,
+  "title": "Subtitle",
+  "content": "Template - Heat map (with numbers)",
+  "bullet_points": [
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Heat map (with numbers)",
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 9,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_082.png",
+  "image_path": "images/slide_082.png"
+}

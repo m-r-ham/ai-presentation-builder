@@ -1,0 +1,27 @@
+{
+  "id": "slide-182",
+  "slide_number": 182,
+  "title": "Subtitle",
+  "content": "Template – Open book slide",
+  "bullet_points": [
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template – Open book slide",
+    "Source:_______"
+  ],
+  "shape_count": 22,
+  "design_elements": {
+    "text_blocks": 3,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_182.png",
+  "image_path": "images/slide_182.png"
+}

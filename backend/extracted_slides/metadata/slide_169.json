@@ -1,0 +1,51 @@
+{
+  "id": "slide-169",
+  "slide_number": 169,
+  "title": "Template – Hexagon concept",
+  "content": "Source:_______",
+  "bullet_points": [
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "2_OK_content",
+  "text_content": [
+    "Template – Hexagon concept",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 21,
+  "design_elements": {
+    "text_blocks": 15,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_169.png",
+  "image_path": "images/slide_169.png"
+}

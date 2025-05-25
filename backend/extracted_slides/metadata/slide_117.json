@@ -1,0 +1,39 @@
+{
+  "id": "slide-117",
+  "slide_number": 117,
+  "title": "Subtitle",
+  "content": "Template - Repeating process",
+  "bullet_points": [
+    "Source:_______",
+    "1",
+    "Text\nText\nText",
+    "3",
+    "Text\nText\nText",
+    "2",
+    "Text\nText\nText"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Repeating process",
+    "Source:_______",
+    "1",
+    "Text\nText\nText",
+    "3",
+    "Text\nText\nText",
+    "2",
+    "Text\nText\nText"
+  ],
+  "shape_count": 23,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_117.png",
+  "image_path": "images/slide_117.png"
+}

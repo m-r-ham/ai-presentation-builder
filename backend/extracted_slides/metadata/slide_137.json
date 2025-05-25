@@ -1,0 +1,39 @@
+{
+  "id": "slide-137",
+  "slide_number": 137,
+  "title": "Subtitle",
+  "content": "XXX\nXXX\nXXX",
+  "bullet_points": [
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "Source:_______",
+    "Template - Road flow chart"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "XXX\nXXX\nXXX",
+    "Source:_______",
+    "Template - Road flow chart"
+  ],
+  "shape_count": 24,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_137.png",
+  "image_path": "images/slide_137.png"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "slide-074",
+  "slide_number": 74,
+  "title": "Subtitle",
+  "content": "Template – Pyramid column chart",
+  "bullet_points": [
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "$0.9M",
+    "$2.1M",
+    "$3.3M",
+    "$2.5M",
+    "$2.9M",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget..",
+    "Source:_______"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template – Pyramid column chart",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "YOUR TITLE",
+    "$0.9M",
+    "$2.1M",
+    "$3.3M",
+    "$2.5M",
+    "$2.9M",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget..",
+    "Source:_______"
+  ],
+  "shape_count": 20,
+  "design_elements": {
+    "text_blocks": 14,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_074.png",
+  "image_path": "images/slide_074.png"
+}

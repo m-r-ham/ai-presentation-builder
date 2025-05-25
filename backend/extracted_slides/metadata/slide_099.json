@@ -1,0 +1,51 @@
+{
+  "id": "slide-099",
+  "slide_number": 99,
+  "title": "Subtitle",
+  "content": "50%",
+  "bullet_points": [
+    "75%",
+    "25%",
+    "90%",
+    "Your Title",
+    "Your Title",
+    "Your Title",
+    "Your Title",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______",
+    "Template - Harvey Ball Slide"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "50%",
+    "75%",
+    "25%",
+    "90%",
+    "Your Title",
+    "Your Title",
+    "Your Title",
+    "Your Title",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Source:_______",
+    "Template - Harvey Ball Slide"
+  ],
+  "shape_count": 36,
+  "design_elements": {
+    "text_blocks": 15,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_099.png",
+  "image_path": "images/slide_099.png"
+}

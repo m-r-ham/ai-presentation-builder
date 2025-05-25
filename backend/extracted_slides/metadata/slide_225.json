@@ -1,0 +1,24 @@
+{
+  "id": "slide-225",
+  "slide_number": 225,
+  "title": "Template — Seven Degrees of Freedom for Growth",
+  "content": "Source:_______",
+  "bullet_points": [],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — Seven Degrees of Freedom for Growth",
+    "Source:_______"
+  ],
+  "shape_count": 3,
+  "design_elements": {
+    "text_blocks": 2,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "simple"
+  },
+  "image_filename": "slide_225.png",
+  "image_path": "images/slide_225.png"
+}

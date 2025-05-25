@@ -1,0 +1,31 @@
+{
+  "id": "slide-078",
+  "slide_number": 78,
+  "title": "Subtitle",
+  "content": "Template - Density chart",
+  "bullet_points": [
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Density chart",
+    "Source:_______",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 8,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 2,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_078.png",
+  "image_path": "images/slide_078.png"
+}

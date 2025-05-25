@@ -1,0 +1,31 @@
+{
+  "id": "slide-123",
+  "slide_number": 123,
+  "title": "Subtitle",
+  "content": "Template - From-to chart",
+  "bullet_points": [
+    "Source:_______",
+    "From",
+    "To"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": true,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - From-to chart",
+    "Source:_______",
+    "From",
+    "To"
+  ],
+  "shape_count": 10,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_123.png",
+  "image_path": "images/slide_123.png"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "slide-050",
+  "slide_number": 50,
+  "title": "Template — Problem-Solving Process Checklist",
+  "content": "1. Define problem",
+  "bullet_points": [
+    "2. Structure problem",
+    "3. Prioritize issues",
+    "4. Plan analyses",
+    "5. Conduct analyses",
+    "6. Synthesize findings",
+    "7. Craft recommendations",
+    "8. Communicate",
+    "Status"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Template — Problem-Solving Process Checklist",
+    "1. Define problem",
+    "2. Structure problem",
+    "3. Prioritize issues",
+    "4. Plan analyses",
+    "5. Conduct analyses",
+    "6. Synthesize findings",
+    "7. Craft recommendations",
+    "8. Communicate",
+    "Status"
+  ],
+  "shape_count": 20,
+  "design_elements": {
+    "text_blocks": 10,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_050.png",
+  "image_path": "images/slide_050.png"
+}

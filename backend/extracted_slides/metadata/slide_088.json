@@ -1,0 +1,47 @@
+{
+  "id": "slide-088",
+  "slide_number": 88,
+  "title": "Subtitle",
+  "content": "Template - Growth curve line chart",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "5%",
+    "10%",
+    "27%",
+    "36%",
+    "22%",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Growth curve line chart",
+    "Source:_______",
+    "Text",
+    "5%",
+    "10%",
+    "27%",
+    "36%",
+    "22%",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 15,
+  "design_elements": {
+    "text_blocks": 13,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_088.png",
+  "image_path": "images/slide_088.png"
+}

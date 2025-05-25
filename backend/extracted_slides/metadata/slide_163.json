@@ -1,0 +1,39 @@
+{
+  "id": "slide-163",
+  "slide_number": 163,
+  "title": "Subtitle",
+  "content": "Template - Network analysis",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Network analysis",
+    "Source:_______",
+    "Text",
+    "Text",
+    "xxx",
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "shape_count": 137,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_163.png",
+  "image_path": "images/slide_163.png"
+}

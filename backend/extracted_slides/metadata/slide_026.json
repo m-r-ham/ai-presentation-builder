@@ -1,0 +1,53 @@
+{
+  "id": "slide-026",
+  "slide_number": 26,
+  "title": "Subtitle",
+  "content": "Template — Executive Summary 4",
+  "bullet_points": [
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  ],
+  "has_image": false,
+  "has_chart": false,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template — Executive Summary 4",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "xxx",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  ],
+  "shape_count": 24,
+  "design_elements": {
+    "text_blocks": 16,
+    "visual_elements": 0,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_026.png",
+  "image_path": "images/slide_026.png"
+}

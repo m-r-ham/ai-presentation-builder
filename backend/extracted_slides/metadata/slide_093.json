@@ -1,0 +1,31 @@
+{
+  "id": "slide-093",
+  "slide_number": 93,
+  "title": "Subtitle",
+  "content": "Template - Radial chart",
+  "bullet_points": [
+    "Source:_______",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Radial chart",
+    "Source:_______",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 7,
+  "design_elements": {
+    "text_blocks": 5,
+    "visual_elements": 1,
+    "color_usage": "unknown",
+    "layout_complexity": "moderate"
+  },
+  "image_filename": "slide_093.png",
+  "image_path": "images/slide_093.png"
+}

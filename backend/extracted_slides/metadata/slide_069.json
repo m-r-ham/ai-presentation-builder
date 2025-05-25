@@ -1,0 +1,39 @@
+{
+  "id": "slide-069",
+  "slide_number": 69,
+  "title": "Subtitle",
+  "content": "Template - Clustered column chart",
+  "bullet_points": [
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "has_image": false,
+  "has_chart": true,
+  "has_table": false,
+  "layout_name": "OK_content",
+  "text_content": [
+    "Subtitle",
+    "Template - Clustered column chart",
+    "xxx",
+    "$$$",
+    "Source:_______",
+    "Text",
+    "Text",
+    "Text",
+    "Text"
+  ],
+  "shape_count": 15,
+  "design_elements": {
+    "text_blocks": 9,
+    "visual_elements": 4,
+    "color_usage": "unknown",
+    "layout_complexity": "complex"
+  },
+  "image_filename": "slide_069.png",
+  "image_path": "images/slide_069.png"
+}
