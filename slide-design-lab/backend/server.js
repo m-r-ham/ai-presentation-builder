@@ -17,11 +17,15 @@ app.use(express.json());
 const slideGenerationRoutes = require('./routes/slideGeneration');
 const trainingDataRoutes = require('./routes/trainingData');
 const analyticsRoutes = require('./routes/analytics');
+const slidevRoutes = require('./routes/slidev');
+const templatesRoutes = require('./routes/templates');
 
 // Routes
 app.use('/api/generate', slideGenerationRoutes);
 app.use('/api/training', trainingDataRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/slidev', slidevRoutes);
+app.use('/api/templates', templatesRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

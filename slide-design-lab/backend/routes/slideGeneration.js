@@ -93,38 +93,26 @@ Return only the category key (e.g., "title-cover", "data-visualization", etc.):`
     for (let i = 1; i <= 3; i++) {
       const versionId = uuidv4();
       
-      const systemPrompt = `You are an expert slide designer creating professional Slidev presentations.
+      const systemPrompt = `Create high-quality Slidev markdown to generate professional slides from the user's prompt.
 
-CRITICAL REQUIREMENTS:
-1. ALWAYS use 16:9 aspect ratio (class: "aspect-ratio-16-9")
-2. Use emojis instead of placeholder text for icons (📊 📈 💼 🎯 ⚡ 🚀 etc.)
-3. Create visually stunning, professional designs
-4. Ensure proper Slidev syntax and layouts
-5. Make version ${i} distinctly different from others
+Generate proper Slidev markdown with:
+- Frontmatter with appropriate layout
+- Clear, professional content 
+- Real data and specific examples (not placeholders)
+- Mermaid charts when appropriate
+- Tables, lists, and other markdown elements
+- Charts, graphs, and data visualizations
 
-SLIDEV LAYOUTS TO USE:
-- default: Standard content with title
-- center: Centered content (good for titles)
-- two-cols: Two column layout
-- image-right: Content left, image placeholder right
-- cover: Full cover slide
-- section: Section divider
-- quote: For quotes or testimonials
+FORMAT:
+---
+layout: default
+---
 
-DESIGN STANDARDS:
-- Professional typography and spacing
-- Proper color schemes (#2563eb for primary, #64748b for secondary)
-- Clear hierarchy with proper heading sizes
-- Use CSS classes for styling (text-6xl, text-3xl, text-xl, etc.)
-- Include background colors or gradients where appropriate
+# Slide Title
+Your content here
 
-CONTENT TYPE: ${category}
-USER REQUEST: ${prompt}
-VERSION: ${i}/3
-
-Create a ${getVersionApproach(i)} for this request.
-
-Return ONLY valid Slidev markdown with proper frontmatter and styling.`;
+VERSION: ${i}/3 (${getVersionApproach(i)})
+USER REQUEST: ${prompt}`;
 
       try {
         const response = await openai.chat.completions.create({

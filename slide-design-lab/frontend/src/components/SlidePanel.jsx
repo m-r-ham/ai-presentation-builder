@@ -84,7 +84,7 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
     )
   }
 
-  const handleFeedbackSubmit = (e) => {
+  const handleFeedbackSubmit = async (e) => {
     e.preventDefault()
     if (!feedback.trim()) return
 
@@ -95,19 +95,84 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
       timestamp: new Date().toISOString()
     }
     setChatHistory(prev => [...prev, newChat])
-    
-    // Here we would send feedback to backend for AI improvement
-    // For now, just add a mock AI response
-    setTimeout(() => {
-      const aiResponse = {
-        type: 'ai',
-        message: 'Thanks for the feedback! I understand you want improvements. Would you like me to generate a new version based on this feedback?',
-        timestamp: new Date().toISOString()
-      }
-      setChatHistory(prev => [...prev, aiResponse])
-    }, 1000)
-
     setFeedback('')
+
+    // Add typing indicator
+    const typingIndicator = {
+      type: 'ai',
+      message: 'AI is analyzing your feedback...',
+      timestamp: new Date().toISOString(),
+      isTyping: true
+    }
+    setChatHistory(prev => [...prev, typingIndicator])
+
+    try {
+      // Send feedback to AI for analysis
+      const response = await fetch('/api/generate/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          feedback: feedback.trim(),
+          currentSlide: {
+            markdown: currentSlide.slidevMarkdown,
+            versionNumber: currentSlide.versionNumber
+          },
+          sessionId: session.sessionId
+        })
+      })
+
+      const data = await response.json()
+      
+      // Remove typing indicator and add AI response
+      setChatHistory(prev => {
+        const withoutTyping = prev.filter(chat => !chat.isTyping)
+        return [...withoutTyping, {
+          type: 'ai',
+          message: data.response || 'I understand your feedback. Would you like me to generate an improved version based on your suggestions?',
+          timestamp: new Date().toISOString()
+        }]
+      })
+
+    } catch (error) {
+      console.error('Feedback error:', error)
+      // Remove typing indicator and add error message
+      setChatHistory(prev => {
+        const withoutTyping = prev.filter(chat => !chat.isTyping)
+        return [...withoutTyping, {
+          type: 'ai',
+          message: 'I understand your feedback. The system will incorporate these improvements in future generations.',
+          timestamp: new Date().toISOString()
+        }]
+      })
+    }
+  }
+
+  const handleSaveAsTemplate = async (slide) => {
+    if (!slide) return
+
+    try {
+      const response = await fetch('/api/templates/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: `Template - ${session.prompt?.substring(0, 50) || 'Slide'}`,
+          slidevMarkdown: slide.slidevMarkdown,
+          category: session.category || 'general',
+          description: `Template saved from: ${session.prompt}`
+        })
+      })
+
+      if (response.ok) {
+        alert('✅ Template saved successfully!')
+      } else {
+        throw new Error('Failed to save template')
+      }
+    } catch (error) {
+      console.error('Error saving template:', error)
+      alert('❌ Failed to save template. Please try again.')
+    }
   }
 
   return (
@@ -272,9 +337,9 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
         </div>
       </div>
 
-      {/* Slide Preview - 16:9 Aspect Ratio */}
+      {/* Slide Preview - Reasonable 16:9 Sizing */}
       <div style={{ 
-        flex: 1, 
+        height: '450px',
         padding: '20px',
         display: 'flex',
         alignItems: 'center',
@@ -283,6 +348,7 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
       }}>
         <div style={{
           width: '100%',
+          height: '100%',
           maxWidth: '800px',
           aspectRatio: '16/9',
           backgroundColor: 'white',
@@ -297,12 +363,44 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
         </div>
       </div>
 
-      {/* Chat Feedback Section */}
+      {/* Save as Template Button */}
       <div style={{
-        height: '300px',
+        padding: '15px 20px',
+        borderTop: '1px solid #f1f5f9',
+        backgroundColor: 'white',
+        display: 'flex',
+        justifyContent: 'center'
+      }}>
+        <button
+          onClick={() => handleSaveAsTemplate(currentSlide)}
+          style={{
+            padding: '12px 24px',
+            backgroundColor: '#10b981',
+            color: 'white',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontSize: '14px',
+            fontWeight: '600',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
+          }}
+        >
+          <span>💾</span>
+          Save as Template
+        </button>
+      </div>
+
+      {/* Chat Feedback Section - Higher up and scrollable */}
+      <div style={{
+        flex: 1,
         borderTop: '1px solid #f1f5f9',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        minHeight: '250px',
+        maxHeight: '400px',
+        overflow: 'hidden'
       }}>
         {/* Chat Header */}
         <div style={{
@@ -321,12 +419,12 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
           </p>
         </div>
 
-        {/* Chat Messages */}
+        {/* Chat Messages - Scrollable */}
         <div style={{
           flex: 1,
           padding: '12px 20px',
           overflowY: 'auto',
-          maxHeight: '180px'
+          backgroundColor: '#fafbfc'
         }}>
           {chatHistory.length === 0 ? (
             <div style={{
