@@ -23,13 +23,13 @@ function App() {
     }
   }
 
-  const handleSlideGeneration = async (prompt, category, apiKey) => {
+  const handleSlideGeneration = async (prompt, apiKey) => {
     setIsGenerating(true)
     try {
       const response = await fetch('/api/generate/slide-versions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, category, apiKey })
+        body: JSON.stringify({ prompt, apiKey })
       })
       
       const data = await response.json()
@@ -71,7 +71,7 @@ function App() {
         if (data.decision === 'revise' && currentSession) {
           const apiKey = localStorage.getItem('openai_api_key')
           if (apiKey) {
-            await handleSlideGeneration(currentSession.prompt, currentSession.category, apiKey)
+            await handleSlideGeneration(currentSession.prompt, apiKey)
           }
         }
         

@@ -3,26 +3,14 @@ import { Send, Sparkles } from 'lucide-react'
 
 function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
   const [prompt, setPrompt] = useState('')
-  const [category, setCategory] = useState('general')
-  const [categories, setCategories] = useState({})
+  // Removed category selection - AI will classify automatically
   const [recentSessions, setRecentSessions] = useState([])
   const [apiKey, setApiKey] = useState(localStorage.getItem('openai_api_key') || '')
   const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey)
 
   useEffect(() => {
-    fetchCategories()
     fetchRecentSessions()
   }, [])
-
-  const fetchCategories = async () => {
-    try {
-      const response = await fetch('/api/generate/categories')
-      const data = await response.json()
-      setCategories(data.categories)
-    } catch (error) {
-      console.error('Failed to fetch categories:', error)
-    }
-  }
 
   const fetchRecentSessions = async () => {
     try {
@@ -37,7 +25,7 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (prompt.trim() && !isGenerating && apiKey.trim()) {
-      onGenerateSlides(prompt.trim(), category, apiKey.trim())
+      onGenerateSlides(prompt.trim(), apiKey.trim())
       setPrompt('')
     }
   }
@@ -136,36 +124,7 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
       {/* Generation Form */}
       <div style={{ padding: '20px', borderBottom: '1px solid #f1f5f9' }}>
         <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '16px' }}>
-            <label style={{ 
-              display: 'block', 
-              fontSize: '13px', 
-              fontWeight: '500', 
-              marginBottom: '6px',
-              color: '#374151'
-            }}>
-              Slide Category
-            </label>
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '8px 12px',
-                border: '1px solid #d1d5db',
-                borderRadius: '6px',
-                fontSize: '13px',
-                backgroundColor: 'white'
-              }}
-            >
-              <option value="general">General</option>
-              {Object.entries(categories).map(([key, description]) => (
-                <option key={key} value={key}>
-                  {key.charAt(0).toUpperCase() + key.slice(1).replace('-', ' ')}
-                </option>
-              ))}
-            </select>
-          </div>
+          {/* Category selection removed - AI will classify automatically */}
 
           <div style={{ marginBottom: '16px' }}>
             <label style={{ 

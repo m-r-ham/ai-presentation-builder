@@ -1,11 +1,14 @@
 import { useState } from 'react'
-import { Check, X, RotateCcw, Star } from 'lucide-react'
+import { ChevronLeft, ChevronRight, MessageCircle, Send, Sparkles, Star, RotateCcw, Check, X } from 'lucide-react'
 import SlidePreview from './SlidePreview'
 import RatingForm from './RatingForm'
 
 function SlidePanel({ session, onRatingSubmit, isGenerating }) {
-  const [selectedVersion, setSelectedVersion] = useState(null)
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+  const [feedback, setFeedback] = useState('')
+  const [chatHistory, setChatHistory] = useState([])
   const [showRatingForm, setShowRatingForm] = useState(false)
+  const [selectedVersion, setSelectedVersion] = useState(null)
 
   if (isGenerating) {
     return (
@@ -53,154 +56,393 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
             justifyContent: 'center',
             margin: '0 auto 16px'
           }}>
-            <Star size={28} color="#6b7280" />
+            <Sparkles size={28} color="#6b7280" />
           </div>
           <h2 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
-            Ready to Create Slides
+            Ready to Generate Slides
           </h2>
-          <p style={{ color: '#6b7280', fontSize: '14px' }}>
-            Enter a slide prompt in the chat panel to generate 3 versions for rating and feedback.
+          <p style={{ color: '#6b7280', fontSize: '14px', lineHeight: '20px' }}>
+            Describe the slide you want to create in the left panel. 
+            AI will generate 3 versions that you can review and improve through chat feedback.
           </p>
         </div>
       </div>
     )
   }
 
-  const handleVersionSelect = (version) => {
-    setSelectedVersion(version)
-    setShowRatingForm(true)
+  const currentSlide = session.versions[currentSlideIndex]
+
+  const nextSlide = () => {
+    setCurrentSlideIndex((prev) => 
+      prev < session.versions.length - 1 ? prev + 1 : 0
+    )
   }
 
-  const handleRatingSubmit = (decision, ratings, feedback) => {
-    const ratingData = {
-      versionId: selectedVersion.id,
-      sessionId: session.sessionId,
-      ratings,
-      decision,
-      feedbackText: feedback
-    }
+  const prevSlide = () => {
+    setCurrentSlideIndex((prev) => 
+      prev > 0 ? prev - 1 : session.versions.length - 1
+    )
+  }
 
-    onRatingSubmit(ratingData)
-    setSelectedVersion(null)
-    setShowRatingForm(false)
+  const handleFeedbackSubmit = (e) => {
+    e.preventDefault()
+    if (!feedback.trim()) return
+
+    // Add user feedback to chat history
+    const newChat = {
+      type: 'user',
+      message: feedback,
+      timestamp: new Date().toISOString()
+    }
+    setChatHistory(prev => [...prev, newChat])
+    
+    // Here we would send feedback to backend for AI improvement
+    // For now, just add a mock AI response
+    setTimeout(() => {
+      const aiResponse = {
+        type: 'ai',
+        message: 'Thanks for the feedback! I understand you want improvements. Would you like me to generate a new version based on this feedback?',
+        timestamp: new Date().toISOString()
+      }
+      setChatHistory(prev => [...prev, aiResponse])
+    }, 1000)
+
+    setFeedback('')
   }
 
   return (
-    <div style={{ height: '100%', backgroundColor: 'white' }}>
-      {!showRatingForm ? (
-        // 3-Version Display
-        <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-          <div style={{
-            padding: '20px',
-            borderBottom: '1px solid #f1f5f9'
-          }}>
-            <h2 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
-              Rate These 3 Versions
-            </h2>
-            <p style={{ fontSize: '13px', color: '#6b7280', marginBottom: '12px' }}>
-              "{session.prompt}"
-            </p>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <span style={{
-                fontSize: '11px',
-                backgroundColor: '#dbeafe',
-                color: '#2563eb',
-                padding: '2px 6px',
-                borderRadius: '4px'
-              }}>
-                {session.category}
-              </span>
-              <span style={{
-                fontSize: '11px',
-                backgroundColor: '#f3f4f6',
-                color: '#6b7280',
-                padding: '2px 6px',
-                borderRadius: '4px'
-              }}>
-                {session.versions.length} versions
-              </span>
-            </div>
+    <div style={{ 
+      height: '100%', 
+      display: 'flex', 
+      flexDirection: 'column',
+      backgroundColor: 'white'
+    }}>
+      {/* Header with navigation */}
+      <div style={{
+        padding: '20px',
+        borderBottom: '1px solid #f1f5f9',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }}>
+        <div>
+          <h2 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '4px' }}>
+            {session.prompt}
+          </h2>
+          <p style={{ fontSize: '12px', color: '#6b7280' }}>
+            Category: {session.category} • {session.versions.length} versions
+          </p>
+        </div>
+        
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          {/* Carousel Navigation */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <button
+              onClick={prevSlide}
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '16px',
+                border: '1px solid #e2e8f0',
+                backgroundColor: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer'
+              }}
+            >
+              <ChevronLeft size={16} />
+            </button>
+            
+            <span style={{ fontSize: '14px', fontWeight: '500' }}>
+              {currentSlideIndex + 1} / {session.versions.length}
+            </span>
+            
+            <button
+              onClick={nextSlide}
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '16px',
+                border: '1px solid #e2e8f0',
+                backgroundColor: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer'
+              }}
+            >
+              <ChevronRight size={16} />
+            </button>
           </div>
 
-          <div style={{
-            flex: 1,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '20px',
-            padding: '20px',
-            overflow: 'auto'
-          }}>
-            {session.versions.map((version, index) => (
-              <div
-                key={version.id}
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                  backgroundColor: 'white'
-                }}
-              >
-                <div style={{
-                  padding: '12px',
-                  backgroundColor: '#f8fafc',
-                  borderBottom: '1px solid #e2e8f0'
-                }}>
-                  <h3 style={{ fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>
-                    Version {version.versionNumber}
-                  </h3>
-                  <p style={{ fontSize: '11px', color: '#6b7280' }}>
-                    {version.aiRationale}
-                  </p>
-                </div>
-
-                <div style={{ flex: 1, padding: '16px' }}>
-                  <SlidePreview markdown={version.slidevMarkdown} />
-                </div>
-
-                <div style={{
-                  padding: '12px',
-                  borderTop: '1px solid #f1f5f9',
-                  display: 'flex',
-                  gap: '8px'
-                }}>
-                  <button
-                    onClick={() => handleVersionSelect(version)}
-                    className="btn btn-primary"
-                    style={{ flex: 1, fontSize: '12px', padding: '8px' }}
-                  >
-                    Rate This Version
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div style={{
-            padding: '16px 20px',
-            borderTop: '1px solid #f1f5f9',
-            backgroundColor: '#f8fafc',
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '12px'
-          }}>
-            <div style={{ textAlign: 'center', fontSize: '12px', color: '#6b7280' }}>
-              Click "Rate This Version" to provide detailed feedback on design quality
-            </div>
+          {/* Quick Rating Actions */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <button
+              onClick={() => {
+                setSelectedVersion(currentSlide)
+                setShowRatingForm(true)
+              }}
+              style={{
+                padding: '6px 12px',
+                backgroundColor: '#2563eb',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                fontSize: '12px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px'
+              }}
+            >
+              <Star size={12} />
+              Rate
+            </button>
+            
+            <button
+              onClick={() => {
+                // Quick Keep action
+                onRatingSubmit({
+                  versionId: currentSlide.id,
+                  sessionId: session.sessionId,
+                  decision: 'keep',
+                  ratings: { overall: 5 }
+                })
+              }}
+              style={{
+                padding: '6px 8px',
+                backgroundColor: '#10b981',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                fontSize: '12px',
+                cursor: 'pointer'
+              }}
+            >
+              <Check size={12} />
+            </button>
+            
+            <button
+              onClick={() => {
+                // Quick Revise action
+                onRatingSubmit({
+                  versionId: currentSlide.id,
+                  sessionId: session.sessionId,
+                  decision: 'revise',
+                  ratings: { overall: 3 }
+                })
+              }}
+              style={{
+                padding: '6px 8px',
+                backgroundColor: '#f59e0b',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                fontSize: '12px',
+                cursor: 'pointer'
+              }}
+            >
+              <RotateCcw size={12} />
+            </button>
+            
+            <button
+              onClick={() => {
+                // Quick Kill action
+                onRatingSubmit({
+                  versionId: currentSlide.id,
+                  sessionId: session.sessionId,
+                  decision: 'kill',
+                  ratings: { overall: 1 }
+                })
+              }}
+              style={{
+                padding: '6px 8px',
+                backgroundColor: '#ef4444',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                fontSize: '12px',
+                cursor: 'pointer'
+              }}
+            >
+              <X size={12} />
+            </button>
           </div>
         </div>
-      ) : (
-        // Rating Form
-        <RatingForm
-          version={selectedVersion}
-          session={session}
-          onSubmit={handleRatingSubmit}
-          onCancel={() => {
-            setSelectedVersion(null)
-            setShowRatingForm(false)
-          }}
-        />
+      </div>
+
+      {/* Slide Preview - 16:9 Aspect Ratio */}
+      <div style={{ 
+        flex: 1, 
+        padding: '20px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#f8fafc'
+      }}>
+        <div style={{
+          width: '100%',
+          maxWidth: '800px',
+          aspectRatio: '16/9',
+          backgroundColor: 'white',
+          borderRadius: '8px',
+          boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
+          overflow: 'hidden'
+        }}>
+          <SlidePreview 
+            slidevMarkdown={currentSlide.slidevMarkdown}
+            versionNumber={currentSlide.versionNumber}
+          />
+        </div>
+      </div>
+
+      {/* Chat Feedback Section */}
+      <div style={{
+        height: '300px',
+        borderTop: '1px solid #f1f5f9',
+        display: 'flex',
+        flexDirection: 'column'
+      }}>
+        {/* Chat Header */}
+        <div style={{
+          padding: '16px 20px',
+          borderBottom: '1px solid #f1f5f9',
+          backgroundColor: '#f8fafc'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <MessageCircle size={16} color="#6b7280" />
+            <h3 style={{ fontSize: '14px', fontWeight: '600' }}>
+              Chat Feedback for Version {currentSlide.versionNumber}
+            </h3>
+          </div>
+          <p style={{ fontSize: '12px', color: '#6b7280', marginTop: '4px' }}>
+            Provide specific feedback to improve this slide design
+          </p>
+        </div>
+
+        {/* Chat Messages */}
+        <div style={{
+          flex: 1,
+          padding: '12px 20px',
+          overflowY: 'auto',
+          maxHeight: '180px'
+        }}>
+          {chatHistory.length === 0 ? (
+            <div style={{
+              textAlign: 'center',
+              color: '#9ca3af',
+              fontSize: '13px',
+              padding: '20px'
+            }}>
+              Start a conversation about this slide design...
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {chatHistory.map((chat, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: 'flex',
+                    justifyContent: chat.type === 'user' ? 'flex-end' : 'flex-start'
+                  }}
+                >
+                  <div
+                    style={{
+                      maxWidth: '70%',
+                      padding: '8px 12px',
+                      borderRadius: '12px',
+                      fontSize: '13px',
+                      backgroundColor: chat.type === 'user' ? '#2563eb' : '#f1f5f9',
+                      color: chat.type === 'user' ? 'white' : '#374151'
+                    }}
+                  >
+                    {chat.message}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Chat Input */}
+        <form onSubmit={handleFeedbackSubmit} style={{
+          padding: '12px 20px',
+          borderTop: '1px solid #f1f5f9',
+          display: 'flex',
+          gap: '8px'
+        }}>
+          <input
+            type="text"
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
+            placeholder="Describe what you'd like to improve about this slide..."
+            style={{
+              flex: 1,
+              padding: '8px 12px',
+              border: '1px solid #d1d5db',
+              borderRadius: '6px',
+              fontSize: '13px'
+            }}
+          />
+          <button
+            type="submit"
+            disabled={!feedback.trim()}
+            style={{
+              padding: '8px 12px',
+              backgroundColor: feedback.trim() ? '#2563eb' : '#e5e7eb',
+              color: 'white',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: feedback.trim() ? 'pointer' : 'not-allowed',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px'
+            }}
+          >
+            <Send size={14} />
+          </button>
+        </form>
+      </div>
+
+      {/* Rating Form Modal */}
+      {showRatingForm && selectedVersion && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            borderRadius: '8px',
+            padding: '24px',
+            maxWidth: '500px',
+            width: '90%',
+            maxHeight: '80vh',
+            overflow: 'auto'
+          }}>
+            <RatingForm
+              version={selectedVersion}
+              session={session}
+              onSubmit={(data) => {
+                onRatingSubmit(data)
+                setShowRatingForm(false)
+                setSelectedVersion(null)
+              }}
+              onCancel={() => {
+                setShowRatingForm(false)
+                setSelectedVersion(null)
+              }}
+            />
+          </div>
+        </div>
       )}
     </div>
   )
