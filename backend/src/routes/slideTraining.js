@@ -121,6 +121,7 @@ async function getRealSlideExamples() {
           title: slide.title,
           content: slide.content || 'Template slide for consulting presentations',
           imageUrl: slide.image_filename ? `http://localhost:3001/api/images/${slide.image_filename}` : `https://via.placeholder.com/600x400/${getColorForSlideType(sdfAnalysis.design_analysis.layout_type)}/ffffff?text=${encodeURIComponent(slide.title.substring(0, 20))}`,
+          image_filename: slide.image_filename, // Add this for debugging
           source: 'Consultant Template',
           category: sdfAnalysis.design_analysis.layout_type,
           designPatterns: sdfAnalysis.design_analysis.design_patterns,
