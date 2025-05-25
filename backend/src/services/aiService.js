@@ -156,7 +156,7 @@ Remember: When you learn something about their presentation, capture it using ou
       console.log(`Found ${outlineUpdates.length} outline updates in AI response`);
       for (const update of outlineUpdates) {
         console.log('Applying outline update:', update);
-        this.applyOutlineUpdate(outline, update);
+        await this.applyOutlineUpdate(outline, update);
       }
 
       // Clean response
@@ -226,7 +226,7 @@ Remember: When you learn something about their presentation, capture it using ou
     return updates;
   }
 
-  applyOutlineUpdate(outline, update) {
+  async applyOutlineUpdate(outline, update) {
     try {
       outline.addToChangelog(update);
       
