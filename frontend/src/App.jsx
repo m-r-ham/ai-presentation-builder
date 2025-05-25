@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import PresentationBuilder from './pages/PresentationBuilder'
 import SettingsPage from './pages/SettingsPage'
+import SlideTraining from './pages/SlideTraining'
 import Navigation from './components/Navigation'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/presentation/:id?" element={<PresentationBuilder />} />
+            <Route path="/slide-training" element={<SlideTraining />} />
             <Route path="/settings" element={<SettingsPage />} />
           </Routes>
         </div>

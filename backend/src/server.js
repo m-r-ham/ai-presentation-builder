@@ -11,6 +11,7 @@ fastify.register(require('@fastify/cors'), {
 // Register routes
 fastify.register(require('./routes/chat'), { prefix: '/api' });
 fastify.register(require('./routes/outline'), { prefix: '/api/outline' });
+fastify.register(require('./routes/slideTraining'), { prefix: '/api' });
 
 // Health check
 fastify.get('/api/health', async (request, reply) => {

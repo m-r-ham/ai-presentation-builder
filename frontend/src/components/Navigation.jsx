@@ -65,6 +65,22 @@ function Navigation() {
           </button>
           
           <button
+            onClick={() => navigate('/slide-training')}
+            style={{
+              padding: '0.5rem 1rem',
+              backgroundColor: isActive('/slide-training') ? '#f3f4f6' : 'transparent',
+              color: isActive('/slide-training') ? '#1f2937' : '#6b7280',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '0.875rem',
+              fontWeight: '500',
+              cursor: 'pointer'
+            }}
+          >
+            Slide Training
+          </button>
+          
+          <button
             onClick={() => navigate('/settings')}
             style={{
               padding: '0.5rem 1rem',

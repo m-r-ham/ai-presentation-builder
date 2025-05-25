@@ -16,7 +16,9 @@
     "@fastify/cors": "^11.0.1",
     "dotenv": "^16.5.0",
     "fastify": "^5.3.3",
-    "openai": "^4.103.0"
+    "officegen": "^0.6.5",
+    "openai": "^4.103.0",
+    "pptx2json": "^0.0.10"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
