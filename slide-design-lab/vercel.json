@@ -1,11 +1,11 @@
 {
   "version": 2,
   "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/dist",
+  "outputDirectory": "frontend/dist", 
   "installCommand": "npm install && cd backend && npm install && cd ../frontend && npm install",
   "functions": {
     "api/**/*.js": {
-      "runtime": "@vercel/node"
+      "runtime": "nodejs18.x"
     }
   },
   "rewrites": [
@@ -13,8 +13,5 @@
       "source": "/api/(.*)",
       "destination": "/api/$1"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
