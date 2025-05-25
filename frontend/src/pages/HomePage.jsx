@@ -5,38 +5,63 @@ function HomePage() {
   const navigate = useNavigate()
   const [presentations, setPresentations] = useState([])
   const [viewMode, setViewMode] = useState('grid')
+  const [deleteModal, setDeleteModal] = useState(null)
+  const [deleteConfirmText, setDeleteConfirmText] = useState('')
 
   useEffect(() => {
-    setPresentations([
-      {
-        id: '1',
-        title: 'A/B Test Results and Next Steps',
-        lastModified: '2 hours ago',
-        status: 'draft',
-        completionPercentage: 67,
-        slideCount: 0,
-        thumbnail: '📊'
-      },
-      {
-        id: '2', 
-        title: 'Q2 Strategy Review',
-        lastModified: '1 day ago',
-        status: 'complete',
-        completionPercentage: 100,
-        slideCount: 12,
-        thumbnail: '📈'
-      },
-      {
-        id: '3',
-        title: 'Client Onboarding Process',
-        lastModified: '3 days ago', 
-        status: 'draft',
-        completionPercentage: 45,
-        slideCount: 6,
-        thumbnail: '🤝'
-      }
-    ])
+    // Load presentations from localStorage
+    const savedPresentations = localStorage.getItem('presentations')
+    if (savedPresentations) {
+      setPresentations(JSON.parse(savedPresentations))
+    }
   }, [])
+
+  const savePresentations = (newPresentations) => {
+    localStorage.setItem('presentations', JSON.stringify(newPresentations))
+    setPresentations(newPresentations)
+  }
+
+  const createNewPresentation = () => {
+    const newId = 'pres_' + Date.now()
+    const newPresentation = {
+      id: newId,
+      title: 'New Presentation',
+      lastModified: 'Just now',
+      status: 'draft',
+      completionPercentage: 0,
+      slideCount: 0,
+      thumbnail: '📄',
+      created: Date.now(),
+      archived: false
+    }
+    
+    const updatedPresentations = [newPresentation, ...presentations]
+    savePresentations(updatedPresentations)
+    navigate(`/presentation/${newId}`)
+  }
+
+  const handleDeleteClick = (e, presentation) => {
+    e.stopPropagation()
+    setDeleteModal(presentation)
+    setDeleteConfirmText('')
+  }
+
+  const handleArchive = () => {
+    const updatedPresentations = presentations.map(p => 
+      p.id === deleteModal.id ? { ...p, archived: true, lastModified: 'Archived' } : p
+    )
+    savePresentations(updatedPresentations)
+    setDeleteModal(null)
+  }
+
+  const handleDelete = () => {
+    if (deleteConfirmText === 'delete') {
+      const updatedPresentations = presentations.filter(p => p.id !== deleteModal.id)
+      savePresentations(updatedPresentations)
+      setDeleteModal(null)
+      setDeleteConfirmText('')
+    }
+  }
 
   const PresentationCard = ({ presentation }) => (
     <div
@@ -48,7 +73,8 @@ function HomePage() {
         border: '1px solid #e5e7eb',
         cursor: 'pointer',
         transition: 'all 0.2s',
-        height: 'fit-content'
+        height: 'fit-content',
+        position: 'relative'
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'
@@ -124,6 +150,37 @@ function HomePage() {
             </div>
           </div>
         </div>
+        
+        {/* Delete Button */}
+        <button
+          onClick={(e) => handleDeleteClick(e, presentation)}
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            right: '1rem',
+            width: '2rem',
+            height: '2rem',
+            backgroundColor: '#f3f4f6',
+            border: '1px solid #d1d5db',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '0.875rem',
+            color: '#6b7280'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#fee2e2'
+            e.currentTarget.style.color = '#dc2626'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#f3f4f6'
+            e.currentTarget.style.color = '#6b7280'
+          }}
+        >
+          ×
+        </button>
       </div>
     </div>
   )
@@ -166,6 +223,33 @@ function HomePage() {
       <div style={{ fontSize: '0.75rem', color: '#6b7280', width: '80px', textAlign: 'right' }}>
         {presentation.completionPercentage}%
       </div>
+      <button
+        onClick={(e) => handleDeleteClick(e, presentation)}
+        style={{
+          width: '2rem',
+          height: '2rem',
+          backgroundColor: '#f3f4f6',
+          border: '1px solid #d1d5db',
+          borderRadius: '4px',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '0.875rem',
+          color: '#6b7280',
+          marginLeft: '1rem'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = '#fee2e2'
+          e.currentTarget.style.color = '#dc2626'
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = '#f3f4f6'
+          e.currentTarget.style.color = '#6b7280'
+        }}
+      >
+        ×
+      </button>
     </div>
   )
 
@@ -197,7 +281,7 @@ function HomePage() {
               My Presentations
             </h1>
             <p style={{ margin: 0, fontSize: '1rem', color: '#6b7280' }}>
-              {presentations.length} presentations
+              {presentations.filter(p => !p.archived).length} presentations
             </p>
           </div>
           
@@ -241,7 +325,7 @@ function HomePage() {
             </div>
 
             <button
-              onClick={() => navigate('/presentation/new')}
+              onClick={createNewPresentation}
               style={{
                 padding: '0.75rem 1.5rem',
                 backgroundColor: '#3b82f6',
@@ -263,7 +347,7 @@ function HomePage() {
         </div>
 
         {/* Presentations */}
-        {presentations.length === 0 ? (
+        {presentations.filter(p => !p.archived).length === 0 ? (
           <div style={{
             backgroundColor: 'white',
             borderRadius: '8px',
@@ -279,7 +363,7 @@ function HomePage() {
               Create your first AI-powered presentation to get started
             </p>
             <button
-              onClick={() => navigate('/presentation/new')}
+              onClick={createNewPresentation}
               style={{
                 padding: '0.75rem 1.5rem',
                 backgroundColor: '#3b82f6',
@@ -303,7 +387,7 @@ function HomePage() {
             borderRadius: viewMode === 'list' ? '8px' : '0',
             overflow: 'hidden'
           }}>
-            {presentations.map((presentation) => (
+            {presentations.filter(p => !p.archived).map((presentation) => (
               viewMode === 'grid' 
                 ? <PresentationCard key={presentation.id} presentation={presentation} />
                 : <PresentationListItem key={presentation.id} presentation={presentation} />
@@ -311,6 +395,115 @@ function HomePage() {
           </div>
         )}
       </div>
+
+      {/* Delete Modal */}
+      {deleteModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            borderRadius: '8px',
+            padding: '2rem',
+            maxWidth: '500px',
+            width: '90%',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+          }}>
+            <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.25rem', fontWeight: '600' }}>
+              Delete "{deleteModal.title}"?
+            </h3>
+            
+            <p style={{ margin: '0 0 1.5rem 0', color: '#6b7280', lineHeight: '1.5' }}>
+              We recommend archiving instead of deleting. Archived presentations can be restored later.
+            </p>
+
+            <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
+              <button
+                onClick={handleArchive}
+                style={{
+                  flex: 1,
+                  padding: '0.75rem 1rem',
+                  backgroundColor: '#f59e0b',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '6px',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: 'pointer'
+                }}
+              >
+                Archive (Recommended)
+              </button>
+              
+              <button
+                onClick={() => setDeleteModal(null)}
+                style={{
+                  flex: 1,
+                  padding: '0.75rem 1rem',
+                  backgroundColor: '#f3f4f6',
+                  color: '#374151',
+                  border: '1px solid #d1d5db',
+                  borderRadius: '6px',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: 'pointer'
+                }}
+              >
+                Cancel
+              </button>
+            </div>
+
+            <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
+              <p style={{ margin: '0 0 1rem 0', fontSize: '0.875rem', color: '#6b7280' }}>
+                To permanently delete, type "delete" below:
+              </p>
+              
+              <input
+                type="text"
+                value={deleteConfirmText}
+                onChange={(e) => setDeleteConfirmText(e.target.value)}
+                placeholder="Type 'delete' to confirm"
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  border: '1px solid #d1d5db',
+                  borderRadius: '6px',
+                  fontSize: '0.875rem',
+                  marginBottom: '1rem',
+                  boxSizing: 'border-box'
+                }}
+              />
+              
+              <button
+                onClick={handleDelete}
+                disabled={deleteConfirmText !== 'delete'}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1rem',
+                  backgroundColor: deleteConfirmText === 'delete' ? '#dc2626' : '#f3f4f6',
+                  color: deleteConfirmText === 'delete' ? 'white' : '#9ca3af',
+                  border: 'none',
+                  borderRadius: '6px',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: deleteConfirmText === 'delete' ? 'pointer' : 'not-allowed'
+                }}
+              >
+                Permanently Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import MessageBubble from './MessageBubble'
 import ChatInput from './ChatInput'
 import OutlinePanel from './OutlinePanel'
@@ -8,7 +8,7 @@ function ChatInterface() {
     {
       id: 1,
       role: 'ai',
-      content: "Hi! I'm here to help you create a presentation. What type of presentation are we building today?",
+      content: "Hi! I'm excited to build a presentation with you. Can you tell me about what you're trying to create?",
       timestamp: Date.now()
     }
   ])
@@ -16,6 +16,25 @@ function ChatInterface() {
   const [outline, setOutline] = useState(null)
   const [sessionId] = useState('session_' + Date.now())
   const [showOutline, setShowOutline] = useState(false)
+
+  // Load existing outline on page load
+  useEffect(() => {
+    const loadOutline = async () => {
+      try {
+        const response = await fetch(`http://localhost:3001/api/outline/${sessionId}`)
+        if (response.ok) {
+          const data = await response.json()
+          if (data.outline) {
+            setOutline(data.outline)
+          }
+        }
+      } catch (error) {
+        console.error('Error loading outline:', error)
+      }
+    }
+    
+    loadOutline()
+  }, [sessionId])
 
   const sendMessage = async (content) => {
     const userMessage = {
@@ -48,17 +67,10 @@ function ChatInterface() {
       }
       setMessages(prev => [...prev, aiMessage])
       
-      // Update outline and show it IMMEDIATELY when ANY data exists
+      // Update outline and show it IMMEDIATELY
       if (data.outline) {
         setOutline(data.outline)
-        // Show outline as soon as we have ANY metadata or completion > 0
-        if (data.outline.completionStatus.percentage > 0 || 
-            data.outline.metadata.title || 
-            data.outline.metadata.goal || 
-            data.outline.metadata.purpose ||
-            data.outline.slides.length > 0) {
-          setShowOutline(true)
-        }
+        setShowOutline(true)
       }
       
     } catch (error) {
@@ -96,13 +108,7 @@ function ChatInterface() {
     }
   }
 
-  const hasOutlineContent = outline && (
-    outline.slides.length > 0 || 
-    outline.completionStatus.percentage > 0 ||
-    outline.metadata.title ||
-    outline.metadata.goal ||
-    outline.metadata.purpose
-  )
+  const hasOutlineContent = outline !== null
 
   return (
     <div style={{ 
@@ -207,10 +213,13 @@ function ChatInterface() {
           {hasOutlineContent && showOutline && (
             <div style={{ 
               width: '350px',
+              height: '100%',
               borderRight: '1px solid #e0e0e0',
               backgroundColor: 'white',
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              flexShrink: 0,
+              overflow: 'hidden'
             }}>
               <OutlinePanel outline={outline} onUpdateOutline={handleOutlineUpdate} />
             </div>

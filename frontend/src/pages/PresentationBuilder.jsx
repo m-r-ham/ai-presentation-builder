@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import MessageBubble from '../components/chat/MessageBubble'
 import ChatInput from '../components/chat/ChatInput'
 import OutlinePanel from '../components/chat/OutlinePanel'
+import EditableSlideRenderer from "../components/slides/EditableSlideRenderer"
 
 function PresentationBuilder() {
   const { id } = useParams()
@@ -10,7 +11,7 @@ function PresentationBuilder() {
     {
       id: 1,
       role: 'ai',
-      content: "Hi! I'm here to help you create a presentation. What type of presentation are we building today?",
+      content: "Hi! I'm excited to build a presentation with you. Can you tell me about what you're trying to create?",
       timestamp: Date.now()
     }
   ])
@@ -21,30 +22,30 @@ function PresentationBuilder() {
   const [activeTab, setActiveTab] = useState('chat')
   const [draftMessage, setDraftMessage] = useState('')
 
-  // Force outline to show whenever ANY outline data exists
+  // Load existing outline on page load
+  useEffect(() => {
+    const loadOutline = async () => {
+      try {
+        const response = await fetch(`http://localhost:3001/api/outline/${sessionId}`)
+        if (response.ok) {
+          const data = await response.json()
+          if (data.outline) {
+            setOutline(data.outline)
+          }
+        }
+      } catch (error) {
+        console.error('Error loading outline:', error)
+      }
+    }
+    
+    loadOutline()
+  }, [sessionId])
+
+  // Force outline to show as soon as ANY outline exists
   useEffect(() => {
     if (outline) {
-      const hasAnyOutlineData = 
-        outline.metadata.title ||
-        outline.metadata.goal ||
-        outline.metadata.purpose ||
-        outline.metadata.audience ||
-        outline.metadata.deliveryMethod ||
-        outline.metadata.duration ||
-        outline.metadata.dateTime ||
-        outline.completionStatus.percentage > 0 ||
-        outline.slides.length > 0;
-      
-      if (hasAnyOutlineData) {
-        console.log('Auto-showing outline due to data:', {
-          title: outline.metadata.title,
-          goal: outline.metadata.goal,
-          purpose: outline.metadata.purpose,
-          audience: outline.metadata.audience,
-          completion: outline.completionStatus.percentage
-        });
-        setShowOutline(true);
-      }
+      console.log('Auto-showing outline - outline exists:', outline);
+      setShowOutline(true);
     }
   }, [outline]);
 
@@ -133,17 +134,18 @@ function PresentationBuilder() {
     }
   }
 
-  const hasOutlineContent = outline && (
-    outline.slides.length > 0 || 
-    outline.completionStatus.percentage > 0 ||
-    outline.metadata.title ||
-    outline.metadata.goal ||
-    outline.metadata.purpose ||
-    outline.metadata.audience ||
-    outline.metadata.deliveryMethod ||
-    outline.metadata.duration ||
-    outline.metadata.dateTime
-  )
+  const handleSlideUpdate = (slideIndex, updatedSlide) => {
+    if (outline && outline.slides) {
+      const updatedSlides = [...outline.slides]
+      updatedSlides[slideIndex] = updatedSlide
+      setOutline({
+        ...outline,
+        slides: updatedSlides
+      })
+    }
+  }
+
+  const hasOutlineContent = outline !== null
 
   const bottomTabs = [
     { id: 'chat', label: 'Chat', icon: '💬' },
@@ -301,11 +303,13 @@ function PresentationBuilder() {
             {hasOutlineContent && showOutline && (
               <div style={{ 
                 width: '350px',
+                height: '100%',
                 borderRight: '1px solid #e0e0e0',
                 backgroundColor: 'white',
                 display: 'flex',
                 flexDirection: 'column',
-                flexShrink: 0
+                flexShrink: 0,
+                overflow: 'hidden'
               }}>
                 <OutlinePanel outline={outline} onUpdateOutline={handleOutlineUpdate} />
               </div>
@@ -314,34 +318,14 @@ function PresentationBuilder() {
             {/* Presentation Canvas */}
             <div style={{ 
               flex: 1,
-              padding: '2rem',
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
+              flexDirection: 'column'
             }}>
-              <div style={{
-                width: '100%',
-                maxWidth: hasOutlineContent && showOutline ? '600px' : '800px',
-                aspectRatio: '16/9',
-                backgroundColor: 'white',
-                borderRadius: '8px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '1.125rem',
-                color: '#666'
-              }}>
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📊</div>
-                  <div style={{ fontWeight: '500', marginBottom: '0.5rem' }}>
-                    {hasOutlineContent ? 'Slides coming soon...' : 'No slides yet'}
-                  </div>
-                  <div style={{ fontSize: '0.875rem' }}>
-                    {hasOutlineContent ? 'Continue the conversation to generate slides' : 'Start a conversation to begin building your presentation'}
-                  </div>
-                </div>
-              </div>
+              <EditableSlideRenderer 
+                outline={outline} 
+                brandColors={{ primaryColor: '#3b82f6', secondaryColor: '#6b7280', accentColor: '#10b981' }}
+                onSlideUpdate={handleSlideUpdate}
+              />
             </div>
           </div>
         </div>

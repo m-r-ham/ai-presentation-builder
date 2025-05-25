@@ -4,19 +4,31 @@ function OutlinePanel({ outline, onUpdateOutline }) {
   const [editingField, setEditingField] = useState(null)
   const [tempValue, setTempValue] = useState('')
   const [showVersions, setShowVersions] = useState(false)
+  const [savingField, setSavingField] = useState(null)
+  const [savedField, setSavedField] = useState(null)
   const { metadata, slides, completionStatus, versions } = outline
+  
 
   const handleFieldEdit = (field, value) => {
     setEditingField(field)
     setTempValue(value || '')
   }
 
-  const handleFieldSave = (field) => {
-    if (onUpdateOutline) {
-      onUpdateOutline(field, tempValue)
+  const handleFieldSave = async (field) => {
+    setSavingField(field)
+    try {
+      if (onUpdateOutline) {
+        await onUpdateOutline(field, tempValue)
+      }
+      setEditingField(null)
+      setTempValue('')
+      setSavedField(field)
+      setTimeout(() => setSavedField(null), 2000) // Clear success indicator after 2 seconds
+    } catch (error) {
+      console.error('Error saving field:', error)
+    } finally {
+      setSavingField(null)
     }
-    setEditingField(null)
-    setTempValue('')
   }
 
   const handleFieldCancel = () => {
@@ -72,17 +84,18 @@ function OutlinePanel({ outline, onUpdateOutline }) {
           )}
           <button
             onClick={() => handleFieldSave(field)}
+            disabled={savingField === field}
             style={{
               padding: '0.25rem 0.5rem',
-              backgroundColor: '#3b82f6',
+              backgroundColor: savingField === field ? '#9ca3af' : '#3b82f6',
               color: 'white',
               border: 'none',
               borderRadius: '3px',
               fontSize: '0.625rem',
-              cursor: 'pointer'
+              cursor: savingField === field ? 'not-allowed' : 'pointer'
             }}
           >
-            ✓
+            {savingField === field ? '⏳' : '✓'}
           </button>
           <button
             onClick={handleFieldCancel}
@@ -108,24 +121,36 @@ function OutlinePanel({ outline, onUpdateOutline }) {
         style={{
           padding: '0.375rem',
           marginTop: '0.25rem',
-          border: '1px solid transparent',
+          border: savedField === field ? '2px solid #10b981' : '1px solid transparent',
           borderRadius: '4px',
           fontSize: '0.75rem',
           cursor: 'pointer',
-          backgroundColor: status === 'missing' ? '#fef2f2' : '#f0fdf4',
-          color: status === 'missing' ? '#991b1b' : '#166534',
+          backgroundColor: savedField === field ? '#ecfdf5' : 
+                          status === 'missing' ? '#fef2f2' : '#f0fdf4',
+          color: savedField === field ? '#047857' :
+                 status === 'missing' ? '#991b1b' : '#166534',
           minHeight: '1.5rem',
           display: 'flex',
-          alignItems: 'center'
+          alignItems: 'center',
+          justifyContent: 'space-between'
         }}
         onMouseEnter={(e) => {
-          e.target.style.backgroundColor = status === 'missing' ? '#fee2e2' : '#dcfce7'
+          if (savedField !== field) {
+            e.target.style.backgroundColor = status === 'missing' ? '#fee2e2' : '#dcfce7'
+          }
         }}
         onMouseLeave={(e) => {
-          e.target.style.backgroundColor = status === 'missing' ? '#fef2f2' : '#f0fdf4'
+          if (savedField !== field) {
+            e.target.style.backgroundColor = status === 'missing' ? '#fef2f2' : '#f0fdf4'
+          }
         }}
       >
-        {value || <span style={{ fontStyle: 'italic', color: '#9ca3af' }}>{placeholder}</span>}
+        <span>
+          {value || <span style={{ fontStyle: 'italic', color: '#9ca3af' }}>{placeholder}</span>}
+        </span>
+        {savedField === field && (
+          <span style={{ color: '#10b981', fontSize: '0.75rem', marginLeft: '0.5rem' }}>✓ Saved</span>
+        )}
       </div>
     )
   }
@@ -135,7 +160,8 @@ function OutlinePanel({ outline, onUpdateOutline }) {
       height: '100%', 
       display: 'flex', 
       flexDirection: 'column',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      minHeight: 0
     }}>
       {/* Header with Progress */}
       <div style={{ 
@@ -197,7 +223,10 @@ function OutlinePanel({ outline, onUpdateOutline }) {
       <div style={{ 
         flex: 1,
         overflowY: 'auto',
-        padding: '0.75rem'
+        overflowX: 'hidden',
+        padding: '0.75rem',
+        minHeight: 0,
+        maxHeight: 'calc(100vh - 250px)'
       }}>
         {/* Status indicators */}
         <div style={{ marginBottom: '1rem' }}>
