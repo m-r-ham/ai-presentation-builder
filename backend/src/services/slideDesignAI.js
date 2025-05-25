@@ -22,27 +22,40 @@ class SlideDesignAI {
       // Build context from training data
       const trainingContext = this.buildTrainingContext(slideType);
       
-      const prompt = `You are an expert slide designer trained on thousands of effective presentations.
+      const prompt = `You are an expert slide designer with deep knowledge of visual design principles learned from real user feedback.
 
-TRAINING INSIGHTS:
+AUTOMATICALLY APPLY THESE PROVEN DESIGN PATTERNS:
 ${trainingContext}
 
-EFFECTIVENESS RULES (learned from user feedback):
-${this.effectivenessRules.map(rule => `- ${rule.rule}: ${rule.recommendation}`).join('\n')}
+For the content: "${content}"
 
-Create a slide for: "${content}"
+DESIGN REQUIREMENTS (automatically apply without user asking):
+1. INFORMATION HIERARCHY: Structure content with clear visual priority and logical flow
+2. VISUAL BALANCE: Distribute elements harmoniously, balance text/visuals appropriately  
+3. READABILITY: Optimize text length, contrast, and typography for comprehension
+4. CONTENT DENSITY: Follow cognitive load principles, use 7±2 rule for information chunks
+5. DESIGN CONSISTENCY: Maintain uniform alignment, spacing, and style patterns
+6. VISUAL APPEAL: Create engaging aesthetics that enhance rather than distract
 
 Return a JSON object with:
 {
-  "title": "Clear, concise slide title",
-  "content": "Main slide content (follow length guidelines from training)",
-  "layout": "recommended layout type",
-  "visualElements": ["list", "of", "recommended", "visual", "elements"],
-  "designPrinciples": ["principles", "applied", "from", "training"],
+  "title": "Clear, hierarchically prominent title (under 60 chars based on training)",
+  "content": "Optimized content following readability and density guidelines",
+  "layout": "layout type that maximizes dimensional effectiveness",
+  "visualElements": ["specific", "elements", "that", "improve", "design", "quality"],
+  "designPrinciples": {
+    "hierarchy": "how information hierarchy is optimized",
+    "balance": "how visual balance is achieved", 
+    "readability": "how readability is maximized",
+    "density": "how content density is optimized",
+    "consistency": "how design consistency is maintained",
+    "appeal": "how visual appeal enhances comprehension"
+  },
+  "automaticOptimizations": ["list", "of", "training-based", "improvements", "applied"],
   "aiConfidence": 0.85
 }
 
-Apply the learned effectiveness patterns and avoid common failure patterns identified in training.`;
+CRITICAL: Proactively apply all dimensional design insights without waiting for user prompts. Create slides that automatically excel in all 6 design quality dimensions based on training data patterns.`;
 
       const response = await this.openai.chat.completions.create({
         model: "gpt-4",
@@ -71,35 +84,153 @@ Apply the learned effectiveness patterns and avoid common failure patterns ident
     }
   }
 
-  // Build context from training data for specific slide types
+  // Build context from training data with dimensional insights
   buildTrainingContext(slideType) {
     if (!this.trainingData) return "No training data available.";
     
     const { goodSlides, badSlides, patterns } = this.trainingData;
+    const dimensionalInsights = this.analyzeDimensionalPatterns(goodSlides, badSlides);
     
     return `
-GOOD SLIDE PATTERNS (Rating 4-5 stars):
-- Average text length: ${Math.round(patterns.goodPatterns.averageTextLength)} characters
-- Top categories: ${Object.entries(patterns.goodPatterns.commonCategories)
-  .sort(([,a], [,b]) => b - a)
-  .slice(0, 3)
-  .map(([cat, count]) => `${cat} (${count})`)
-  .join(', ')}
-- Success factors: ${Object.entries(patterns.commonFactors.goodFactors)
-  .sort(([,a], [,b]) => b - a)
-  .slice(0, 5)
-  .map(([factor, count]) => `${factor} (${count})`)
-  .join(', ')}
+PROVEN DESIGN QUALITY PATTERNS (from user training):
 
-BAD SLIDE PATTERNS (Rating 1-2 stars):
-- Average text length: ${Math.round(patterns.badPatterns.averageTextLength)} characters  
-- Problematic factors: ${Object.entries(patterns.commonFactors.badFactors)
-  .sort(([,a], [,b]) => b - a)
-  .slice(0, 3)
-  .map(([factor, count]) => `${factor} (${count})`)
-  .join(', ')}
+INFORMATION HIERARCHY (${dimensionalInsights.hierarchy.confidence}% confidence):
+${dimensionalInsights.hierarchy.guidelines.map(g => `- ${g}`).join('\n')}
 
-TRAINING SAMPLE SIZE: ${goodSlides.length} good slides, ${badSlides.length} bad slides analyzed.`;
+VISUAL BALANCE (${dimensionalInsights.balance.confidence}% confidence):
+${dimensionalInsights.balance.guidelines.map(g => `- ${g}`).join('\n')}
+
+READABILITY (${dimensionalInsights.readability.confidence}% confidence):
+${dimensionalInsights.readability.guidelines.map(g => `- ${g}`).join('\n')}
+
+CONTENT DENSITY (${dimensionalInsights.density.confidence}% confidence):
+${dimensionalInsights.density.guidelines.map(g => `- ${g}`).join('\n')}
+
+DESIGN CONSISTENCY (${dimensionalInsights.consistency.confidence}% confidence):
+${dimensionalInsights.consistency.guidelines.map(g => `- ${g}`).join('\n')}
+
+VISUAL APPEAL (${dimensionalInsights.appeal.confidence}% confidence):
+${dimensionalInsights.appeal.guidelines.map(g => `- ${g}`).join('\n')}
+
+LAYOUT EFFECTIVENESS:
+${dimensionalInsights.layoutPatterns.map(p => `- ${p}`).join('\n')}
+
+TRAINING SAMPLE: ${goodSlides.length} high-rated slides, ${badSlides.length} low-rated slides analyzed.`;
+  }
+
+  // Analyze dimensional rating patterns to extract actionable guidelines
+  analyzeDimensionalPatterns(goodSlides, badSlides) {
+    const insights = {
+      hierarchy: { guidelines: [], confidence: 0 },
+      balance: { guidelines: [], confidence: 0 },
+      readability: { guidelines: [], confidence: 0 },
+      density: { guidelines: [], confidence: 0 },
+      consistency: { guidelines: [], confidence: 0 },
+      appeal: { guidelines: [], confidence: 0 },
+      layoutPatterns: []
+    };
+
+    if (goodSlides.length === 0) return insights;
+
+    // Analyze high-scoring patterns for each dimension
+    const highHierarchy = goodSlides.filter(s => s.feedback.dimensional_ratings?.information_hierarchy >= 4);
+    const highBalance = goodSlides.filter(s => s.feedback.dimensional_ratings?.visual_balance >= 4);
+    const highReadability = goodSlides.filter(s => s.feedback.dimensional_ratings?.readability >= 4);
+    const highDensity = goodSlides.filter(s => s.feedback.dimensional_ratings?.content_density >= 4);
+    const highConsistency = goodSlides.filter(s => s.feedback.dimensional_ratings?.design_consistency >= 4);
+    const highAppeal = goodSlides.filter(s => s.feedback.dimensional_ratings?.visual_appeal >= 4);
+
+    // Information Hierarchy insights
+    if (highHierarchy.length > 0) {
+      insights.hierarchy.confidence = Math.round((highHierarchy.length / goodSlides.length) * 100);
+      insights.hierarchy.guidelines = [
+        `Use clear title prominence (${highHierarchy.filter(s => s.slide.title.length < 60).length}/${highHierarchy.length} effective slides have concise titles)`,
+        `Structure content hierarchically (${highHierarchy.filter(s => s.slide.content.includes('•') || s.slide.content.includes('-')).length}/${highHierarchy.length} use bullet structure)`,
+        `Maintain visual flow from top to bottom, left to right`
+      ];
+    }
+
+    // Visual Balance insights  
+    if (highBalance.length > 0) {
+      insights.balance.confidence = Math.round((highBalance.length / goodSlides.length) * 100);
+      const chartsWithText = highBalance.filter(s => s.slide.visualElements?.includes('charts') && s.slide.content.length > 50);
+      insights.balance.guidelines = [
+        `Balance text and visual elements (${chartsWithText.length}/${highBalance.length} successful slides combine charts with supporting text)`,
+        `Use whitespace strategically to create breathing room`,
+        `Distribute visual weight evenly across slide quadrants`
+      ];
+    }
+
+    // Readability insights
+    if (highReadability.length > 0) {
+      insights.readability.confidence = Math.round((highReadability.length / goodSlides.length) * 100);
+      const avgLength = Math.round(highReadability.reduce((sum, s) => sum + s.slide.content.length, 0) / highReadability.length);
+      insights.readability.guidelines = [
+        `Optimize text length for comprehension (high-rated slides average ${avgLength} characters)`,
+        `Use high contrast between text and background`,
+        `Choose legible font sizes and clear typography hierarchy`
+      ];
+    }
+
+    // Content Density insights
+    if (highDensity.length > 0) {
+      insights.density.confidence = Math.round((highDensity.length / goodSlides.length) * 100);
+      const avgBullets = Math.round(highDensity.reduce((sum, s) => sum + (s.slide.visualElements?.length || 0), 0) / highDensity.length);
+      insights.density.guidelines = [
+        `Follow 7±2 rule for information chunks (effective slides average ${avgBullets} main elements)`,
+        `Use progressive disclosure for complex information`,
+        `Balance information load with cognitive processing capacity`
+      ];
+    }
+
+    // Design Consistency insights
+    if (highConsistency.length > 0) {
+      insights.consistency.confidence = Math.round((highConsistency.length / goodSlides.length) * 100);
+      insights.consistency.guidelines = [
+        `Maintain consistent alignment and spacing patterns`,
+        `Use uniform style for similar content types`,
+        `Apply grid-based layout for predictable structure`
+      ];
+    }
+
+    // Visual Appeal insights
+    if (highAppeal.length > 0) {
+      insights.appeal.confidence = Math.round((highAppeal.length / goodSlides.length) * 100);
+      insights.appeal.guidelines = [
+        `Create visual interest through strategic use of color and imagery`,
+        `Apply design principles that enhance rather than distract`,
+        `Ensure aesthetic choices support content comprehension`
+      ];
+    }
+
+    // Layout effectiveness patterns
+    const layoutSuccess = this.analyzeLayoutEffectiveness(goodSlides);
+    insights.layoutPatterns = layoutSuccess;
+
+    return insights;
+  }
+
+  analyzeLayoutEffectiveness(goodSlides) {
+    const patterns = [];
+    
+    // Analyze successful layout patterns
+    const textChartSlides = goodSlides.filter(s => 
+      s.slide.visualElements?.includes('charts') && s.slide.content.length > 100
+    );
+    
+    if (textChartSlides.length > 0) {
+      patterns.push(`Text-chart combination works best with ${Math.round(textChartSlides.reduce((sum, s) => sum + s.slide.content.length, 0) / textChartSlides.length)} character explanations`);
+    }
+
+    const minimalSlides = goodSlides.filter(s => 
+      s.slide.content.length < 100 && !s.slide.visualElements?.includes('charts')
+    );
+    
+    if (minimalSlides.length > 0) {
+      patterns.push(`Minimal content slides (under 100 chars) achieve high impact through focus and whitespace`);
+    }
+
+    return patterns;
   }
 
   // Apply training rules to generated slides

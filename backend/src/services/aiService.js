@@ -1,5 +1,7 @@
 const OpenAI = require('openai');
 const PresentationOutline = require('../models/outline');
+const SlideDesignAI = require('./slideDesignAI');
+const SlideTrainingData = require('../models/slideTraining');
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -8,6 +10,20 @@ const openai = new OpenAI({
 class AIService {
   constructor() {
     this.userOutlines = new Map();
+    this.slideDesignAI = new SlideDesignAI();
+    this.trainingStore = new SlideTrainingData();
+    this.initializeDesignAI();
+  }
+
+  async initializeDesignAI() {
+    // Load training data to inform slide generation
+    try {
+      const trainingDataset = await this.trainingStore.getTrainingDataset();
+      await this.slideDesignAI.loadTrainingData(trainingDataset);
+      console.log('Slide design AI initialized with training data');
+    } catch (error) {
+      console.log('Slide design AI initialized without training data:', error.message);
+    }
   }
 
   async processMessage(userMessage, conversationHistory = [], sessionId = 'default') {
@@ -38,7 +54,17 @@ class AIService {
       const messages = [
         {
           role: 'system',
-          content: `You are an AI presentation coach who helps create compelling presentations through natural conversation. You have the ability to both collaborate on presentation strategy and build actual slides.
+          content: `You are an AI presentation coach who helps create compelling presentations through natural conversation. You have the ability to both collaborate on presentation strategy and build actual slides with advanced design intelligence.
+
+IMPORTANT: You are equipped with a sophisticated slide design AI that has been trained on real user feedback across 6 design quality dimensions:
+- Information Hierarchy
+- Visual Balance  
+- Readability
+- Content Density
+- Design Consistency
+- Visual Appeal
+
+When you create slides, they are automatically enhanced with proven design patterns learned from training data. You don't need to ask users about design preferences - the AI proactively applies best practices.
 
 Current presentation outline:
 ${outline.getCurrentState()}
@@ -133,6 +159,37 @@ Remember: When you learn something about their presentation, you can capture it 
     }
   }
 
+  async enhanceSlideWithTraining(slideData) {
+    try {
+      // Use design AI to enhance slide based on training data
+      const slideContent = `${slideData.title}: ${slideData.description || ''} ${slideData.keyPoints ? slideData.keyPoints.join(', ') : ''}`;
+      const enhancedDesign = await this.slideDesignAI.generateSlideWithTraining(slideContent, slideData.type);
+      
+      // Merge AI enhancements with original slide data
+      return {
+        ...slideData,
+        designEnhancements: {
+          optimizedTitle: enhancedDesign.title,
+          optimizedContent: enhancedDesign.content,
+          recommendedLayout: enhancedDesign.layout,
+          visualElements: enhancedDesign.visualElements,
+          designPrinciples: enhancedDesign.designPrinciples,
+          automaticOptimizations: enhancedDesign.automaticOptimizations,
+          aiConfidence: enhancedDesign.aiConfidence
+        },
+        metadata: {
+          ...slideData.metadata,
+          designOptimized: true,
+          optimizationTimestamp: new Date().toISOString()
+        }
+      };
+    } catch (error) {
+      console.log('Could not enhance slide with training data:', error.message);
+      // Return original slide if enhancement fails
+      return slideData;
+    }
+  }
+
   parseOutlineUpdates(response) {
     const updates = [];
     const outlineRegex = /```outline\s*([\s\S]*?)\s*```/g;
@@ -198,7 +255,9 @@ Remember: When you learn something about their presentation, you can capture it 
           break;
         
         case 'add_slide':
-          outline.addSlide(update.data);
+          // Enhance slide with design AI before adding to outline
+          const enhancedSlide = await this.enhanceSlideWithTraining(update.data);
+          outline.addSlide(enhancedSlide);
           break;
         
         case 'update_slide':
