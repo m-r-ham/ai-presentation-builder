@@ -10,57 +10,72 @@ class SlideDesignFramework {
     this.visualElements = this.initializeVisualElements();
   }
 
-  // Initialize comprehensive design patterns based on consultant templates
+  // Initialize visual design patterns focused on layout and effectiveness
   initializeDesignPatterns() {
     return {
-      // Strategic Frameworks
-      'matrix-2x2': {
-        name: '2x2 Matrix',
-        description: 'Four-quadrant analysis framework',
-        use_cases: ['BCG Matrix', 'Eisenhower Matrix', 'Risk Assessment'],
-        optimal_content: 'Short labels, clear quadrant names',
-        ai_prompt_template: 'Create a 2x2 matrix showing {axis_x} vs {axis_y} with {item_count} items positioned in quadrants',
-        effectiveness_score: 0.9
-      },
-      'matrix-3x3': {
-        name: '3x3 Matrix',
-        description: 'Nine-cell strategic framework',
-        use_cases: ['GE McKinsey Matrix', 'Strategic Options'],
-        optimal_content: 'Minimal text, focus on positioning',
-        ai_prompt_template: 'Design a 3x3 matrix analyzing {dimension_1} vs {dimension_2}',
+      // Layout & Composition Patterns
+      'split-left-text-right-visual': {
+        name: 'Left Text, Right Visual',
+        description: 'Text content on left, chart/image on right',
+        use_cases: ['Data presentation with context', 'Feature explanations', 'Before/after comparisons'],
+        optimal_content: '2-4 bullet points, concise chart labels',
+        design_principles: ['visual balance', 'logical reading flow', 'content separation'],
+        ai_prompt_template: 'Create a slide with {bullet_count} key points on the left and {visual_type} on the right',
         effectiveness_score: 0.85
       },
-      'porter-five-forces': {
-        name: "Porter's Five Forces",
-        description: 'Industry analysis framework',
-        use_cases: ['Market Analysis', 'Competitive Strategy'],
-        optimal_content: 'Brief force descriptions, impact ratings',
-        ai_prompt_template: 'Create Porter Five Forces analysis for {industry} with emphasis on {primary_force}',
-        effectiveness_score: 0.95
+      'split-right-text-left-visual': {
+        name: 'Right Text, Left Visual',
+        description: 'Chart/image on left, text content on right',
+        use_cases: ['Image-first storytelling', 'Visual emphasis', 'Product showcases'],
+        optimal_content: 'Supporting text, brief explanations',
+        design_principles: ['visual priority', 'contextual support', 'hierarchy'],
+        ai_prompt_template: 'Lead with {visual_type} on left, support with {text_elements} on right',
+        effectiveness_score: 0.82
       },
-      'value-chain': {
-        name: 'Value Chain Analysis',
-        description: 'Business process optimization framework',
-        use_cases: ['Process Improvement', 'Cost Analysis'],
-        optimal_content: 'Process steps, value-add indicators',
-        ai_prompt_template: 'Design value chain for {business_type} highlighting {optimization_area}',
+      'chart-with-overlay-text': {
+        name: 'Chart with Text Overlay',
+        description: 'Text box positioned over chart in empty space',
+        use_cases: ['Dense data visualization', 'Key insights highlight', 'Space-efficient design'],
+        optimal_content: '2-3 key takeaways, minimal text',
+        design_principles: ['space utilization', 'readability contrast', 'visual hierarchy'],
+        ai_prompt_template: 'Position {insight_count} key insights over chart in areas with minimal data density',
         effectiveness_score: 0.88
       },
-      'hypothesis-tree': {
-        name: 'Hypothesis Tree',
-        description: 'Problem decomposition framework',
-        use_cases: ['Problem Solving', 'Root Cause Analysis'],
-        optimal_content: 'Clear hypotheses, logical branching',
-        ai_prompt_template: 'Build hypothesis tree for {problem_statement} with {branch_count} main branches',
+      'vertical-text-chart-stack': {
+        name: 'Vertical Text-Chart Stack',
+        description: 'Text above or below chart, full width',
+        use_cases: ['Complex charts needing context', 'Timeline presentations', 'Process flows'],
+        optimal_content: 'Brief intro/conclusion, detailed chart',
+        design_principles: ['vertical flow', 'full-width utilization', 'clear separation'],
+        ai_prompt_template: 'Stack {text_position} text with full-width {chart_type} below/above',
+        effectiveness_score: 0.79
+      },
+      'center-focus-minimal': {
+        name: 'Center Focus Minimal',
+        description: 'Single central element with ample whitespace',
+        use_cases: ['Key messages', 'Impact statements', 'Simple concepts'],
+        optimal_content: 'One main idea, minimal supporting text',
+        design_principles: ['whitespace utilization', 'focus attention', 'visual impact'],
+        ai_prompt_template: 'Center {main_element} with generous whitespace for maximum impact',
         effectiveness_score: 0.92
       },
-      'issue-tree': {
-        name: 'Issue Tree',
-        description: 'MECE problem breakdown',
-        use_cases: ['Consulting Analysis', 'Project Planning'],
-        optimal_content: 'MECE categories, actionable issues',
-        ai_prompt_template: 'Create issue tree for {main_issue} using MECE principle',
-        effectiveness_score: 0.94
+      'grid-layout-equal': {
+        name: 'Equal Grid Layout',
+        description: 'Multiple elements in balanced grid',
+        use_cases: ['Feature comparisons', 'Team introductions', 'Product lineups'],
+        optimal_content: 'Consistent formatting per grid item',
+        design_principles: ['visual balance', 'consistent spacing', 'parallel structure'],
+        ai_prompt_template: 'Arrange {item_count} elements in {grid_size} grid with consistent formatting',
+        effectiveness_score: 0.81
+      },
+      'progressive-disclosure': {
+        name: 'Progressive Information Disclosure',
+        description: 'Information revealed in logical sequence',
+        use_cases: ['Step-by-step processes', 'Learning materials', 'Complex explanations'],
+        optimal_content: 'Hierarchical text structure, clear progression',
+        design_principles: ['information hierarchy', 'cognitive load management', 'logical flow'],
+        ai_prompt_template: 'Structure information in {hierarchy_levels} levels from general to specific',
+        effectiveness_score: 0.86
       }
     };
   }
@@ -113,28 +128,44 @@ class SlideDesignFramework {
     };
   }
 
-  // Initialize visual elements catalog
+  // Initialize visual design elements focused on layout effectiveness
   initializeVisualElements() {
     return {
-      'icons': {
-        usage: 'Concept representation, navigation, emphasis',
-        best_practices: ['Consistent style', 'Appropriate size', 'Meaningful context'],
-        ai_selection_criteria: 'Match concept metaphor, maintain visual consistency'
+      'spacing-rhythm': {
+        usage: 'Consistent visual rhythm and breathing room',
+        best_practices: ['8px grid system', 'Consistent margins', 'Proportional spacing'],
+        ai_selection_criteria: 'Maintain visual harmony, improve readability, guide eye flow',
+        quality_indicators: ['consistent margins', 'balanced proportions', 'purposeful gaps']
       },
-      'color-coding': {
-        usage: 'Categorization, hierarchy, branding',
-        best_practices: ['Accessibility compliant', 'Cultural sensitivity', 'Brand alignment'],
-        ai_selection_criteria: 'Logical grouping, sufficient contrast, emotional appropriateness'
+      'visual-hierarchy': {
+        usage: 'Guide attention through size, contrast, positioning',
+        best_practices: ['Primary/secondary/tertiary levels', 'Strategic emphasis', 'Clear reading path'],
+        ai_selection_criteria: 'Emphasize key information, create logical flow, avoid visual chaos',
+        quality_indicators: ['clear priority levels', 'strategic emphasis', 'logical progression']
       },
-      'whitespace': {
-        usage: 'Visual breathing room, focus direction',
-        best_practices: ['30-40% of slide area', 'Consistent margins', 'Purposeful placement'],
-        ai_selection_criteria: 'Balance information density with readability'
+      'content-density': {
+        usage: 'Balance information load with comprehension',
+        best_practices: ['7±2 rule for lists', 'Strategic whitespace', 'Progressive disclosure'],
+        ai_selection_criteria: 'Optimize cognitive load, maintain engagement, ensure retention',
+        quality_indicators: ['appropriate information load', 'readable text sizes', 'focused messaging']
       },
-      'typography-hierarchy': {
-        usage: 'Information organization, reading flow',
-        best_practices: ['Maximum 3 font sizes', 'Consistent spacing', 'High contrast'],
-        ai_selection_criteria: 'Guide eye movement, emphasize key points'
+      'alignment-consistency': {
+        usage: 'Create visual order and professional appearance',
+        best_practices: ['Grid-based layout', 'Consistent alignment', 'Intentional positioning'],
+        ai_selection_criteria: 'Improve perceived quality, reduce cognitive load, enhance trust',
+        quality_indicators: ['clean edges', 'predictable placement', 'visual stability']
+      },
+      'contrast-legibility': {
+        usage: 'Ensure readability and accessibility',
+        best_practices: ['WCAG contrast ratios', 'Color-blind friendly', 'Size appropriateness'],
+        ai_selection_criteria: 'Guarantee readability, support accessibility, maintain professionalism',
+        quality_indicators: ['high readability', 'sufficient contrast', 'accessible design']
+      },
+      'visual-balance': {
+        usage: 'Distribute visual weight for harmony',
+        best_practices: ['Balanced composition', 'Strategic asymmetry', 'Proportional elements'],
+        ai_selection_criteria: 'Create visual stability, guide attention, improve aesthetics',
+        quality_indicators: ['harmonious composition', 'stable visual weight', 'intentional asymmetry']
       }
     };
   }
@@ -197,32 +228,50 @@ class SlideDesignFramework {
     return 'content-heavy';
   }
 
-  // Identify design patterns used in the slide
+  // Identify visual design patterns used in the slide
   identifyDesignPatterns(slide) {
     const patterns = [];
-    const title = slide.title.toLowerCase();
-    const content = slide.content.toLowerCase();
+    const hasChart = slide.has_chart;
+    const hasImage = slide.has_image;
+    const hasTable = slide.has_table;
+    const bulletCount = slide.bullet_points.length;
+    const textRatio = this.calculateTextRatio(slide);
+    const layoutName = slide.layout_name?.toLowerCase() || '';
     
-    // Matrix patterns
-    if (title.includes('2x2') || title.includes('matrix')) {
-      patterns.push('matrix-2x2');
-    }
-    if (title.includes('3x3')) {
-      patterns.push('matrix-3x3');
+    // Analyze layout patterns based on content distribution
+    if (hasChart && bulletCount >= 2 && bulletCount <= 4) {
+      // Likely text-chart split layout
+      patterns.push('split-left-text-right-visual');
     }
     
-    // Strategic frameworks
-    if (title.includes('porter') || title.includes('five forces')) {
-      patterns.push('porter-five-forces');
+    if (hasChart && textRatio < 0.2) {
+      // Chart-dominant with minimal text - could be overlay
+      patterns.push('chart-with-overlay-text');
     }
-    if (title.includes('value chain')) {
-      patterns.push('value-chain');
+    
+    if (hasChart && textRatio > 0.3 && slide.content.length > 100) {
+      // Substantial text with chart - likely stacked
+      patterns.push('vertical-text-chart-stack');
     }
-    if (title.includes('hypothesis tree')) {
-      patterns.push('hypothesis-tree');
+    
+    if (!hasChart && !hasImage && !hasTable && textRatio < 0.3) {
+      // Minimal content, likely center focus
+      patterns.push('center-focus-minimal');
     }
-    if (title.includes('issue tree')) {
-      patterns.push('issue-tree');
+    
+    if (slide.shape_count > 6 && bulletCount > 0) {
+      // Multiple elements suggest grid layout
+      patterns.push('grid-layout-equal');
+    }
+    
+    if (bulletCount > 5 && slide.content.length > 200) {
+      // Hierarchical information structure
+      patterns.push('progressive-disclosure');
+    }
+    
+    // Image-based patterns
+    if (hasImage && bulletCount >= 2 && bulletCount <= 4) {
+      patterns.push('split-right-text-left-visual');
     }
     
     return patterns;
@@ -275,24 +324,50 @@ class SlideDesignFramework {
     return template;
   }
 
-  // Generate improvement suggestions
+  // Generate design-focused improvement suggestions
   generateImprovementSuggestions(slide) {
     const suggestions = [];
+    const textRatio = this.calculateTextRatio(slide);
+    const bulletCount = slide.bullet_points.length;
     
+    // Content density suggestions
     if (slide.title.length > 60) {
-      suggestions.push('Consider shortening title for better impact');
+      suggestions.push('Shorten title for better visual impact and readability');
     }
     
-    if (slide.content.length > 300) {
-      suggestions.push('Break content into multiple slides or use bullet points');
+    if (slide.content.length > 300 && !slide.has_chart && !slide.has_image) {
+      suggestions.push('Consider text-visual split layout to reduce cognitive load');
     }
     
-    if (slide.bullet_points.length > 7) {
-      suggestions.push('Reduce bullet points to maximum 5-7 for better retention');
+    if (bulletCount > 7) {
+      suggestions.push('Reduce to 5-7 bullet points for better comprehension (7±2 rule)');
     }
     
-    if (!slide.has_image && !slide.has_chart && slide.content.length > 200) {
-      suggestions.push('Consider adding visual elements to support text');
+    // Layout and visual balance suggestions
+    if (slide.has_chart && bulletCount >= 3 && bulletCount <= 5) {
+      suggestions.push('Good candidate for left-text, right-chart layout pattern');
+    }
+    
+    if (slide.has_chart && textRatio < 0.15) {
+      suggestions.push('Consider overlay text box on chart for key insights');
+    }
+    
+    if (!slide.has_image && !slide.has_chart && textRatio > 0.6) {
+      suggestions.push('Add visual element to break up text density and improve engagement');
+    }
+    
+    // Visual hierarchy suggestions
+    if (slide.shape_count > 8) {
+      suggestions.push('Simplify layout to reduce visual complexity and improve focus');
+    }
+    
+    if (textRatio < 0.1 && !slide.has_chart && !slide.has_image) {
+      suggestions.push('Perfect for center-focus minimal layout with ample whitespace');
+    }
+    
+    // Design quality suggestions
+    if (bulletCount > 3 && slide.content.length > 150) {
+      suggestions.push('Consider progressive disclosure or grid layout for better organization');
     }
     
     return suggestions;

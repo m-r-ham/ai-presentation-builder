@@ -32,46 +32,71 @@ class SlideTrainingData {
     return trainingEntry;
   }
 
-  // Categorize slides based on content and structure
+  // Categorize slides based on visual design patterns
   categorizeSlide(slideData) {
     const categories = [];
     
-    // Content type analysis
-    if (slideData.title.toLowerCase().includes('chart') || 
-        slideData.title.toLowerCase().includes('graph') ||
-        slideData.title.toLowerCase().includes('data')) {
-      categories.push('data-visualization');
+    // Layout pattern analysis
+    if (slideData.has_chart && slideData.bullet_points && slideData.bullet_points.length >= 2) {
+      categories.push('text-chart-split');
     }
     
-    if (slideData.title.toLowerCase().includes('title') ||
-        slideData.title.toLowerCase().includes('intro')) {
-      categories.push('title-slide');
+    if (slideData.has_chart && slideData.content.length < 100) {
+      categories.push('chart-dominant');
     }
     
-    if (slideData.content.length > 200) {
+    if (!slideData.has_chart && !slideData.has_image && slideData.content.length < 100) {
+      categories.push('minimal-focused');
+    }
+    
+    if (slideData.bullet_points && slideData.bullet_points.length > 5) {
+      categories.push('information-dense');
+    }
+    
+    // Visual complexity analysis
+    if (slideData.shape_count > 6) {
+      categories.push('complex-layout');
+    } else if (slideData.shape_count <= 3) {
+      categories.push('simple-layout');
+    }
+    
+    // Content density analysis
+    const totalText = (slideData.title || '').length + (slideData.content || '').length;
+    if (totalText > 300) {
       categories.push('text-heavy');
-    } else if (slideData.content.length < 50) {
-      categories.push('minimal-text');
+    } else if (totalText < 100) {
+      categories.push('text-light');
     }
     
     return categories;
   }
 
-  // Extract effectiveness factors from user feedback
+  // Extract design effectiveness factors from user feedback
   extractEffectivenessFactors(feedback) {
     const factors = [];
     const text = feedback.toLowerCase();
     
-    // Positive factors
-    if (text.includes('clear') || text.includes('readable')) factors.push('clarity');
-    if (text.includes('visual') || text.includes('image')) factors.push('visual-appeal');
-    if (text.includes('simple') || text.includes('clean')) factors.push('simplicity');
-    if (text.includes('balanced') || text.includes('layout')) factors.push('layout');
+    // Visual design factors
+    if (text.includes('clear') || text.includes('readable') || text.includes('legible')) factors.push('readability');
+    if (text.includes('balanced') || text.includes('proportion') || text.includes('harmony')) factors.push('visual-balance');
+    if (text.includes('simple') || text.includes('clean') || text.includes('minimal')) factors.push('simplicity');
+    if (text.includes('organized') || text.includes('structured') || text.includes('hierarchy')) factors.push('organization');
+    if (text.includes('space') || text.includes('breathing') || text.includes('whitespace')) factors.push('spacing');
+    if (text.includes('aligned') || text.includes('consistent') || text.includes('neat')) factors.push('alignment');
+    if (text.includes('contrast') || text.includes('stands out') || text.includes('pop')) factors.push('contrast');
     
-    // Negative factors
-    if (text.includes('cluttered') || text.includes('busy')) factors.push('clutter-negative');
-    if (text.includes('text') && text.includes('too much')) factors.push('text-overload');
-    if (text.includes('boring') || text.includes('dull')) factors.push('engagement-issues');
+    // Layout effectiveness factors
+    if (text.includes('flow') || text.includes('logical') || text.includes('sequence')) factors.push('information-flow');
+    if (text.includes('focus') || text.includes('attention') || text.includes('emphasis')) factors.push('focus-direction');
+    if (text.includes('split') || text.includes('divided') || text.includes('sections')) factors.push('content-separation');
+    if (text.includes('grid') || text.includes('columns') || text.includes('rows')) factors.push('grid-structure');
+    
+    // Negative design factors
+    if (text.includes('cluttered') || text.includes('busy') || text.includes('crowded')) factors.push('clutter-negative');
+    if (text.includes('dense') || text.includes('overwhelming') || text.includes('too much')) factors.push('density-negative');
+    if (text.includes('unbalanced') || text.includes('lopsided') || text.includes('uneven')) factors.push('balance-negative');
+    if (text.includes('hard to read') || text.includes('difficult') || text.includes('unclear')) factors.push('readability-negative');
+    if (text.includes('boring') || text.includes('plain') || text.includes('uninspiring')) factors.push('engagement-negative');
     
     return factors;
   }
