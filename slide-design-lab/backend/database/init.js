@@ -3,16 +3,27 @@ const path = require('path');
 
 class Database {
   constructor() {
-    // Use environment variable for database path, fallback to local
-    this.dbPath = process.env.DATABASE_PATH || path.join(__dirname, 'slide_design_lab.db');
+    // Detect if we're in a serverless environment (Vercel)
+    const isServerless = process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.NETLIFY;
     
-    // Ensure directory exists
-    const dir = path.dirname(this.dbPath);
-    if (!require('fs').existsSync(dir)) {
-      require('fs').mkdirSync(dir, { recursive: true });
+    if (isServerless) {
+      // Use in-memory database for serverless environments
+      console.log('📊 Using in-memory database for serverless environment');
+      this.db = new sqlite3.Database(':memory:');
+    } else {
+      // Use file-based database for local development
+      this.dbPath = process.env.DATABASE_PATH || path.join(__dirname, 'slide_design_lab.db');
+      
+      // Ensure directory exists
+      const dir = path.dirname(this.dbPath);
+      if (!require('fs').existsSync(dir)) {
+        require('fs').mkdirSync(dir, { recursive: true });
+      }
+      
+      console.log('📊 Using file-based database for local development');
+      this.db = new sqlite3.Database(this.dbPath);
     }
     
-    this.db = new sqlite3.Database(this.dbPath);
     this.initializeTables();
   }
 

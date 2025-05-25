@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require('uuid');
 const OpenAI = require('openai');
+const Database = require('../../backend/database/init');
 
 // Enhanced slide categories for AI classification
 const SLIDE_CATEGORIES = {
@@ -91,6 +92,14 @@ Return only the category key (e.g., "title-cover", "data-visualization", etc.):`
     // Create session
     const sessionId = uuidv4();
     
+    // Initialize database
+    const db = new Database();
+    
+    db.db.run(
+      'INSERT INTO slide_sessions (id, prompt, category, user_context) VALUES (?, ?, ?, ?)',
+      [sessionId, prompt, category, userContext]
+    );
+    
     // Generate 3 different versions
     const versions = [];
     
@@ -143,6 +152,12 @@ Return ONLY valid Slidev markdown with proper frontmatter and styling.`;
 
         const slidevMarkdown = response.choices[0].message.content;
         const aiRationale = `Version ${i}: ${getVersionApproach(i)}`;
+
+        // Store version in database
+        db.db.run(
+          'INSERT INTO slide_versions (id, session_id, version_number, slidev_markdown, ai_rationale) VALUES (?, ?, ?, ?, ?)',
+          [versionId, sessionId, i, slidevMarkdown, aiRationale]
+        );
 
         versions.push({
           id: versionId,
