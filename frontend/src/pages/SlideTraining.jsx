@@ -26,6 +26,14 @@ function SlideTraining() {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0)
   const [reviewFeedback, setReviewFeedback] = useState('')
   const [reviewRating, setReviewRating] = useState(0)
+  const [dimensionalRatings, setDimensionalRatings] = useState({
+    information_hierarchy: 0,
+    visual_balance: 0,
+    readability: 0,
+    content_density: 0,
+    design_consistency: 0,
+    visual_appeal: 0
+  })
 
   useEffect(() => {
     fetchRealSlides().then(realSlides => {
@@ -36,7 +44,7 @@ function SlideTraining() {
   const unreviewed = slides.filter(slide => !slide.reviewed)
   const currentSlide = unreviewed[currentReviewIndex]
 
-  const handleRating = async (slideId, rating, feedback) => {
+  const handleRating = async (slideId, rating, feedback, dimensionalRatings) => {
     // Find the slide being rated
     const slide = slides.find(s => s.id === slideId);
     
@@ -50,7 +58,8 @@ function SlideTraining() {
         body: JSON.stringify({
           slideData: slide,
           rating,
-          feedback
+          feedback,
+          dimensionalRatings
         })
       });
       console.log('Training feedback saved successfully');
@@ -61,29 +70,41 @@ function SlideTraining() {
     // Update local state
     setSlides(prev => prev.map(s => 
       s.id === slideId 
-        ? { ...s, rating, feedback, reviewed: true }
+        ? { ...s, rating, feedback, dimensionalRatings, reviewed: true }
         : s
     ))
+  }
+
+  const resetRatings = () => {
+    setReviewRating(0);
+    setReviewFeedback('');
+    setDimensionalRatings({
+      information_hierarchy: 0,
+      visual_balance: 0,
+      readability: 0,
+      content_density: 0,
+      design_consistency: 0,
+      visual_appeal: 0
+    });
   }
 
   const handleSwipe = (direction, rating) => {
     if (!currentSlide || !reviewFeedback.trim()) return
     
-    handleRating(currentSlide.id, rating, reviewFeedback)
-    setReviewFeedback('')
-    setReviewRating(0)
+    handleRating(currentSlide.id, rating, reviewFeedback, dimensionalRatings)
+    resetRatings()
     
     if (currentReviewIndex < unreviewed.length - 1) {
       setCurrentReviewIndex(prev => prev + 1)
     }
   }
 
-  const StarRating = ({ rating, onRatingChange, readonly = false }) => (
+  const StarRating = ({ rating, onRatingChange, readonly = false, size = 16 }) => (
     <div style={{ display: 'flex', gap: '2px' }}>
       {[1, 2, 3, 4, 5].map(star => (
         <Star
           key={star}
-          size={16}
+          size={size}
           style={{
             cursor: readonly ? 'default' : 'pointer',
             fill: star <= rating ? '#fbbf24' : 'none',
@@ -94,6 +115,54 @@ function SlideTraining() {
       ))}
     </div>
   )
+
+  const DimensionalRatings = () => {
+    const dimensions = [
+      { key: 'information_hierarchy', label: 'Information Hierarchy', description: 'Clear visual order and priority' },
+      { key: 'visual_balance', label: 'Visual Balance', description: 'Harmonious composition and weight distribution' },
+      { key: 'readability', label: 'Readability', description: 'Text clarity and legibility' },
+      { key: 'content_density', label: 'Content Density', description: 'Appropriate amount of information' },
+      { key: 'design_consistency', label: 'Design Consistency', description: 'Uniform style and alignment' },
+      { key: 'visual_appeal', label: 'Visual Appeal', description: 'Overall aesthetic quality' }
+    ];
+
+    return (
+      <div style={{ width: '100%', marginBottom: '1rem' }}>
+        <h4 style={{ margin: '0 0 1rem 0', fontWeight: '600', fontSize: '1rem' }}>
+          Design Quality Dimensions
+        </h4>
+        <div style={{ display: 'grid', gap: '1rem' }}>
+          {dimensions.map(dimension => (
+            <div key={dimension.key} style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'space-between',
+              padding: '0.75rem',
+              backgroundColor: '#f9fafb',
+              borderRadius: '6px'
+            }}>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: '500', marginBottom: '0.25rem' }}>
+                  {dimension.label}
+                </div>
+                <div style={{ fontSize: '0.75rem', color: '#6b7280' }}>
+                  {dimension.description}
+                </div>
+              </div>
+              <StarRating 
+                rating={dimensionalRatings[dimension.key]} 
+                onRatingChange={(rating) => setDimensionalRatings(prev => ({
+                  ...prev,
+                  [dimension.key]: rating
+                }))}
+                size={14}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -339,14 +408,18 @@ function SlideTraining() {
                 </div>
               </div>
 
-              {/* Rating */}
+              {/* Overall Rating */}
               <div style={{ textAlign: 'center' }}>
-                <p style={{ margin: '0 0 0.5rem 0', fontWeight: '500' }}>Rate this slide:</p>
+                <p style={{ margin: '0 0 0.5rem 0', fontWeight: '500' }}>Overall Rating:</p>
                 <StarRating 
                   rating={reviewRating} 
                   onRatingChange={setReviewRating}
+                  size={20}
                 />
               </div>
+
+              {/* Dimensional Ratings */}
+              <DimensionalRatings />
 
               {/* Feedback Input */}
               <div style={{ width: '100%' }}>
@@ -355,15 +428,15 @@ function SlideTraining() {
                   marginBottom: '0.5rem', 
                   fontWeight: '500' 
                 }}>
-                  Why is this slide good or bad?
+                  Overall feedback on design quality:
                 </label>
                 <textarea
                   value={reviewFeedback}
                   onChange={(e) => setReviewFeedback(e.target.value)}
-                  placeholder="Explain what makes this slide effective or ineffective..."
+                  placeholder="Explain what makes this slide design effective or ineffective (layout, hierarchy, readability, etc.)..."
                   style={{
                     width: '100%',
-                    height: '100px',
+                    height: '80px',
                     padding: '0.75rem',
                     border: '1px solid #d1d5db',
                     borderRadius: '6px',

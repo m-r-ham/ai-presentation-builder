@@ -8,7 +8,7 @@ class SlideTrainingData {
     this.slideDatabase = [];
   }
 
-  // Store user feedback on slides
+  // Store user feedback on slides with dimensional ratings
   async saveTrainingFeedback(slideData) {
     const trainingEntry = {
       id: Date.now().toString(),
@@ -21,7 +21,15 @@ class SlideTrainingData {
         visualElements: slideData.visualElements || []
       },
       feedback: {
-        rating: slideData.rating, // 1-5 stars
+        overall_rating: slideData.rating, // 1-5 stars overall
+        dimensional_ratings: slideData.dimensionalRatings || {
+          information_hierarchy: null,
+          visual_balance: null,
+          readability: null,
+          content_density: null,
+          design_consistency: null,
+          visual_appeal: null
+        },
         textFeedback: slideData.feedback,
         categories: this.categorizeSlide(slideData),
         effectivenessFactors: this.extractEffectivenessFactors(slideData.feedback)

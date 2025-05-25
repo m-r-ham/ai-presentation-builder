@@ -8,6 +8,12 @@ fastify.register(require('@fastify/cors'), {
   origin: process.env.FRONTEND_URL || 'http://localhost:5173'
 });
 
+// Register static file serving for slide images
+fastify.register(require('@fastify/static'), {
+  root: path.join(__dirname, '../data/images'),
+  prefix: '/api/images/',
+});
+
 // Register routes
 fastify.register(require('./routes/chat'), { prefix: '/api' });
 fastify.register(require('./routes/outline'), { prefix: '/api/outline' });

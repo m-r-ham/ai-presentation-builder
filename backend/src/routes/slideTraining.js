@@ -120,7 +120,7 @@ async function getRealSlideExamples() {
           id: slide.id,
           title: slide.title,
           content: slide.content || 'Template slide for consulting presentations',
-          imageUrl: `https://via.placeholder.com/600x400/${getColorForSlideType(sdfAnalysis.design_analysis.layout_type)}/ffffff?text=${encodeURIComponent(slide.title.substring(0, 20))}`,
+          imageUrl: slide.image_filename ? `http://localhost:3001/api/images/${slide.image_filename}` : `https://via.placeholder.com/600x400/${getColorForSlideType(sdfAnalysis.design_analysis.layout_type)}/ffffff?text=${encodeURIComponent(slide.title.substring(0, 20))}`,
           source: 'Consultant Template',
           category: sdfAnalysis.design_analysis.layout_type,
           designPatterns: sdfAnalysis.design_analysis.design_patterns,

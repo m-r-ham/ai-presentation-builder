@@ -2,6 +2,7 @@
   "source_file": "v3 PowerPoint Template for Consultants2023-07-18.pptx",
   "total_slides": 230,
   "extraction_date": "1689614509.0",
+  "images_directory": "images",
   "slides": [
     {
       "id": "template-1",
@@ -17,7 +18,8 @@
         "Presentation title goes here",
         "Subtitle goes here"
       ],
-      "shape_count": 4
+      "shape_count": 4,
+      "image_filename": "slide_001.png"
     },
     {
       "id": "template-2",
@@ -52,7 +54,8 @@
         "5",
         "Move your own logo into position on the Master slide. \nOR: Just delete the placeholder logo from the Master and leave that space blank."
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_002.png"
     },
     {
       "id": "template-3",
@@ -89,7 +92,8 @@
         "Watch video: \nHow to change the color palette",
         "Use RBG / HEV color values\nOr just use the color eyedrop to replace the existing colors"
       ],
-      "shape_count": 23
+      "shape_count": 23,
+      "image_filename": "slide_003.png"
     },
     {
       "id": "template-4",
@@ -104,7 +108,8 @@
       "text_content": [
         "About Umbrex"
       ],
-      "shape_count": 2
+      "shape_count": 2,
+      "image_filename": "slide_004.png"
     },
     {
       "id": "template-5",
@@ -120,7 +125,8 @@
         "Umbrex is the fastest way to find the right independent management consultant.",
         "Find a consultant now"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_005.png"
     },
     {
       "id": "template-6",
@@ -149,7 +155,8 @@
         "You don’t want to spend time sorting through 40 resumes.",
         "Find a consultant now"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_006.png"
     },
     {
       "id": "template-7",
@@ -204,7 +211,8 @@
         "Pro bono",
         "Find a consultant now"
       ],
-      "shape_count": 30
+      "shape_count": 30,
+      "image_filename": "slide_007.png"
     },
     {
       "id": "template-8",
@@ -227,7 +235,8 @@
         "Real Estate & Construction\nRestaurant\nRetail\nSocial Sector & NGOs\nSoftware\nTechnology\nTelecommunications\nTravel & Logistics\nWaste Management\nWine, Beer, and Spirits",
         "Find a consultant now"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_008.png"
     },
     {
       "id": "template-9",
@@ -266,7 +275,8 @@
         "Remote",
         "Find a consultant now"
       ],
-      "shape_count": 30
+      "shape_count": 30,
+      "image_filename": "slide_009.png"
     },
     {
       "id": "template-10",
@@ -295,7 +305,8 @@
         "Private online forum",
         "Online events"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_010.png"
     },
     {
       "id": "template-11",
@@ -314,7 +325,8 @@
         "You're global and local - Umbrex is, too",
         "Find a consultant now"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_011.png"
     },
     {
       "id": "template-12",
@@ -341,7 +353,8 @@
         "Organized over 300 events for independent consultants",
         "Find a consultant now"
       ],
-      "shape_count": 17
+      "shape_count": 17,
+      "image_filename": "slide_012.png"
     },
     {
       "id": "template-13",
@@ -364,7 +377,8 @@
         "Find a consultant now",
         "Join our community"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_013.png"
     },
     {
       "id": "template-14",
@@ -395,7 +409,8 @@
         "And dozens more",
         "Access resources"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_014.png"
     },
     {
       "id": "template-15",
@@ -416,7 +431,8 @@
         "This template was created by Umbrex for the free use of independent consultants everywhere.\n\nTo get ideas on how to use these slide designs in practice, visit:\nhttps://umbrex.com/resources/powerpoint-slides/\nYou’ll find real-life examples of how each of these slide types is used by top consulting firms.\n\nYou can customize this template with your own logo and color scheme.\nFind instructions at: https://umbrex.com/resources/powerpoint-templates-download/\n\nWe are continuing to add new slides to this template. For the latest version, visit that same link.",
         "Source: team analysis"
       ],
-      "shape_count": 5
+      "shape_count": 5,
+      "image_filename": "slide_015.png"
     },
     {
       "id": "template-16",
@@ -459,7 +475,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_016.png"
     },
     {
       "id": "template-17",
@@ -482,7 +499,8 @@
         "Title in 1 line",
         "Template – Section Divider"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_017.png"
     },
     {
       "id": "template-18",
@@ -511,7 +529,8 @@
         "Source:_______",
         "Template – Table of Contents"
       ],
-      "shape_count": 24
+      "shape_count": 24,
+      "image_filename": "slide_018.png"
     },
     {
       "id": "template-19",
@@ -556,7 +575,8 @@
         "Text box with grey background",
         "Text box with Blue background"
       ],
-      "shape_count": 43
+      "shape_count": 43,
+      "image_filename": "slide_019.png"
     },
     {
       "id": "template-20",
@@ -593,7 +613,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 45
+      "shape_count": 45,
+      "image_filename": "slide_020.png"
     },
     {
       "id": "template-21",
@@ -612,7 +633,8 @@
         "Template - Content slide",
         "Source:"
       ],
-      "shape_count": 5
+      "shape_count": 5,
+      "image_filename": "slide_021.png"
     },
     {
       "id": "template-22",
@@ -655,7 +677,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_022.png"
     },
     {
       "id": "template-23",
@@ -676,7 +699,8 @@
         "Text\nText\nText",
         "Image"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_023.png"
     },
     {
       "id": "template-24",
@@ -705,7 +729,8 @@
         "HIGHLIGHT 4\nxxxxxxx",
         "Template — Executive Summary 2"
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_024.png"
     },
     {
       "id": "template-25",
@@ -738,7 +763,8 @@
         "xxx",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       ],
-      "shape_count": 15
+      "shape_count": 15,
+      "image_filename": "slide_025.png"
     },
     {
       "id": "template-26",
@@ -783,7 +809,8 @@
         "xxx",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       ],
-      "shape_count": 24
+      "shape_count": 24,
+      "image_filename": "slide_026.png"
     },
     {
       "id": "template-27",
@@ -802,7 +829,8 @@
         "Template — Executive Summary 5",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText"
       ],
-      "shape_count": 4
+      "shape_count": 4,
+      "image_filename": "slide_027.png"
     },
     {
       "id": "template-28",
@@ -821,7 +849,8 @@
         "Template — Executive Summary 6",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget. Lorem ipsum dolor sit amet, consectetur adipiscing elite.\nText\nText\nText\nText"
       ],
-      "shape_count": 8
+      "shape_count": 8,
+      "image_filename": "slide_028.png"
     },
     {
       "id": "template-29",
@@ -840,7 +869,8 @@
         "Template — Executive Summary 7",
         "[Situation – lay out the facts of the current state]\nText\nText\nText\nText\n\n[Complication – what has changed or will change, and what will be the impact]\nText\nText\nText\nText\n\n[Resolution – what should we do]\nText\nText\nText\nText"
       ],
-      "shape_count": 4
+      "shape_count": 4,
+      "image_filename": "slide_029.png"
     },
     {
       "id": "template-30",
@@ -883,7 +913,8 @@
         "xxx",
         "Source:_______"
       ],
-      "shape_count": 23
+      "shape_count": 23,
+      "image_filename": "slide_030.png"
     },
     {
       "id": "template-31",
@@ -926,7 +957,8 @@
         "xxx",
         "Source:"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_031.png"
     },
     {
       "id": "template-32",
@@ -979,7 +1011,8 @@
         "xxx",
         "Source:_______"
       ],
-      "shape_count": 39
+      "shape_count": 39,
+      "image_filename": "slide_032.png"
     },
     {
       "id": "template-33",
@@ -1032,7 +1065,8 @@
         "xxx",
         "Source:_______"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_033.png"
     },
     {
       "id": "template-34",
@@ -1081,7 +1115,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
         "Source:_______"
       ],
-      "shape_count": 34
+      "shape_count": 34,
+      "image_filename": "slide_034.png"
     },
     {
       "id": "template-35",
@@ -1112,7 +1147,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.",
         "Source:_______"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_035.png"
     },
     {
       "id": "template-36",
@@ -1139,7 +1175,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 15
+      "shape_count": 15,
+      "image_filename": "slide_036.png"
     },
     {
       "id": "template-37",
@@ -1158,7 +1195,8 @@
         "Template — Table of words",
         "Source:_______"
       ],
-      "shape_count": 10
+      "shape_count": 10,
+      "image_filename": "slide_037.png"
     },
     {
       "id": "template-38",
@@ -1177,7 +1215,8 @@
         "Template — Table",
         "Source:_______"
       ],
-      "shape_count": 5
+      "shape_count": 5,
+      "image_filename": "slide_038.png"
     },
     {
       "id": "template-39",
@@ -1196,7 +1235,8 @@
         "Template — Table",
         "Source:_______"
       ],
-      "shape_count": 5
+      "shape_count": 5,
+      "image_filename": "slide_039.png"
     },
     {
       "id": "template-40",
@@ -1215,7 +1255,8 @@
         "Template — Features List",
         "Source:_______"
       ],
-      "shape_count": 13
+      "shape_count": 13,
+      "image_filename": "slide_040.png"
     },
     {
       "id": "template-41",
@@ -1236,7 +1277,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing",
         "Person name"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_041.png"
     },
     {
       "id": "template-42",
@@ -1261,7 +1303,8 @@
         "Person name",
         "Person name"
       ],
-      "shape_count": 14
+      "shape_count": 14,
+      "image_filename": "slide_042.png"
     },
     {
       "id": "template-43",
@@ -1290,7 +1333,8 @@
         "Person name",
         "Person name"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_043.png"
     },
     {
       "id": "template-44",
@@ -1323,7 +1367,8 @@
         "Person name",
         "Person name"
       ],
-      "shape_count": 20
+      "shape_count": 20,
+      "image_filename": "slide_044.png"
     },
     {
       "id": "template-45",
@@ -1360,7 +1405,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nLorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Person name"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_045.png"
     },
     {
       "id": "template-46",
@@ -1397,7 +1443,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_046.png"
     },
     {
       "id": "template-47",
@@ -1440,7 +1487,8 @@
         "THREATS",
         "WEAKNESSES"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_047.png"
     },
     {
       "id": "template-48",
@@ -1475,7 +1523,8 @@
         "Source:_______",
         "Template B - SWOT Analysis"
       ],
-      "shape_count": 20
+      "shape_count": 20,
+      "image_filename": "slide_048.png"
     },
     {
       "id": "template-49",
@@ -1500,7 +1549,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_049.png"
     },
     {
       "id": "template-50",
@@ -1533,7 +1583,8 @@
         "8. Communicate",
         "Status"
       ],
-      "shape_count": 20
+      "shape_count": 20,
+      "image_filename": "slide_050.png"
     },
     {
       "id": "template-51",
@@ -1588,7 +1639,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 22
+      "shape_count": 22,
+      "image_filename": "slide_051.png"
     },
     {
       "id": "template-52",
@@ -1617,7 +1669,8 @@
         "Scope of solution space\u000bText",
         "Key sources of insight\u000bText"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_052.png"
     },
     {
       "id": "template-53",
@@ -1672,7 +1725,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 22
+      "shape_count": 22,
+      "image_filename": "slide_053.png"
     },
     {
       "id": "template-54",
@@ -1695,7 +1749,8 @@
         "4. Engaging with stakeholder\nxxx",
         "Template B — Stakeholder Analysis"
       ],
-      "shape_count": 6
+      "shape_count": 6,
+      "image_filename": "slide_054.png"
     },
     {
       "id": "template-55",
@@ -1711,7 +1766,8 @@
         "Template A - Statistics table",
         "Source:_______"
       ],
-      "shape_count": 6
+      "shape_count": 6,
+      "image_filename": "slide_055.png"
     },
     {
       "id": "template-56",
@@ -1727,7 +1783,8 @@
         "Template B - Statistics table",
         "Source:_______"
       ],
-      "shape_count": 5
+      "shape_count": 5,
+      "image_filename": "slide_056.png"
     },
     {
       "id": "template-57",
@@ -1760,7 +1817,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_057.png"
     },
     {
       "id": "template-58",
@@ -1803,7 +1861,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_058.png"
     },
     {
       "id": "template-59",
@@ -1830,7 +1889,8 @@
         "xxx",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget."
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_059.png"
     },
     {
       "id": "template-60",
@@ -1857,7 +1917,8 @@
         "xxx",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget."
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_060.png"
     },
     {
       "id": "template-61",
@@ -1888,7 +1949,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 14
+      "shape_count": 14,
+      "image_filename": "slide_061.png"
     },
     {
       "id": "template-62",
@@ -1915,7 +1977,8 @@
         "$$$",
         "Source:_______"
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_062.png"
     },
     {
       "id": "template-63",
@@ -1942,7 +2005,8 @@
         "xxx",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget."
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_063.png"
     },
     {
       "id": "template-64",
@@ -1958,7 +2022,8 @@
         "Template — Bar chart with words",
         "Source:_______"
       ],
-      "shape_count": 6
+      "shape_count": 6,
+      "image_filename": "slide_064.png"
     },
     {
       "id": "template-65",
@@ -2001,7 +2066,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_065.png"
     },
     {
       "id": "template-66",
@@ -2024,7 +2090,8 @@
         "$$$",
         "Source:_______"
       ],
-      "shape_count": 8
+      "shape_count": 8,
+      "image_filename": "slide_066.png"
     },
     {
       "id": "template-67",
@@ -2051,7 +2118,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 10
+      "shape_count": 10,
+      "image_filename": "slide_067.png"
     },
     {
       "id": "template-68",
@@ -2078,7 +2146,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 10
+      "shape_count": 10,
+      "image_filename": "slide_068.png"
     },
     {
       "id": "template-69",
@@ -2109,7 +2178,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 15
+      "shape_count": 15,
+      "image_filename": "slide_069.png"
     },
     {
       "id": "template-70",
@@ -2136,7 +2206,8 @@
         "xxx",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget."
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_070.png"
     },
     {
       "id": "template-71",
@@ -2163,7 +2234,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_071.png"
     },
     {
       "id": "template-72",
@@ -2190,7 +2262,8 @@
         "$$$",
         "Source:_______"
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_072.png"
     },
     {
       "id": "template-73",
@@ -2233,7 +2306,8 @@
         "Source:_______",
         "xxx"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_073.png"
     },
     {
       "id": "template-74",
@@ -2274,7 +2348,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget..",
         "Source:_______"
       ],
-      "shape_count": 20
+      "shape_count": 20,
+      "image_filename": "slide_074.png"
     },
     {
       "id": "template-75",
@@ -2293,7 +2368,8 @@
         "Template - Combination chart",
         "Source:_______"
       ],
-      "shape_count": 5
+      "shape_count": 5,
+      "image_filename": "slide_075.png"
     },
     {
       "id": "template-76",
@@ -2326,7 +2402,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_076.png"
     },
     {
       "id": "template-77",
@@ -2349,7 +2426,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_077.png"
     },
     {
       "id": "template-78",
@@ -2372,7 +2450,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 8
+      "shape_count": 8,
+      "image_filename": "slide_078.png"
     },
     {
       "id": "template-79",
@@ -2395,7 +2474,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 8
+      "shape_count": 8,
+      "image_filename": "slide_079.png"
     },
     {
       "id": "template-80",
@@ -2426,7 +2506,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 13
+      "shape_count": 13,
+      "image_filename": "slide_080.png"
     },
     {
       "id": "template-81",
@@ -2455,7 +2536,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_081.png"
     },
     {
       "id": "template-82",
@@ -2478,7 +2560,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_082.png"
     },
     {
       "id": "template-83",
@@ -2521,7 +2604,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_083.png"
     },
     {
       "id": "template-84",
@@ -2556,7 +2640,8 @@
         "$$$",
         "Source:_______"
       ],
-      "shape_count": 17
+      "shape_count": 17,
+      "image_filename": "slide_084.png"
     },
     {
       "id": "template-85",
@@ -2575,7 +2660,8 @@
         "Template - Vertical line chart",
         "Source:_______"
       ],
-      "shape_count": 6
+      "shape_count": 6,
+      "image_filename": "slide_085.png"
     },
     {
       "id": "template-86",
@@ -2618,7 +2704,8 @@
         "$$$",
         "Source:_______"
       ],
-      "shape_count": 25
+      "shape_count": 25,
+      "image_filename": "slide_086.png"
     },
     {
       "id": "template-87",
@@ -2649,7 +2736,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 14
+      "shape_count": 14,
+      "image_filename": "slide_087.png"
     },
     {
       "id": "template-88",
@@ -2688,7 +2776,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 15
+      "shape_count": 15,
+      "image_filename": "slide_088.png"
     },
     {
       "id": "template-89",
@@ -2727,7 +2816,8 @@
         "Innovators",
         "Source:_______"
       ],
-      "shape_count": 43
+      "shape_count": 43,
+      "image_filename": "slide_089.png"
     },
     {
       "id": "template-90",
@@ -2752,7 +2842,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_090.png"
     },
     {
       "id": "template-91",
@@ -2803,7 +2894,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_091.png"
     },
     {
       "id": "template-92",
@@ -2842,7 +2934,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Source:_______"
       ],
-      "shape_count": 20
+      "shape_count": 20,
+      "image_filename": "slide_092.png"
     },
     {
       "id": "template-93",
@@ -2865,7 +2958,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_093.png"
     },
     {
       "id": "template-94",
@@ -2908,7 +3002,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_094.png"
     },
     {
       "id": "template-95",
@@ -2935,7 +3030,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_095.png"
     },
     {
       "id": "template-96",
@@ -2962,7 +3058,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_096.png"
     },
     {
       "id": "template-97",
@@ -2999,7 +3096,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Source:_______"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_097.png"
     },
     {
       "id": "template-98",
@@ -3026,7 +3124,8 @@
         "04",
         "Source:_______"
       ],
-      "shape_count": 28
+      "shape_count": 28,
+      "image_filename": "slide_098.png"
     },
     {
       "id": "template-99",
@@ -3069,7 +3168,8 @@
         "Source:_______",
         "Template - Harvey Ball Slide"
       ],
-      "shape_count": 36
+      "shape_count": 36,
+      "image_filename": "slide_099.png"
     },
     {
       "id": "template-100",
@@ -3090,7 +3190,8 @@
         "Source:_______",
         "Template - Harvey Ball Slide"
       ],
-      "shape_count": 46
+      "shape_count": 46,
+      "image_filename": "slide_100.png"
     },
     {
       "id": "template-101",
@@ -3121,7 +3222,8 @@
         "Source:_______",
         "Template - Harvey Ball Slide"
       ],
-      "shape_count": 28
+      "shape_count": 28,
+      "image_filename": "slide_101.png"
     },
     {
       "id": "template-102",
@@ -3152,7 +3254,8 @@
         "Source:_______",
         "Template - Harvey Ball Map Slide"
       ],
-      "shape_count": 35
+      "shape_count": 35,
+      "image_filename": "slide_102.png"
     },
     {
       "id": "template-103",
@@ -3171,7 +3274,8 @@
         "Template - Wheel chart",
         "Source:_______"
       ],
-      "shape_count": 17
+      "shape_count": 17,
+      "image_filename": "slide_103.png"
     },
     {
       "id": "template-104",
@@ -3214,7 +3318,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_104.png"
     },
     {
       "id": "template-105",
@@ -3237,7 +3342,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_105.png"
     },
     {
       "id": "template-106",
@@ -3268,7 +3374,8 @@
         "Title here",
         "Title here"
       ],
-      "shape_count": 14
+      "shape_count": 14,
+      "image_filename": "slide_106.png"
     },
     {
       "id": "template-107",
@@ -3293,7 +3400,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_107.png"
     },
     {
       "id": "template-108",
@@ -3336,7 +3444,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_108.png"
     },
     {
       "id": "template-109",
@@ -3373,7 +3482,8 @@
         "X%",
         "Text"
       ],
-      "shape_count": 167
+      "shape_count": 167,
+      "image_filename": "slide_109.png"
     },
     {
       "id": "template-110",
@@ -3400,7 +3510,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_110.png"
     },
     {
       "id": "template-111",
@@ -3419,7 +3530,8 @@
         "Template - Scatter chart",
         "Source:_______"
       ],
-      "shape_count": 5
+      "shape_count": 5,
+      "image_filename": "slide_111.png"
     },
     {
       "id": "template-112",
@@ -3446,7 +3558,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 13
+      "shape_count": 13,
+      "image_filename": "slide_112.png"
     },
     {
       "id": "template-113",
@@ -3471,7 +3584,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 8
+      "shape_count": 8,
+      "image_filename": "slide_113.png"
     },
     {
       "id": "template-114",
@@ -3496,7 +3610,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 8
+      "shape_count": 8,
+      "image_filename": "slide_114.png"
     },
     {
       "id": "template-115",
@@ -3539,7 +3654,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_115.png"
     },
     {
       "id": "template-116",
@@ -3570,7 +3686,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_116.png"
     },
     {
       "id": "template-117",
@@ -3601,7 +3718,8 @@
         "2",
         "Text\nText\nText"
       ],
-      "shape_count": 23
+      "shape_count": 23,
+      "image_filename": "slide_117.png"
     },
     {
       "id": "template-118",
@@ -3632,7 +3750,8 @@
         "Text\nText",
         "Text\nText"
       ],
-      "shape_count": 17
+      "shape_count": 17,
+      "image_filename": "slide_118.png"
     },
     {
       "id": "template-119",
@@ -3671,7 +3790,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_119.png"
     },
     {
       "id": "template-120",
@@ -3710,7 +3830,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_120.png"
     },
     {
       "id": "template-121",
@@ -3787,7 +3908,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Heading"
       ],
-      "shape_count": 33
+      "shape_count": 33,
+      "image_filename": "slide_121.png"
     },
     {
       "id": "template-122",
@@ -3818,7 +3940,8 @@
         "XXX\nText",
         "XXX\nText"
       ],
-      "shape_count": 13
+      "shape_count": 13,
+      "image_filename": "slide_122.png"
     },
     {
       "id": "template-123",
@@ -3841,7 +3964,8 @@
         "From",
         "To"
       ],
-      "shape_count": 10
+      "shape_count": 10,
+      "image_filename": "slide_123.png"
     },
     {
       "id": "template-124",
@@ -3862,7 +3986,8 @@
         "xxx",
         "Source:_______"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_124.png"
     },
     {
       "id": "template-125",
@@ -3883,7 +4008,8 @@
         "xxx",
         "Source:_______"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_125.png"
     },
     {
       "id": "template-126",
@@ -3922,7 +4048,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Source:_______"
       ],
-      "shape_count": 24
+      "shape_count": 24,
+      "image_filename": "slide_126.png"
     },
     {
       "id": "template-127",
@@ -3961,7 +4088,8 @@
         "5",
         "Source:_______"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_127.png"
     },
     {
       "id": "template-128",
@@ -4002,7 +4130,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Source:_______"
       ],
-      "shape_count": 25
+      "shape_count": 25,
+      "image_filename": "slide_128.png"
     },
     {
       "id": "template-129",
@@ -4029,7 +4158,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "Source:_______"
       ],
-      "shape_count": 20
+      "shape_count": 20,
+      "image_filename": "slide_129.png"
     },
     {
       "id": "template-130",
@@ -4092,7 +4222,8 @@
         "Source:_______",
         "Template - Go-To-Market Slide"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_130.png"
     },
     {
       "id": "template-131",
@@ -4155,7 +4286,8 @@
         "Source:_______",
         "Template - Project timeline"
       ],
-      "shape_count": 45
+      "shape_count": 45,
+      "image_filename": "slide_131.png"
     },
     {
       "id": "template-132",
@@ -4218,7 +4350,8 @@
         "Source:_______",
         "Template - Customer Touchpoints"
       ],
-      "shape_count": 49
+      "shape_count": 49,
+      "image_filename": "slide_132.png"
     },
     {
       "id": "template-133",
@@ -4291,7 +4424,8 @@
         "Touchpoint",
         "Source:_______"
       ],
-      "shape_count": 54
+      "shape_count": 54,
+      "image_filename": "slide_133.png"
     },
     {
       "id": "template-134",
@@ -4338,7 +4472,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 22
+      "shape_count": 22,
+      "image_filename": "slide_134.png"
     },
     {
       "id": "template-135",
@@ -4409,7 +4544,8 @@
         "Source:_______",
         "Template - Business workflow"
       ],
-      "shape_count": 44
+      "shape_count": 44,
+      "image_filename": "slide_135.png"
     },
     {
       "id": "template-136",
@@ -4452,7 +4588,8 @@
         "Source:_______",
         "Template – Circular process"
       ],
-      "shape_count": 30
+      "shape_count": 30,
+      "image_filename": "slide_136.png"
     },
     {
       "id": "template-137",
@@ -4483,7 +4620,8 @@
         "Source:_______",
         "Template - Road flow chart"
       ],
-      "shape_count": 24
+      "shape_count": 24,
+      "image_filename": "slide_137.png"
     },
     {
       "id": "template-138",
@@ -4532,7 +4670,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 24
+      "shape_count": 24,
+      "image_filename": "slide_138.png"
     },
     {
       "id": "template-139",
@@ -4581,7 +4720,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 33
+      "shape_count": 33,
+      "image_filename": "slide_139.png"
     },
     {
       "id": "template-140",
@@ -4620,7 +4760,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 24
+      "shape_count": 24,
+      "image_filename": "slide_140.png"
     },
     {
       "id": "template-141",
@@ -4657,7 +4798,8 @@
         "X",
         "X"
       ],
-      "shape_count": 26
+      "shape_count": 26,
+      "image_filename": "slide_141.png"
     },
     {
       "id": "template-142",
@@ -4720,7 +4862,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 33
+      "shape_count": 33,
+      "image_filename": "slide_142.png"
     },
     {
       "id": "template-143",
@@ -4791,7 +4934,8 @@
         "5",
         "Text"
       ],
-      "shape_count": 50
+      "shape_count": 50,
+      "image_filename": "slide_143.png"
     },
     {
       "id": "template-144",
@@ -4852,7 +4996,8 @@
         "Source:_______",
         "Template - Decision Tree"
       ],
-      "shape_count": 37
+      "shape_count": 37,
+      "image_filename": "slide_144.png"
     },
     {
       "id": "template-145",
@@ -4895,7 +5040,8 @@
         "Source:_______",
         "Template - Decision Tree"
       ],
-      "shape_count": 23
+      "shape_count": 23,
+      "image_filename": "slide_145.png"
     },
     {
       "id": "template-146",
@@ -4928,7 +5074,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_146.png"
     },
     {
       "id": "template-147",
@@ -4971,7 +5118,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_147.png"
     },
     {
       "id": "template-148",
@@ -5000,7 +5148,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 10
+      "shape_count": 10,
+      "image_filename": "slide_148.png"
     },
     {
       "id": "template-149",
@@ -5075,7 +5224,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 32
+      "shape_count": 32,
+      "image_filename": "slide_149.png"
     },
     {
       "id": "template-150",
@@ -5098,7 +5248,8 @@
         "4. Timing / steps / responsisibility\nxxx",
         "Template — Analysis Plan"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_150.png"
     },
     {
       "id": "template-151",
@@ -5159,7 +5310,8 @@
         "Week 12",
         "Template — High-level Workplan"
       ],
-      "shape_count": 44
+      "shape_count": 44,
+      "image_filename": "slide_151.png"
     },
     {
       "id": "template-152",
@@ -5236,7 +5388,8 @@
         "Heading",
         "Workstream"
       ],
-      "shape_count": 34
+      "shape_count": 34,
+      "image_filename": "slide_152.png"
     },
     {
       "id": "template-153",
@@ -5301,7 +5454,8 @@
         "End products",
         "Responsibility"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_153.png"
     },
     {
       "id": "template-154",
@@ -5366,7 +5520,8 @@
         "Logo",
         "Logo"
       ],
-      "shape_count": 31
+      "shape_count": 31,
+      "image_filename": "slide_154.png"
     },
     {
       "id": "template-155",
@@ -5433,7 +5588,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 75
+      "shape_count": 75,
+      "image_filename": "slide_155.png"
     },
     {
       "id": "template-156",
@@ -5476,7 +5632,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_156.png"
     },
     {
       "id": "template-157",
@@ -5541,7 +5698,8 @@
         "xxxx",
         "xxxx"
       ],
-      "shape_count": 44
+      "shape_count": 44,
+      "image_filename": "slide_157.png"
     },
     {
       "id": "template-158",
@@ -5584,7 +5742,8 @@
         "Source:_______",
         "Template - Hierarchy Infographic"
       ],
-      "shape_count": 33
+      "shape_count": 33,
+      "image_filename": "slide_158.png"
     },
     {
       "id": "template-159",
@@ -5603,7 +5762,8 @@
         "Template - Business systems/hierarchy",
         "Source:_______"
       ],
-      "shape_count": 22
+      "shape_count": 22,
+      "image_filename": "slide_159.png"
     },
     {
       "id": "template-160",
@@ -5634,7 +5794,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_160.png"
     },
     {
       "id": "template-161",
@@ -5663,7 +5824,8 @@
         "4",
         "5"
       ],
-      "shape_count": 10
+      "shape_count": 10,
+      "image_filename": "slide_161.png"
     },
     {
       "id": "template-162",
@@ -5704,7 +5866,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 37
+      "shape_count": 37,
+      "image_filename": "slide_162.png"
     },
     {
       "id": "template-163",
@@ -5735,7 +5898,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 137
+      "shape_count": 137,
+      "image_filename": "slide_163.png"
     },
     {
       "id": "template-164",
@@ -5764,7 +5928,8 @@
         "Y Label",
         "X Label"
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_164.png"
     },
     {
       "id": "template-165",
@@ -5795,7 +5960,8 @@
         "Y Label",
         "X Label"
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_165.png"
     },
     {
       "id": "template-166",
@@ -5828,7 +5994,8 @@
         "Y Label",
         "X Label"
       ],
-      "shape_count": 13
+      "shape_count": 13,
+      "image_filename": "slide_166.png"
     },
     {
       "id": "template-167",
@@ -5871,7 +6038,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_167.png"
     },
     {
       "id": "template-168",
@@ -5916,7 +6084,8 @@
         "XXX\nXXX\nXXX",
         "Source:_______"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_168.png"
     },
     {
       "id": "template-169",
@@ -5959,7 +6128,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_169.png"
     },
     {
       "id": "template-170",
@@ -5986,7 +6156,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_170.png"
     },
     {
       "id": "template-171",
@@ -6019,7 +6190,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_171.png"
     },
     {
       "id": "template-172",
@@ -6044,7 +6216,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_172.png"
     },
     {
       "id": "template-173",
@@ -6069,7 +6242,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_173.png"
     },
     {
       "id": "template-174",
@@ -6098,7 +6272,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 14
+      "shape_count": 14,
+      "image_filename": "slide_174.png"
     },
     {
       "id": "template-175",
@@ -6151,7 +6326,8 @@
         "Source:_______",
         "Template - Challenges Slide"
       ],
-      "shape_count": 44
+      "shape_count": 44,
+      "image_filename": "slide_175.png"
     },
     {
       "id": "template-176",
@@ -6210,7 +6386,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Source:_______"
       ],
-      "shape_count": 74
+      "shape_count": 74,
+      "image_filename": "slide_176.png"
     },
     {
       "id": "template-177",
@@ -6249,7 +6426,8 @@
         "Source:_______",
         "Template - Decision Diagram"
       ],
-      "shape_count": 30
+      "shape_count": 30,
+      "image_filename": "slide_177.png"
     },
     {
       "id": "template-178",
@@ -6288,7 +6466,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Source:_______"
       ],
-      "shape_count": 29
+      "shape_count": 29,
+      "image_filename": "slide_178.png"
     },
     {
       "id": "template-179",
@@ -6317,7 +6496,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_179.png"
     },
     {
       "id": "template-180",
@@ -6364,7 +6544,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 28
+      "shape_count": 28,
+      "image_filename": "slide_180.png"
     },
     {
       "id": "template-181",
@@ -6403,7 +6584,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 24
+      "shape_count": 24,
+      "image_filename": "slide_181.png"
     },
     {
       "id": "template-182",
@@ -6422,7 +6604,8 @@
         "Template – Open book slide",
         "Source:_______"
       ],
-      "shape_count": 22
+      "shape_count": 22,
+      "image_filename": "slide_182.png"
     },
     {
       "id": "template-183",
@@ -6453,7 +6636,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 30
+      "shape_count": 30,
+      "image_filename": "slide_183.png"
     },
     {
       "id": "template-184",
@@ -6490,7 +6674,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 27
+      "shape_count": 27,
+      "image_filename": "slide_184.png"
     },
     {
       "id": "template-185",
@@ -6513,7 +6698,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_185.png"
     },
     {
       "id": "template-186",
@@ -6558,7 +6744,8 @@
         "4",
         "Text"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_186.png"
     },
     {
       "id": "template-187",
@@ -6585,7 +6772,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_187.png"
     },
     {
       "id": "template-188",
@@ -6624,7 +6812,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_188.png"
     },
     {
       "id": "template-189",
@@ -6661,7 +6850,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 41
+      "shape_count": 41,
+      "image_filename": "slide_189.png"
     },
     {
       "id": "template-190",
@@ -6680,7 +6870,8 @@
         "Template - Gears chart",
         "Source:_______"
       ],
-      "shape_count": 8
+      "shape_count": 8,
+      "image_filename": "slide_190.png"
     },
     {
       "id": "template-191",
@@ -6713,7 +6904,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_191.png"
     },
     {
       "id": "template-192",
@@ -6746,7 +6938,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 14
+      "shape_count": 14,
+      "image_filename": "slide_192.png"
     },
     {
       "id": "template-193",
@@ -6779,7 +6972,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 20
+      "shape_count": 20,
+      "image_filename": "slide_193.png"
     },
     {
       "id": "template-194",
@@ -6812,7 +7006,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 12
+      "shape_count": 12,
+      "image_filename": "slide_194.png"
     },
     {
       "id": "template-195",
@@ -6841,7 +7036,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 15
+      "shape_count": 15,
+      "image_filename": "slide_195.png"
     },
     {
       "id": "template-196",
@@ -6882,7 +7078,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_196.png"
     },
     {
       "id": "template-197",
@@ -6905,7 +7102,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 13
+      "shape_count": 13,
+      "image_filename": "slide_197.png"
     },
     {
       "id": "template-198",
@@ -6930,7 +7128,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 10
+      "shape_count": 10,
+      "image_filename": "slide_198.png"
     },
     {
       "id": "template-199",
@@ -6957,7 +7156,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 14
+      "shape_count": 14,
+      "image_filename": "slide_199.png"
     },
     {
       "id": "template-200",
@@ -7002,7 +7202,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 69
+      "shape_count": 69,
+      "image_filename": "slide_200.png"
     },
     {
       "id": "template-201",
@@ -7045,7 +7246,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_201.png"
     },
     {
       "id": "template-202",
@@ -7082,7 +7284,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_202.png"
     },
     {
       "id": "template-203",
@@ -7135,7 +7338,8 @@
         "AF",
         "AS"
       ],
-      "shape_count": 55
+      "shape_count": 55,
+      "image_filename": "slide_203.png"
     },
     {
       "id": "template-204",
@@ -7192,7 +7396,8 @@
         "Text",
         "Text\nText"
       ],
-      "shape_count": 27
+      "shape_count": 27,
+      "image_filename": "slide_204.png"
     },
     {
       "id": "template-205",
@@ -7251,7 +7456,8 @@
         "X",
         "Text"
       ],
-      "shape_count": 25
+      "shape_count": 25,
+      "image_filename": "slide_205.png"
     },
     {
       "id": "template-206",
@@ -7294,7 +7500,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_206.png"
     },
     {
       "id": "template-207",
@@ -7331,7 +7538,8 @@
         "Low, moderate, or high\nXXX",
         "Source:_______"
       ],
-      "shape_count": 13
+      "shape_count": 13,
+      "image_filename": "slide_207.png"
     },
     {
       "id": "template-208",
@@ -7374,7 +7582,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 26
+      "shape_count": 26,
+      "image_filename": "slide_208.png"
     },
     {
       "id": "template-209",
@@ -7419,7 +7628,8 @@
         "XXX",
         "Source:_______"
       ],
-      "shape_count": 23
+      "shape_count": 23,
+      "image_filename": "slide_209.png"
     },
     {
       "id": "template-210",
@@ -7464,7 +7674,8 @@
         "Text\nText\nText",
         "Source:_______"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_210.png"
     },
     {
       "id": "template-211",
@@ -7529,7 +7740,8 @@
         "Text",
         "Source:_______"
       ],
-      "shape_count": 38
+      "shape_count": 38,
+      "image_filename": "slide_211.png"
     },
     {
       "id": "template-212",
@@ -7570,7 +7782,8 @@
         "Text\nText\nText",
         "Source:_______"
       ],
-      "shape_count": 15
+      "shape_count": 15,
+      "image_filename": "slide_212.png"
     },
     {
       "id": "template-213",
@@ -7615,7 +7828,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
         "Source:_______"
       ],
-      "shape_count": 26
+      "shape_count": 26,
+      "image_filename": "slide_213.png"
     },
     {
       "id": "template-214",
@@ -7631,7 +7845,8 @@
         "Template — The 3 C’s",
         "Source:_______"
       ],
-      "shape_count": 7
+      "shape_count": 7,
+      "image_filename": "slide_214.png"
     },
     {
       "id": "template-215",
@@ -7664,7 +7879,8 @@
         "Promotion",
         "Source:_______"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_215.png"
     },
     {
       "id": "template-216",
@@ -7715,7 +7931,8 @@
         "Restraining forces (Obstacles to change)",
         "Source:_______"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_216.png"
     },
     {
       "id": "template-217",
@@ -7780,7 +7997,8 @@
         "Costs",
         "Source:_______"
       ],
-      "shape_count": 36
+      "shape_count": 36,
+      "image_filename": "slide_217.png"
     },
     {
       "id": "template-218",
@@ -7825,7 +8043,8 @@
         "XXX\nXXX\nXXX",
         "Source:_______"
       ],
-      "shape_count": 17
+      "shape_count": 17,
+      "image_filename": "slide_218.png"
     },
     {
       "id": "template-219",
@@ -7848,7 +8067,8 @@
         "XXX\nXXX\nXXX\nXXX\nXXX",
         "Source:_______"
       ],
-      "shape_count": 9
+      "shape_count": 9,
+      "image_filename": "slide_219.png"
     },
     {
       "id": "template-220",
@@ -7885,7 +8105,8 @@
         "Observability\nLorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Source:_______"
       ],
-      "shape_count": 23
+      "shape_count": 23,
+      "image_filename": "slide_220.png"
     },
     {
       "id": "template-221",
@@ -7922,7 +8143,8 @@
         "C",
         "Source:_______"
       ],
-      "shape_count": 22
+      "shape_count": 22,
+      "image_filename": "slide_221.png"
     },
     {
       "id": "template-222",
@@ -7938,7 +8160,8 @@
         "Template — PESTEL Analysis",
         "Source:_______"
       ],
-      "shape_count": 4
+      "shape_count": 4,
+      "image_filename": "slide_222.png"
     },
     {
       "id": "template-223",
@@ -7975,7 +8198,8 @@
         "XXX\nXXX",
         "Source:_______"
       ],
-      "shape_count": 21
+      "shape_count": 21,
+      "image_filename": "slide_223.png"
     },
     {
       "id": "template-224",
@@ -8008,7 +8232,8 @@
         "Next",
         "Source:_______"
       ],
-      "shape_count": 18
+      "shape_count": 18,
+      "image_filename": "slide_224.png"
     },
     {
       "id": "template-225",
@@ -8024,7 +8249,8 @@
         "Template — Seven Degrees of Freedom for Growth",
         "Source:_______"
       ],
-      "shape_count": 3
+      "shape_count": 3,
+      "image_filename": "slide_225.png"
     },
     {
       "id": "template-226",
@@ -8063,7 +8289,8 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Source:_______"
       ],
-      "shape_count": 31
+      "shape_count": 31,
+      "image_filename": "slide_226.png"
     },
     {
       "id": "template-227",
@@ -8106,7 +8333,8 @@
         "Consulting frameworks",
         "Additional\nslides"
       ],
-      "shape_count": 16
+      "shape_count": 16,
+      "image_filename": "slide_227.png"
     },
     {
       "id": "template-228",
@@ -8147,7 +8375,8 @@
         "xxxx",
         "xxxx"
       ],
-      "shape_count": 17
+      "shape_count": 17,
+      "image_filename": "slide_228.png"
     },
     {
       "id": "template-229",
@@ -8190,7 +8419,8 @@
         "Text",
         "Text"
       ],
-      "shape_count": 19
+      "shape_count": 19,
+      "image_filename": "slide_229.png"
     },
     {
       "id": "template-230",
@@ -8217,7 +8447,8 @@
         "xxx",
         "xxx"
       ],
-      "shape_count": 11
+      "shape_count": 11,
+      "image_filename": "slide_230.png"
     }
   ]
 }
