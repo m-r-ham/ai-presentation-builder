@@ -34,21 +34,27 @@ class AIService {
         this.userOutlines.set(sessionId, outline);
       }
 
-      // Check for slide creation trigger words
-      const buildTriggers = ['start building', 'build', 'create slides', 'make slides', 'generate slides', 'start', 'go ahead', 'proceed'];
+      // Check for slide creation trigger words (expanded list)
+      const buildTriggers = [
+        'start building', 'build', 'create slides', 'make slides', 'generate slides', 
+        'start', 'go ahead', 'proceed', 'slides', 'build slides', 'show me slides',
+        'let\'s build', 'create presentation', 'make presentation', 'build presentation',
+        'generate', 'create', 'ready', 'build it', 'let\'s go', 'time to build'
+      ];
       const userRequestsBuild = buildTriggers.some(trigger => 
         userMessage.toLowerCase().includes(trigger.toLowerCase())
       );
 
-      // Determine what phase we're in - be more proactive
+      // Determine what phase we're in - be much more proactive
       const hasBasicInfo = outline.completionStatus.metadataComplete;
       const hasSlideOutline = outline.completionStatus.hasSlideOutline;
       const hasMinimalInfo = outline.metadata.title || outline.metadata.purpose || outline.metadata.audience;
-      const hasDecentInfo = (outline.metadata.title && outline.metadata.purpose) || 
-                           (outline.metadata.title && outline.metadata.audience) ||
-                           outline.completionStatus.percentage >= 50;
+      const hasAnyInfo = outline.metadata.title || outline.metadata.purpose || outline.metadata.audience || outline.topics.length > 0;
+      const hasDecentInfo = hasMinimalInfo; // Lowered threshold - just need basic info
       const userExplicitlyAsksForSlides = userRequestsBuild;
-      const needsSlideOutline = (userExplicitlyAsksForSlides || hasDecentInfo) && !hasSlideOutline;
+      const shouldBuildSlides = userExplicitlyAsksForSlides || 
+                               (hasAnyInfo && !hasSlideOutline && conversationHistory.length >= 2) ||
+                               (outline.completionStatus.percentage >= 30);
       const readyForSlideDetails = hasBasicInfo && hasSlideOutline;
 
       const messages = [
@@ -96,12 +102,19 @@ When you have enough context and the user is ready to build slides, you create t
 }
 \`\`\`
 
-${needsSlideOutline ? `
-The user is ready for you to create slides. Build a complete slide deck by creating multiple slides with outline blocks. Each slide should have a clear purpose and specific content.
+${shouldBuildSlides ? `
+🎯 TIME TO BUILD SLIDES! The user has provided enough information to start creating a presentation. 
+
+IMPORTANT: Start generating actual slides now using outline blocks with "add_slide" action. Create a complete slide deck with:
+- Title slide
+- Content slides for each main topic/point
+- Summary/conclusion slide
+
+Be proactive - don't ask permission, just start building the slides they need!
 ` : readyForSlideDetails ? `
 The presentation slides are ready. Focus on helping refine content and improve the presentation.
 ` : `
-Focus on learning about their presentation through natural conversation. As you discover details about their topic, audience, or goals, capture them in the outline.
+Focus on learning about their presentation through natural conversation. As you discover details about their topic, audience, or goals, capture them in the outline. Once you have basic information, proactively offer to build slides.
 `}
 
 Conversation style:
@@ -109,9 +122,15 @@ Conversation style:
 - Ask follow-up questions that show genuine interest
 - Share relevant insights when helpful
 - Build understanding through dialogue
-- You can create slides and build presentations - lean into this capability when appropriate
+- **BE PROACTIVE ABOUT BUILDING SLIDES** - when you have enough info, start creating slides immediately
 
-Remember: When you learn something about their presentation, you can capture it using outline blocks. This helps build their presentation outline as you talk.`
+KEY BEHAVIORS:
+- If user says anything like "build", "create", "slides", "generate" - START BUILDING SLIDES
+- If you have a topic + audience OR topic + purpose - START BUILDING SLIDES  
+- If conversation has gone 3+ exchanges and you have basic info - OFFER TO BUILD SLIDES
+- Don't ask "would you like me to..." - just start building and explain what you're doing
+
+Remember: When you learn something about their presentation, capture it using outline blocks. When you have enough info, immediately start adding slides with "add_slide" actions.`
         },
         ...conversationHistory.map(msg => ({
           role: msg.role === 'ai' ? 'assistant' : msg.role,
