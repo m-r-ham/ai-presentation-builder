@@ -6,6 +6,8 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
   const [category, setCategory] = useState('general')
   const [categories, setCategories] = useState({})
   const [recentSessions, setRecentSessions] = useState([])
+  const [apiKey, setApiKey] = useState(localStorage.getItem('openai_api_key') || '')
+  const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey)
 
   useEffect(() => {
     fetchCategories()
@@ -34,10 +36,16 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (prompt.trim() && !isGenerating) {
-      onGenerateSlides(prompt.trim(), category)
+    if (prompt.trim() && !isGenerating && apiKey.trim()) {
+      onGenerateSlides(prompt.trim(), category, apiKey.trim())
       setPrompt('')
     }
+  }
+
+  const handleApiKeySubmit = (key) => {
+    localStorage.setItem('openai_api_key', key)
+    setApiKey(key)
+    setShowApiKeyInput(false)
   }
 
   const examplePrompts = [
@@ -67,6 +75,63 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
           Describe the slide you want to create. AI will generate 3 versions for you to rate.
         </p>
       </div>
+
+      {/* API Key Input */}
+      {showApiKeyInput && (
+        <div style={{ 
+          padding: '20px', 
+          backgroundColor: '#fef3c7', 
+          borderBottom: '1px solid #f59e0b',
+          border: '1px solid #f59e0b'
+        }}>
+          <h3 style={{ fontSize: '14px', fontWeight: '600', marginBottom: '8px', color: '#92400e' }}>
+            OpenAI API Key Required
+          </h3>
+          <p style={{ fontSize: '12px', color: '#92400e', marginBottom: '12px' }}>
+            Please enter your OpenAI API key to generate slides. Your key is stored locally in your browser only and is never saved on our servers - it's only used for your current session requests.
+          </p>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <input
+              type="password"
+              placeholder="sk-..."
+              style={{
+                flex: 1,
+                padding: '8px 12px',
+                border: '1px solid #f59e0b',
+                borderRadius: '6px',
+                fontSize: '13px'
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && e.target.value.trim()) {
+                  handleApiKeySubmit(e.target.value.trim())
+                }
+              }}
+            />
+            <button
+              onClick={(e) => {
+                const input = e.target.previousElementSibling
+                if (input.value.trim()) {
+                  handleApiKeySubmit(input.value.trim())
+                }
+              }}
+              style={{
+                padding: '8px 16px',
+                backgroundColor: '#f59e0b',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                fontSize: '13px',
+                cursor: 'pointer'
+              }}
+            >
+              Save
+            </button>
+          </div>
+          <p style={{ fontSize: '11px', color: '#92400e', marginTop: '8px' }}>
+            Get your API key from <a href="https://platform.openai.com/api-keys" target="_blank" style={{ color: '#92400e', textDecoration: 'underline' }}>OpenAI Platform</a>
+          </p>
+        </div>
+      )}
 
       {/* Generation Form */}
       <div style={{ padding: '20px', borderBottom: '1px solid #f1f5f9' }}>
@@ -129,7 +194,7 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
 
           <button
             type="submit"
-            disabled={!prompt.trim() || isGenerating}
+            disabled={!prompt.trim() || isGenerating || !apiKey.trim()}
             className="btn btn-primary"
             style={{
               width: '100%',
@@ -137,13 +202,19 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '8px',
-              padding: '12px'
+              padding: '12px',
+              opacity: (!prompt.trim() || !apiKey.trim()) ? 0.5 : 1
             }}
           >
             {isGenerating ? (
               <>
                 <div className="spinner"></div>
                 Generating 3 versions...
+              </>
+            ) : !apiKey.trim() ? (
+              <>
+                <Sparkles size={16} />
+                API Key Required
               </>
             ) : (
               <>
@@ -152,6 +223,51 @@ function ChatPanel({ onGenerateSlides, isGenerating, currentSession }) {
               </>
             )}
           </button>
+
+          {apiKey && !showApiKeyInput && (
+            <div style={{ 
+              marginTop: '12px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'space-between',
+              fontSize: '11px',
+              color: '#6b7280'
+            }}>
+              <span>✓ API key configured (stored locally only)</span>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <button
+                  onClick={() => setShowApiKeyInput(true)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#2563eb',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    textDecoration: 'underline'
+                  }}
+                >
+                  Change
+                </button>
+                <button
+                  onClick={() => {
+                    localStorage.removeItem('openai_api_key')
+                    setApiKey('')
+                    setShowApiKeyInput(true)
+                  }}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#dc2626',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    textDecoration: 'underline'
+                  }}
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+          )}
         </form>
       </div>
 

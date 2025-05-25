@@ -23,13 +23,13 @@ function App() {
     }
   }
 
-  const handleSlideGeneration = async (prompt, category) => {
+  const handleSlideGeneration = async (prompt, category, apiKey) => {
     setIsGenerating(true)
     try {
       const response = await fetch('/api/generate/slide-versions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, category })
+        body: JSON.stringify({ prompt, category, apiKey })
       })
       
       const data = await response.json()
@@ -38,6 +38,13 @@ function App() {
         setCurrentSession(data)
       } else {
         console.error('Generation failed:', data.error)
+        // Handle API key errors by clearing stored key
+        if (response.status === 401 || data.error.includes('API key')) {
+          localStorage.removeItem('openai_api_key')
+          alert('Invalid API key. Please enter a valid OpenAI API key.')
+        } else {
+          alert(`Generation failed: ${data.error}`)
+        }
       }
     } catch (error) {
       console.error('Generation error:', error)
@@ -62,7 +69,10 @@ function App() {
         
         // If revise was selected, generate new versions
         if (data.decision === 'revise' && currentSession) {
-          await handleSlideGeneration(currentSession.prompt, currentSession.category)
+          const apiKey = localStorage.getItem('openai_api_key')
+          if (apiKey) {
+            await handleSlideGeneration(currentSession.prompt, currentSession.category, apiKey)
+          }
         }
         
         // If keep or kill, ready for new prompt

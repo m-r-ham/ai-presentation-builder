@@ -4,18 +4,14 @@
   "outputDirectory": "frontend/dist",
   "installCommand": "npm install && cd backend && npm install && cd ../frontend && npm install",
   "functions": {
-    "backend/server.js": {
+    "api/**/*.js": {
       "runtime": "@vercel/node"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/dist/$1"
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     }
   ],
   "env": {

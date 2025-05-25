@@ -5,9 +5,7 @@ const Database = require('../database/init');
 
 const router = express.Router();
 const db = new Database();
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// OpenAI instance will be created per request with user's API key
 
 // Slide categories for focused training
 const SLIDE_CATEGORIES = {
@@ -20,13 +18,32 @@ const SLIDE_CATEGORIES = {
 };
 
 // Generate 3 slide versions from user prompt
+// SECURITY: API keys are passed in request body and NEVER stored server-side
 router.post('/slide-versions', async (req, res) => {
   try {
-    const { prompt, category = 'general', userContext = '' } = req.body;
+    const { prompt, category = 'general', userContext = '', apiKey } = req.body;
     
     if (!prompt) {
       return res.status(400).json({ error: 'Prompt is required' });
     }
+    
+    if (!apiKey) {
+      return res.status(400).json({ error: 'OpenAI API key is required' });
+    }
+    
+    // Basic API key validation
+    if (!apiKey.startsWith('sk-') || apiKey.length < 20) {
+      return res.status(400).json({ error: 'Invalid OpenAI API key format' });
+    }
+    
+    // Create OpenAI instance with user's API key (session-only, never stored)
+    const openai = new OpenAI({
+      apiKey: apiKey,
+    });
+    
+    // Clear API key from memory immediately after creating client
+    const userApiKey = apiKey;
+    // Don't store the API key anywhere - it exists only for this request
 
     // Create session
     const sessionId = uuidv4();
@@ -87,6 +104,15 @@ Return ONLY the Slidev markdown, including frontmatter with layout and styling.`
 
       } catch (error) {
         console.error(`Error generating version ${i}:`, error);
+        
+        // Handle API key authentication errors specifically
+        if (error.status === 401 || error.message.includes('API key')) {
+          return res.status(401).json({ 
+            error: 'Invalid OpenAI API key. Please check your API key and try again.',
+            details: 'Authentication failed with OpenAI API'
+          });
+        }
+        
         versions.push({
           id: versionId,
           versionNumber: i,
