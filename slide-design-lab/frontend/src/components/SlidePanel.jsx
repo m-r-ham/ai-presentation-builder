@@ -180,7 +180,8 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
       height: '100%', 
       display: 'flex', 
       flexDirection: 'column',
-      backgroundColor: 'white'
+      backgroundColor: 'white',
+      overflow: 'hidden'
     }}>
       {/* Header with navigation */}
       <div style={{
@@ -337,19 +338,21 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
         </div>
       </div>
 
-      {/* Slide Preview - Reasonable 16:9 Sizing */}
+      {/* Slide Preview - Takes available space */}
       <div style={{ 
-        height: '450px',
+        flex: 1,
         padding: '20px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#f8fafc'
+        backgroundColor: '#f8fafc',
+        minHeight: '300px'
       }}>
         <div style={{
           width: '100%',
           height: '100%',
           maxWidth: '800px',
+          maxHeight: '500px',
           aspectRatio: '16/9',
           backgroundColor: 'white',
           borderRadius: '8px',
@@ -394,13 +397,11 @@ function SlidePanel({ session, onRatingSubmit, isGenerating }) {
 
       {/* Chat Feedback Section - Higher up and scrollable */}
       <div style={{
-        flex: 1,
+        height: '280px',
         borderTop: '1px solid #f1f5f9',
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '250px',
-        maxHeight: '400px',
-        overflow: 'hidden'
+        backgroundColor: 'white'
       }}>
         {/* Chat Header */}
         <div style={{

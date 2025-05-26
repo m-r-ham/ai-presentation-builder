@@ -93,26 +93,84 @@ Return only the category key (e.g., "title-cover", "data-visualization", etc.):`
     for (let i = 1; i <= 3; i++) {
       const versionId = uuidv4();
       
-      const systemPrompt = `Create high-quality Slidev markdown to generate professional slides from the user's prompt.
+      const systemPrompt = `You are an expert Slidev presentation designer. Create high-quality, developer-focused slides that follow Slidev best practices.
 
-Generate proper Slidev markdown with:
-- Frontmatter with appropriate layout
-- Clear, professional content 
-- Real data and specific examples (not placeholders)
-- Mermaid charts when appropriate
-- Tables, lists, and other markdown elements
-- Charts, graphs, and data visualizations
+SLIDEV PRINCIPLES:
+- Web-based, Vue-powered presentations with modern design
+- Markdown-first with support for HTML/Vue components  
+- Code-friendly with syntax highlighting and interactive demos
+- Clean, minimalist aesthetic focused on content
+- Leverage web technologies: UnoCSS, Mermaid, LaTeX math
+- Developer audience: technical, precise, example-driven
+
+QUALITY GUIDELINES FROM REAL SLIDEV SHOWCASES:
+- Clear, concise titles that capture the essence
+- Technical depth with practical examples
+- Clean layouts that don't overwhelm
+- Strategic use of code blocks with proper syntax highlighting
+- Mermaid diagrams for architecture/flow visualization
+- Professional color schemes and typography
+- Logical content progression
+
+GENERATE SLIDEV MARKDOWN WITH:
+- Appropriate layout (default, center, cover, two-cols, etc.)
+- Syntax-highlighted code blocks when relevant
+- Mermaid charts for data/processes
+- Real, specific data (not placeholders)
+- Professional styling with UnoCSS classes when needed
+- LaTeX math for formulas if applicable
+
+ADVANCED SLIDEV FEATURES:
+- Code blocks with syntax highlighting: \`\`\`js {2,3|5-8|10}\`\`\`
+- Line highlighting and focusing in code
+- Mermaid diagrams for flowcharts, architecture, sequences
+- LaTeX math rendering: $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$
+- Two-column layouts with ::left:: and ::right::
+- UnoCSS classes for styling: class="text-center text-xl"
+- Icons from any icon set: <mdi:github />
+
+LAYOUT OPTIONS (choose the most appropriate):
+- layout: default (standard content slide)
+- layout: center (centered content, good for quotes/key points)
+- layout: cover (title/intro slide with large text)
+- layout: two-cols (side-by-side content)
+- layout: image-left/image-right (content + image)
+- layout: quote (for prominent quotations)
+- layout: section (section divider)
+- layout: end (final slide)
+
+CODE EXAMPLES:
+\`\`\`typescript {2-4|6-8}
+// TypeScript with line highlighting
+interface User {
+  id: number
+  name: string
+}
+const user: User = {
+  id: 1, name: 'Alice'
+}
+\`\`\`
+
+TWO-COLUMN SYNTAX:
+::left::
+Left column content
+::right::
+Right column content
 
 FORMAT:
 ---
-layout: default
+layout: [most-appropriate-layout]
+class: [optional-css-classes]
 ---
 
-# Slide Title
-Your content here
+# Professional Title
+
+Content using Slidev's full feature set
 
 VERSION: ${i}/3 (${getVersionApproach(i)})
-USER REQUEST: ${prompt}`;
+USER REQUEST: ${prompt}
+
+Create a slide worthy of a top-tier tech conference with proper Slidev features.`;
 
       try {
         const response = await openai.chat.completions.create({
